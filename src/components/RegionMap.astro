@@ -1,0 +1,161 @@
+---
+// RM choropleth rendered entirely at build time: no client JS needed to see it.
+// Each comuna carries its class for every fuel in data attributes, so the fuel
+// selector (step 1.5) only swaps `data-class` without recomputing anything.
+import { getCollection } from "astro:content";
+import { projectComunas } from "../lib/geo";
+import {
+  CLASS_LABELS,
+  FUEL_LABELS,
+  PRICE_CLASSES,
+  classify,
+  formatClp,
+  regionMedian,
+  statsByComuna,
+  type PriceClass,
+} from "../lib/prices";
+import { FUELS, type Fuel } from "../lib/schema";
+
+interface Props {
+  fuel?: Fuel;
+}
+
+const { fuel = "95" } = Astro.props;
+
+const stations = (await getCollection("stations")).map((entry) => entry.data);
+const stats = statsByComuna(stations);
+const medians = Object.fromEntries(FUELS.map((f) => [f, regionMedian(stations, f)])) as Record<
+  Fuel,
+  number | undefined
+>;
+const { width, height, shapes } = projectComunas(600);
+
+function classFor(cut: string, f: Fuel): PriceClass {
+  const comunaMedian = stats.get(cut)?.[f]?.median;
+  const reference = medians[f];
+  if (comunaMedian === undefined || reference === undefined) return "none";
+  return classify(comunaMedian - reference);
+}
+
+const cheapest = shapes
+  .map((shape) => ({ shape, median: stats.get(shape.cut)?.[fuel]?.median }))
+  .filter((c): c is { shape: (typeof shapes)[number]; median: number } => c.median !== undefined)
+  .sort((a, b) => a.median - b.median)[0];
+
+const referenceMedian = medians[fuel];
+---
+
+<figure class="space-y-3">
+  <svg
+    viewBox={`0 0 ${width} ${height}`}
+    class="h-auto w-full"
+    role="img"
+    aria-labelledby="map-title"
+  >
+    <title id="map-title">
+      Mapa de comunas de la Región Metropolitana coloreadas según su precio mediano de {
+        FUEL_LABELS[fuel]
+      }
+    </title>
+
+    {shapes.map((shape) => {
+      const fuelStats = stats.get(shape.cut)?.[fuel];
+      return (
+        <path
+          d={shape.d}
+          class="comuna"
+          data-cut={shape.cut}
+          data-class={classFor(shape.cut, fuel)}
+          {...Object.fromEntries(FUELS.map((f) => [`data-class-${f}`, classFor(shape.cut, f)]))}
+        >
+          <title>
+              {fuelStats
+                ? `${shape.name}: mediana ${formatClp(fuelStats.median)} (${fuelStats.count} estaciones)`
+                : `${shape.name}: sin datos`}
+            </title>
+        </path>
+      );
+    })}
+
+    {cheapest && (
+      <g class="pointer-events-none">
+        <path d={cheapest.shape.d} class="cheapest-outline" />
+        <text
+          x={cheapest.shape.centroid[0]}
+          y={cheapest.shape.centroid[1]}
+          class="cheapest-label font-display"
+          text-anchor="middle"
+          dominant-baseline="middle"
+        >
+          {cheapest.shape.name}
+        </text>
+      </g>
+    )}
+  </svg>
+
+  <figcaption class="space-y-2">
+    <p class="text-sm text-dust">
+      Diferencia con la mediana de la región
+      {referenceMedian && ` (${formatClp(referenceMedian)} la ${FUEL_LABELS[fuel]})`}
+    </p>
+    <ul class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm sm:grid-cols-5">
+      {PRICE_CLASSES.map((c) => (
+        <li class="flex items-center gap-2">
+          <span class="swatch size-3 shrink-0 rounded-sm" data-class={c} />
+          {CLASS_LABELS[c]}
+        </li>
+      ))}
+    </ul>
+  </figcaption>
+</figure>
+
+<style>
+  .comuna {
+    stroke: var(--color-asphalt);
+    stroke-width: 1;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .comuna,
+  .swatch {
+    fill: var(--fill);
+    background-color: var(--fill);
+  }
+
+  [data-class="-2"] {
+    --fill: var(--color-cheap-2);
+  }
+  [data-class="-1"] {
+    --fill: var(--color-cheap-1);
+  }
+  [data-class="0"] {
+    --fill: var(--color-neutral);
+  }
+  [data-class="1"] {
+    --fill: var(--color-pricey-1);
+  }
+  [data-class="2"] {
+    --fill: var(--color-pricey-2);
+  }
+  [data-class="none"] {
+    --fill: var(--color-curb);
+  }
+
+  .cheapest-outline {
+    fill: none;
+    stroke: var(--color-paint);
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .cheapest-label {
+    fill: var(--color-paint);
+    font-size: 15px;
+    font-weight: 700;
+    paint-order: stroke;
+    stroke: var(--color-asphalt);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+  }
+</style>

@@ -18,12 +18,14 @@
   --color-led-off: #3a2f18;
   --color-sign: #0f7a55;
 
-  /* Choropleth scale: brightest is cheapest. Revisited when the map is built. */
-  --color-price-1: #ffc94d;
-  --color-price-2: #e9a23b;
-  --color-price-3: #c47a2c;
-  --color-price-4: #8f5620;
-  --color-price-5: #5a3a12;
+  /* Diverging map scale around the region median: cool = cheaper, warm = pricier.
+     Validated on the asphalt surface with the dataviz skill's validator
+     (each arm monotone, >= 3:1; neutral >= 2:1; poles distinct under CVD). */
+  --color-cheap-2: #62a2ee;
+  --color-cheap-1: #3470b8;
+  --color-neutral: #555960;
+  --color-pricey-1: #a8661f;
+  --color-pricey-2: #f2a531;
 }
 
 @layer base {

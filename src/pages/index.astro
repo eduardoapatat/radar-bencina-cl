@@ -1,36 +1,37 @@
 ---
+import { getCollection } from "astro:content";
 import PriceBoard from "../components/PriceBoard.astro";
+import RegionMap from "../components/RegionMap.astro";
 import Layout from "../layouts/Layout.astro";
+import { comunas } from "../lib/geo";
+import { FUEL_LABELS } from "../lib/prices";
+import { FUELS } from "../lib/schema";
 
-// Placeholder rows until the mock data arrives in step 1.3.
-const rows = [
-  { fuel: "93", label: "93" },
-  { fuel: "95", label: "95" },
-  { fuel: "97", label: "97" },
-  { fuel: "diesel", label: "D" },
-];
+const selectedFuel = "95";
+const stations = (await getCollection("stations")).map((entry) => entry.data);
+const comunaName = new Map(comunas.map((c) => [c.cut, c.name]));
+
+// Lowest single-station price per fuel, for the price board.
+const rows = FUELS.map((fuel) => {
+  const best = stations
+    .filter((s) => s.prices[fuel] !== undefined)
+    .sort((a, b) => a.prices[fuel]! - b.prices[fuel]!)[0];
+  return {
+    fuel,
+    label: fuel === "diesel" ? "D" : FUEL_LABELS[fuel],
+    price: best?.prices[fuel],
+    comuna: best && comunaName.get(best.comunaCut),
+  };
+});
 ---
 
 <Layout>
-  <div class="grid gap-8 lg:grid-cols-[minmax(0,24rem)_1fr]">
-    <div class="space-y-8">
-      <div class="max-w-prose space-y-2">
-        <h1 class="font-display text-4xl leading-tight font-bold sm:text-5xl">
-          Dónde cargar más barato en la Región Metropolitana
-        </h1>
-        <p class="text-lg text-dust">
-          Compara el precio por comuna. Toca una comuna para ver sus estaciones.
-        </p>
-      </div>
+  <h1 class="max-w-prose font-display text-3xl leading-tight font-bold sm:text-4xl">
+    Dónde cargar más barato en la Región Metropolitana
+  </h1>
 
-      <PriceBoard rows={rows} selected="95" />
-    </div>
-
-    <section
-      aria-label="Mapa de precios por comuna"
-      class="grid min-h-[28rem] place-items-center rounded-lg border border-dashed border-lane text-dust"
-    >
-      Aquí va el mapa de la RM
-    </section>
+  <div class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start">
+    <RegionMap fuel={selectedFuel} />
+    <PriceBoard rows={rows} selected={selectedFuel} />
   </div>
 </Layout>
