@@ -1,5 +1,8 @@
 allowBuilds:
+  # mapshaper deps: only needed for GeoPackage and as an optional speedup, not for shapefile → TopoJSON
+  better-sqlite3: false
   esbuild: true
+  msgpackr-extract: false
   sharp: true
 peerDependencyRules:
   allowedVersions:

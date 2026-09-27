@@ -6,6 +6,9 @@ dist/
 # dependencies
 node_modules/
 
+# downloaded source data (regenerable with the scripts in scripts/)
+data/raw/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
