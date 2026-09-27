@@ -1,8 +1,36 @@
 ---
+import PriceBoard from "../components/PriceBoard.astro";
 import Layout from "../layouts/Layout.astro";
+
+// Placeholder rows until the mock data arrives in step 1.3.
+const rows = [
+  { fuel: "93", label: "93" },
+  { fuel: "95", label: "95" },
+  { fuel: "97", label: "97" },
+  { fuel: "diesel", label: "D" },
+];
 ---
 
 <Layout>
-  <h1>Welcome to My Astro Site</h1>
-  <p>This is the homepage of my Astro project.</p>
+  <div class="grid gap-8 lg:grid-cols-[minmax(0,24rem)_1fr]">
+    <div class="space-y-8">
+      <div class="max-w-prose space-y-2">
+        <h1 class="font-display text-4xl leading-tight font-bold sm:text-5xl">
+          Dónde cargar más barato en la Región Metropolitana
+        </h1>
+        <p class="text-lg text-dust">
+          Compara el precio por comuna. Toca una comuna para ver sus estaciones.
+        </p>
+      </div>
+
+      <PriceBoard rows={rows} selected="95" />
+    </div>
+
+    <section
+      aria-label="Mapa de precios por comuna"
+      class="grid min-h-[28rem] place-items-center rounded-lg border border-dashed border-lane text-dust"
+    >
+      Aquí va el mapa de la RM
+    </section>
+  </div>
 </Layout>

@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-barlow);
+  --font-display: var(--font-barlow-condensed);
+}
+
+@theme {
+  /* Street palette: asphalt, curb, lane paint */
+  --color-asphalt: #1b1d20;
+  --color-curb: #25282c;
+  --color-lane: #34383d;
+  --color-paint: #eceae4;
+  --color-dust: #9a9c98;
+
+  /* Price board LED and road-sign green */
+  --color-led: #ffb31a;
+  --color-led-off: #3a2f18;
+  --color-sign: #0f7a55;
+
+  /* Choropleth scale: brightest is cheapest. Revisited when the map is built. */
+  --color-price-1: #ffc94d;
+  --color-price-2: #e9a23b;
+  --color-price-3: #c47a2c;
+  --color-price-4: #8f5620;
+  --color-price-5: #5a3a12;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-asphalt font-sans text-paint antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-led;
+  }
+}

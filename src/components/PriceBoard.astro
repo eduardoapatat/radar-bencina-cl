@@ -1,0 +1,53 @@
+---
+// Gas-station price board: one row per fuel with its lowest price in the region.
+// Rows double as the fuel selector (behavior arrives in step 1.5).
+
+interface Row {
+  fuel: string;
+  label: string;
+  price?: number;
+  comuna?: string;
+}
+
+interface Props {
+  rows: Row[];
+  selected: string;
+}
+
+const { rows, selected } = Astro.props;
+
+const formatPrice = (price: number) => price.toLocaleString("es-CL");
+---
+
+<section aria-labelledby="board-title" class="w-full max-w-sm">
+  <h2 id="board-title" class="font-display text-lg font-semibold text-dust">
+    Precio más bajo por litro hoy
+  </h2>
+
+  <ul class="mt-2 overflow-hidden rounded-t-xl border border-lane bg-curb">
+    {rows.map((row) => {
+      const isSelected = row.fuel === selected;
+      return (
+        <li class="flex items-center gap-4 border-b border-lane px-4 py-3 last:border-b-0">
+          <span
+            class:list={[
+              "grid size-12 shrink-0 place-items-center rounded-md border-2 font-display text-2xl font-bold",
+              isSelected ? "border-sign bg-sign text-paint" : "border-lane text-dust",
+            ]}
+          >
+            {row.label}
+          </span>
+
+          <span class="relative font-display text-5xl leading-none font-bold tabular-nums">
+            <span aria-hidden="true" class="text-led-off">
+              8.888
+            </span>
+            <span class="absolute inset-0 text-led">{row.price ? formatPrice(row.price) : ""}</span>
+          </span>
+
+          <span class="ml-auto text-right text-sm text-dust">{row.comuna ?? "Sin datos aún"}</span>
+        </li>
+      );
+    })}
+  </ul>
+</section>

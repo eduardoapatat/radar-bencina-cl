@@ -1,17 +1,55 @@
 ---
+import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Radar Bencina",
+  description = "Precios de combustible en Chile, comuna por comuna, con datos oficiales de la CNE.",
+} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1b1d20" />
+    <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <Font cssVariable="--font-barlow" preload />
+    <Font cssVariable="--font-barlow-condensed" preload />
+    <title>{title}</title>
+    <ClientRouter />
   </head>
-  <body>
-    <slot />
+  <body class="flex min-h-dvh flex-col">
+    <header class="border-b border-lane">
+      <div class="mx-auto flex max-w-6xl items-baseline justify-between px-4 py-3">
+        <a href="/" class="font-display text-xl font-bold">
+          Radar Bencina
+        </a>
+        <span class="text-sm text-dust">Región Metropolitana</span>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
+      <slot />
+    </main>
+
+    <footer class="border-t border-lane text-sm text-dust">
+      <div class="mx-auto max-w-6xl space-y-1 px-4 py-4">
+        <p>
+          Precios: Comisión Nacional de Energía, Bencina en Línea. Cada estación informa sus propios
+          precios.
+        </p>
+        <p>Límites comunales: Biblioteca del Congreso Nacional.</p>
+      </div>
+    </footer>
   </body>
 </html>
