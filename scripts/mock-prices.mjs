@@ -1,14 +1,16 @@
-// Generates src/data/prices.mock.json: plausible, deterministic fake stations
-// placed inside each RM comuna. Used until real CNE data arrives (step 2).
+// Generates src/data/prices.json (+ prices.meta.json): plausible, deterministic fake
+// stations placed inside each RM comuna. Same files and contract as fetch-prices.mjs,
+// so the site can run offline or without CNE credentials.
 import { readFile, writeFile } from "node:fs/promises";
 import { geoBounds, geoContains } from "d3-geo";
 import { feature } from "topojson-client";
 import { z } from "astro/zod";
-import { StationSchema } from "../src/lib/schema.ts";
+import { PricesMetaSchema, StationSchema } from "../src/lib/schema.ts";
 
 const TOPOLOGY_PATH = "src/data/rm.topo.json";
-const OUTPUT_PATH = "src/data/prices.mock.json";
-const REPORTED_BEFORE = Date.parse("2026-09-26T12:00:00-03:00");
+const OUTPUT_PATH = "src/data/prices.json";
+const META_PATH = "src/data/prices.meta.json";
+const FETCHED_AT = Date.parse("2026-09-26T12:00:00-03:00");
 
 // Seeded PRNG so the file only changes when this script changes.
 function mulberry32(seed) {
@@ -23,7 +25,8 @@ const random = mulberry32(2026);
 const between = (min, max) => min + random() * (max - min);
 const pick = (items) => items[Math.floor(random() * items.length)];
 
-const BASE_PRICE = { 93: 1260, 95: 1300, 97: 1350, diesel: 1010 };
+// Full-service levels seen in the CNE data for the RM (September 2026).
+const BASE_PRICE = { 93: 1450, 95: 1485, 97: 1530, diesel: 1385 };
 const BRANDS = ["Copec", "Shell", "Aramco", "Independiente"];
 const STREETS = [
   "Av. Principal",
@@ -54,13 +57,22 @@ const stations = comunas.flatMap((comuna) => {
 
   return Array.from({ length: count }, (_, i) => {
     const [lng, lat] = randomPointInside(comuna);
+    // Like the CNE data, about a third of stations also have a cheaper self-service price.
+    const hasSelfService = random() < 0.3;
     const prices = {};
     for (const [fuel, base] of Object.entries(BASE_PRICE)) {
       // Some stations do not sell 97 or diesel.
       if ((fuel === "97" || fuel === "diesel") && random() < 0.15) continue;
-      prices[fuel] = Math.round(base + comunaOffset + between(-25, 25));
+      const fullService = Math.round(base + comunaOffset + between(-25, 25));
+      const selfService = hasSelfService && random() < 0.8;
+      // A few stations stop updating: their price is months old.
+      const daysAgo = random() < 0.05 ? between(40, 200) : between(0.05, 4);
+      prices[fuel] = {
+        price: selfService ? fullService - Math.round(between(10, 60)) : fullService,
+        selfService,
+        updatedAt: new Date(FETCHED_AT - daysAgo * 86_400_000).toISOString(),
+      };
     }
-    const hoursAgo = between(1, 96);
 
     return {
       id: `mock-${cut}-${i + 1}`,
@@ -70,11 +82,12 @@ const stations = comunas.flatMap((comuna) => {
       lat: Number(lat.toFixed(6)),
       lng: Number(lng.toFixed(6)),
       prices,
-      updatedAt: new Date(REPORTED_BEFORE - hoursAgo * 3_600_000).toISOString(),
     };
   });
 });
 
 z.array(StationSchema).parse(stations);
+const meta = PricesMetaSchema.parse({ source: "mock", fetchedAt: new Date(FETCHED_AT) });
 await writeFile(OUTPUT_PATH, `${JSON.stringify(stations, null, 2)}\n`);
-console.log(`${OUTPUT_PATH}: ${stations.length} stations in ${comunas.length} comunas`);
+await writeFile(META_PATH, `${JSON.stringify(meta, null, 2)}\n`);
+console.log(`${OUTPUT_PATH}: ${stations.length} mock stations in ${comunas.length} comunas`);

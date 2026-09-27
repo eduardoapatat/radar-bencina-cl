@@ -1,5 +1,18 @@
 import { FUELS, type Fuel } from "./fuels";
-import type { Station } from "./schema";
+import type { FuelPrice, Station } from "./schema";
+
+// Prices older than this (relative to the download) are shown but not counted.
+export const STALE_AFTER_DAYS = 30;
+const DAY_MS = 86_400_000;
+
+export const isFresh = (price: FuelPrice, fetchedAt: Date) =>
+  fetchedAt.getTime() - price.updatedAt.getTime() <= STALE_AFTER_DAYS * DAY_MS;
+
+// The station's price for `fuel` if it is recent enough to count, else undefined.
+export function freshPrice(station: Station, fuel: Fuel, fetchedAt: Date): number | undefined {
+  const price = station.prices[fuel];
+  return price && isFresh(price, fetchedAt) ? price.price : undefined;
+}
 
 export interface FuelStats {
   median: number;
@@ -15,12 +28,12 @@ export function median(values: number[]): number | undefined {
   return sorted.length % 2 ? sorted[mid] : Math.round((sorted[mid - 1] + sorted[mid]) / 2);
 }
 
-export function statsByComuna(stations: Station[]): Map<string, ComunaStats> {
+export function statsByComuna(stations: Station[], fetchedAt: Date): Map<string, ComunaStats> {
   const pricesByComuna = new Map<string, Partial<Record<Fuel, number[]>>>();
   for (const station of stations) {
     const prices = pricesByComuna.get(station.comunaCut) ?? {};
     for (const fuel of FUELS) {
-      const price = station.prices[fuel];
+      const price = freshPrice(station, fuel, fetchedAt);
       if (price !== undefined) (prices[fuel] ??= []).push(price);
     }
     pricesByComuna.set(station.comunaCut, prices);
@@ -40,8 +53,13 @@ export function statsByComuna(stations: Station[]): Map<string, ComunaStats> {
 }
 
 // Median over every station in the region: the "normal" price the map compares against.
-export function regionMedian(stations: Station[], fuel: Fuel): number | undefined {
-  return median(stations.flatMap((s) => (s.prices[fuel] === undefined ? [] : [s.prices[fuel]])));
+export function regionMedian(stations: Station[], fuel: Fuel, fetchedAt: Date): number | undefined {
+  return median(
+    stations.flatMap((s) => {
+      const price = freshPrice(s, fuel, fetchedAt);
+      return price === undefined ? [] : [price];
+    }),
+  );
 }
 
 // Diverging classes: how far a comuna's median sits from the region median, in CLP.

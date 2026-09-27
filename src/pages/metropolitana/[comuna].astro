@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro";
 import FuelTabs from "../../components/FuelTabs.astro";
 import Layout from "../../layouts/Layout.astro";
 import { comunas, projectComuna } from "../../lib/geo";
-import { FUEL_LABELS, formatClp } from "../../lib/prices";
+import { FUEL_LABELS, STALE_AFTER_DAYS, formatClp } from "../../lib/prices";
 import { getRegionData } from "../../lib/region";
 import { FUELS } from "../../lib/fuels";
 import { slugify } from "../../lib/slug";
@@ -20,7 +20,7 @@ export const getStaticPaths = (() => {
 
 const { comuna } = Astro.props;
 const selectedFuel = "95";
-const { stats, medians, classFor, stationsIn } = await getRegionData();
+const { stats, medians, classFor, stationsIn, cheapestFirst } = await getRegionData();
 
 const stations = stationsIn(comuna.cut);
 const comunaStats = stats.get(comuna.cut) ?? {};
@@ -125,24 +125,22 @@ const mapsUrl = (lat: number, lng: number) =>
         </h2>
 
         {FUELS.map((fuel) => {
-          const selling = stations
-            .filter((s) => s.prices[fuel] !== undefined)
-            .sort((a, b) => a.prices[fuel]! - b.prices[fuel]!);
+          const selling = cheapestFirst(stations, fuel);
           const missing = stations.length - selling.length;
           return (
             <div data-for-fuel={fuel}>
               <ol class="mt-2 divide-y divide-lane">
-                {selling.map((station) => {
+                {selling.map(({ station, price }) => {
                   return (
                     <li class="flex gap-4 py-4">
                       <span class="w-24 shrink-0 font-display text-4xl leading-none font-bold text-led tabular-nums">
-                        {formatClp(station.prices[fuel]!).slice(1)}
+                        {formatClp(price).slice(1)}
                       </span>
                       <div class="min-w-0 space-y-1">
                         <p class="font-semibold">{station.brand}</p>
                         <p class="text-dust">{station.address}</p>
                         <p class="text-sm text-dust">
-                          Precio informado el {reportedAt.format(station.updatedAt)}
+                          Precio informado el {reportedAt.format(station.prices[fuel]!.updatedAt)}
                         </p>
                         <p class="flex flex-wrap gap-2 pt-1">
                           <a
@@ -170,8 +168,8 @@ const mapsUrl = (lat: number, lng: number) =>
               {missing > 0 && (
                 <p class="pt-2 text-sm text-dust">
                   {missing === 1
-                    ? `1 estación no informa ${FUEL_LABELS[fuel]}.`
-                    : `${missing} estaciones no informan ${FUEL_LABELS[fuel]}.`}
+                    ? `1 estación sin precio de ${FUEL_LABELS[fuel]} de los últimos ${STALE_AFTER_DAYS} días.`
+                    : `${missing} estaciones sin precio de ${FUEL_LABELS[fuel]} de los últimos ${STALE_AFTER_DAYS} días.`}
                 </p>
               )}
             </div>

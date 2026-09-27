@@ -6,8 +6,15 @@ import { FUELS } from "./fuels.ts";
 export { FUELS, type Fuel } from "./fuels.ts";
 export const FuelSchema = z.enum(FUELS);
 
-// Price per liter in CLP. Chilean prices are whole pesos.
-const PriceSchema = z.int().min(300).max(5000);
+export const FuelPriceSchema = z.object({
+  // Price per liter in CLP. Chilean prices are whole pesos.
+  price: z.int().min(300).max(5000),
+  // The CNE lists full-service and self-service prices separately; we keep the lower one.
+  selfService: z.boolean(),
+  // When the station reported this price
+  updatedAt: z.coerce.date(),
+});
+export type FuelPrice = z.infer<typeof FuelPriceSchema>;
 
 export const StationSchema = z.object({
   id: z.string().min(1),
@@ -18,9 +25,14 @@ export const StationSchema = z.object({
   lat: z.number().min(-56).max(-17),
   lng: z.number().min(-110).max(-66),
   prices: z
-    .partialRecord(FuelSchema, PriceSchema)
+    .partialRecord(FuelSchema, FuelPriceSchema)
     .refine((prices) => Object.keys(prices).length > 0, "A station needs at least one price"),
-  // When the station reported its prices
-  updatedAt: z.coerce.date(),
 });
 export type Station = z.infer<typeof StationSchema>;
+
+// Written next to the stations file by whichever script produced it.
+export const PricesMetaSchema = z.object({
+  source: z.enum(["mock", "cne"]),
+  fetchedAt: z.coerce.date(),
+});
+export type PricesMeta = z.infer<typeof PricesMetaSchema>;
