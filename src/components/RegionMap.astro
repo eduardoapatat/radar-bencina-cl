@@ -1,51 +1,39 @@
 ---
 // RM choropleth rendered entirely at build time: no client JS needed to see it.
-// Each comuna carries its class for every fuel in data attributes, so the fuel
-// selector (step 1.5) only swaps `data-class` without recomputing anything.
-import { getCollection } from "astro:content";
-import { projectComunas } from "../lib/geo";
-import {
-  CLASS_LABELS,
-  FUEL_LABELS,
-  PRICE_CLASSES,
-  classify,
-  formatClp,
-  regionMedian,
-  statsByComuna,
-  type PriceClass,
-} from "../lib/prices";
+// Everything that depends on the fuel is rendered for all four fuels; the page's
+// `data-fuel` root attribute decides what shows (see global.css), and the fuel
+// selector script only swaps each comuna's `data-class`.
+import { CLASS_LABELS, FUEL_LABELS, PRICE_CLASSES, formatClp } from "../lib/prices";
+import { getRegionData } from "../lib/region";
 import { FUELS, type Fuel } from "../lib/schema";
 
 interface Props {
-  fuel?: Fuel;
+  fuel: Fuel;
 }
 
-const { fuel = "95" } = Astro.props;
+const { fuel } = Astro.props;
+const { stats, medians, map, classFor, ranking } = await getRegionData();
+const { width, height, shapes } = map;
+const shapeByCut = new Map(shapes.map((s) => [s.cut, s]));
 
-const stations = (await getCollection("stations")).map((entry) => entry.data);
-const stats = statsByComuna(stations);
-const medians = Object.fromEntries(FUELS.map((f) => [f, regionMedian(stations, f)])) as Record<
-  Fuel,
-  number | undefined
->;
-const { width, height, shapes } = projectComunas(600);
-
-function classFor(cut: string, f: Fuel): PriceClass {
-  const comunaMedian = stats.get(cut)?.[f]?.median;
-  const reference = medians[f];
-  if (comunaMedian === undefined || reference === undefined) return "none";
-  return classify(comunaMedian - reference);
-}
-
-const cheapest = shapes
-  .map((shape) => ({ shape, median: stats.get(shape.cut)?.[fuel]?.median }))
-  .filter((c): c is { shape: (typeof shapes)[number]; median: number } => c.median !== undefined)
-  .sort((a, b) => a.median - b.median)[0];
-
-const referenceMedian = medians[fuel];
+const perFuelAttrs = (cut: string) =>
+  Object.fromEntries(
+    FUELS.flatMap((f) => {
+      const s = stats.get(cut)?.[f];
+      return [
+        [`data-class-${f}`, classFor(cut, f)],
+        [`data-median-${f}`, s?.median ?? ""],
+        [`data-count-${f}`, s?.count ?? 0],
+      ];
+    }),
+  );
 ---
 
-<figure class="space-y-3">
+<figure
+  class="relative space-y-3"
+  data-region-map
+  {...Object.fromEntries(FUELS.map((f) => [`data-ref-${f}`, medians[f] ?? ""]))}
+>
   <svg
     viewBox={`0 0 ${width} ${height}`}
     class="h-auto w-full"
@@ -53,9 +41,7 @@ const referenceMedian = medians[fuel];
     aria-labelledby="map-title"
   >
     <title id="map-title">
-      Mapa de comunas de la Región Metropolitana coloreadas según su precio mediano de {
-        FUEL_LABELS[fuel]
-      }
+      Mapa de comunas de la Región Metropolitana coloreadas según su precio mediano
     </title>
 
     {shapes.map((shape) => {
@@ -64,44 +50,63 @@ const referenceMedian = medians[fuel];
         <path
           d={shape.d}
           class="comuna"
-          data-cut={shape.cut}
+          data-name={shape.name}
           data-class={classFor(shape.cut, fuel)}
-          {...Object.fromEntries(FUELS.map((f) => [`data-class-${f}`, classFor(shape.cut, f)]))}
+          {...perFuelAttrs(shape.cut)}
         >
           <title>
               {fuelStats
-                ? `${shape.name}: mediana ${formatClp(fuelStats.median)} (${fuelStats.count} estaciones)`
+                ? `${shape.name}: mediana ${formatClp(fuelStats.median)}`
                 : `${shape.name}: sin datos`}
             </title>
         </path>
       );
     })}
 
-    {cheapest && (
-      <g class="pointer-events-none">
-        <path d={cheapest.shape.d} class="cheapest-outline" />
-        <text
-          x={cheapest.shape.centroid[0]}
-          y={cheapest.shape.centroid[1]}
-          class="cheapest-label font-display"
-          text-anchor="middle"
-          dominant-baseline="middle"
-        >
-          {cheapest.shape.name}
-        </text>
-      </g>
-    )}
+    {FUELS.map((f) => {
+      const cheapest = shapeByCut.get(ranking(f)[0]?.cut ?? "");
+      return (
+        cheapest && (
+          <g class="pointer-events-none" data-for-fuel={f}>
+            <path d={cheapest.d} class="cheapest-outline" />
+            <text
+              x={cheapest.centroid[0]}
+              y={cheapest.centroid[1]}
+              class="cheapest-label font-display"
+              text-anchor="middle"
+              dominant-baseline="middle"
+            >
+              {cheapest.name}
+            </text>
+          </g>
+        )
+      );
+    })}
+
+    <!-- Hover/tap highlight drawn last: SVG has no z-index, so a stroke on the
+         comuna itself gets half-covered by neighbors painted after it. -->
+    <path class="highlight-outline invisible" data-map-highlight></path>
   </svg>
+
+  <div
+    class="map-tooltip pointer-events-none absolute z-10 hidden w-max max-w-56 rounded-md border border-lane bg-curb px-3 py-2 text-sm"
+    data-map-tooltip
+    role="status"
+  ></div>
 
   <figcaption class="space-y-2">
     <p class="text-sm text-dust">
       Diferencia con la mediana de la región
-      {referenceMedian && ` (${formatClp(referenceMedian)} la ${FUEL_LABELS[fuel]})`}
+      {FUELS.map((f) => (
+        <span data-for-fuel={f}>
+          {medians[f] !== undefined && ` (${formatClp(medians[f])} la ${FUEL_LABELS[f]})`}
+        </span>
+      ))}
     </p>
     <ul class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm sm:grid-cols-5">
       {PRICE_CLASSES.map((c) => (
         <li class="flex items-center gap-2">
-          <span class="swatch size-3 shrink-0 rounded-sm" data-class={c} />
+          <span class="size-3 shrink-0 rounded-sm bg-(--fill)" data-class={c} />
           {CLASS_LABELS[c]}
         </li>
       ))}
@@ -115,31 +120,26 @@ const referenceMedian = medians[fuel];
     stroke-width: 1;
     stroke-linejoin: round;
     vector-effect: non-scaling-stroke;
+    transition: fill 250ms ease-out;
   }
 
-  .comuna,
-  .swatch {
+  .highlight-outline {
+    fill: none;
+    stroke: var(--color-paint);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .comuna {
+      transition: none;
+    }
+  }
+
+  .comuna {
     fill: var(--fill);
-    background-color: var(--fill);
-  }
-
-  [data-class="-2"] {
-    --fill: var(--color-cheap-2);
-  }
-  [data-class="-1"] {
-    --fill: var(--color-cheap-1);
-  }
-  [data-class="0"] {
-    --fill: var(--color-neutral);
-  }
-  [data-class="1"] {
-    --fill: var(--color-pricey-1);
-  }
-  [data-class="2"] {
-    --fill: var(--color-pricey-2);
-  }
-  [data-class="none"] {
-    --fill: var(--color-curb);
   }
 
   .cheapest-outline {

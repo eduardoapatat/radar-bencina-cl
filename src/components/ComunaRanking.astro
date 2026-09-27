@@ -1,0 +1,51 @@
+---
+// Table view of the map: comunas ordered by median price, one list per fuel.
+// Gives the same information as the colors without relying on them.
+import { CLASS_LABELS, FUEL_LABELS, formatClp } from "../lib/prices";
+import { getRegionData } from "../lib/region";
+import { FUELS } from "../lib/schema";
+
+const TOP = 10;
+const { ranking } = await getRegionData();
+---
+
+<section aria-labelledby="ranking-title" class="w-full max-w-sm">
+  <h2 id="ranking-title" class="font-display text-lg font-semibold text-dust">
+    Comunas por precio mediano
+  </h2>
+
+  {FUELS.map((fuel) => {
+    const rows = ranking(fuel);
+    const renderRow = (row: (typeof rows)[number], position: number) => (
+      <li class="flex items-center gap-3 py-1.5">
+        <span class="w-6 text-right text-sm text-dust tabular-nums">{position}</span>
+        <span
+          class="size-3 shrink-0 rounded-sm bg-(--fill)"
+          data-class={row.priceClass}
+          title={row.priceClass === "none" ? undefined : CLASS_LABELS[row.priceClass]}
+        />
+        <span class="flex-1">{row.name}</span>
+        <span class="font-display text-lg font-semibold tabular-nums">{formatClp(row.median)}</span>
+      </li>
+    );
+
+    return (
+      <div data-for-fuel={fuel} class="mt-2">
+        <p class="sr-only">Combustible {FUEL_LABELS[fuel]}</p>
+        <ol class="divide-y divide-lane">
+          {rows.slice(0, TOP).map((row, i) => renderRow(row, i + 1))}
+        </ol>
+        {rows.length > TOP && (
+          <details class="group">
+            <summary class="cursor-pointer py-2 text-sm text-dust hover:text-paint">
+              Ver las {rows.length} comunas
+            </summary>
+            <ol class="divide-y divide-lane" start={TOP + 1}>
+              {rows.slice(TOP).map((row, i) => renderRow(row, TOP + i + 1))}
+            </ol>
+          </details>
+        )}
+      </div>
+    );
+  })}
+</section>

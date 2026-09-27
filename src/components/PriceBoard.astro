@@ -1,22 +1,16 @@
 ---
 // Gas-station price board: one row per fuel with its lowest price in the region.
-// Rows double as the fuel selector (behavior arrives in step 1.5).
-
-interface Row {
-  fuel: string;
-  label: string;
-  price?: number;
-  comuna?: string;
-}
+// Each row is also the fuel selector for the map and the ranking.
+import { FUEL_LABELS, formatClp } from "../lib/prices";
+import { getRegionData } from "../lib/region";
+import { FUELS, type Fuel } from "../lib/schema";
 
 interface Props {
-  rows: Row[];
-  selected: string;
+  selected: Fuel;
 }
 
-const { rows, selected } = Astro.props;
-
-const formatPrice = (price: number) => price.toLocaleString("es-CL");
+const { selected } = Astro.props;
+const { cheapestStation } = await getRegionData();
 ---
 
 <section aria-labelledby="board-title" class="w-full max-w-sm">
@@ -25,27 +19,34 @@ const formatPrice = (price: number) => price.toLocaleString("es-CL");
   </h2>
 
   <ul class="mt-2 overflow-hidden rounded-t-xl border border-lane bg-curb">
-    {rows.map((row) => {
-      const isSelected = row.fuel === selected;
+    {FUELS.map((fuel) => {
+      const best = cheapestStation(fuel);
       return (
-        <li class="flex items-center gap-4 border-b border-lane px-4 py-3 last:border-b-0">
-          <span
-            class:list={[
-              "grid size-12 shrink-0 place-items-center rounded-md border-2 font-display text-2xl font-bold",
-              isSelected ? "border-sign bg-sign text-paint" : "border-lane text-dust",
-            ]}
+        <li class="border-b border-lane last:border-b-0">
+          <button
+            type="button"
+            class="group flex w-full items-center gap-4 px-4 py-3 text-left hover:bg-lane/40"
+            data-fuel-option={fuel}
+            aria-pressed={fuel === selected ? "true" : "false"}
           >
-            {row.label}
-          </span>
-
-          <span class="relative font-display text-5xl leading-none font-bold tabular-nums">
-            <span aria-hidden="true" class="text-led-off">
-              8.888
+            <span class="sr-only">Ver el mapa de</span>
+            <span class="grid size-12 shrink-0 place-items-center rounded-md border-2 border-lane font-display text-2xl font-bold text-dust group-aria-pressed:border-sign group-aria-pressed:bg-sign group-aria-pressed:text-paint">
+              {fuel === "diesel" ? "D" : FUEL_LABELS[fuel]}
             </span>
-            <span class="absolute inset-0 text-led">{row.price ? formatPrice(row.price) : ""}</span>
-          </span>
 
-          <span class="ml-auto text-right text-sm text-dust">{row.comuna ?? "Sin datos aún"}</span>
+            <span class="relative font-display text-5xl leading-none font-bold tabular-nums">
+              <span aria-hidden="true" class="text-led-off">
+                8.888
+              </span>
+              <span class="absolute inset-0 text-led">
+                {best ? formatClp(best.price).slice(1) : ""}
+              </span>
+            </span>
+
+            <span class="ml-auto text-right text-sm text-dust">
+              {best?.comuna ?? "Sin datos aún"}
+            </span>
+          </button>
         </li>
       );
     })}

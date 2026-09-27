@@ -40,4 +40,32 @@
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-led;
   }
+
+  /* Price class → color, shared by the map, its legend and the ranking */
+  [data-class="-2"] {
+    --fill: var(--color-cheap-2);
+  }
+  [data-class="-1"] {
+    --fill: var(--color-cheap-1);
+  }
+  [data-class="0"] {
+    --fill: var(--color-neutral);
+  }
+  [data-class="1"] {
+    --fill: var(--color-pricey-1);
+  }
+  [data-class="2"] {
+    --fill: var(--color-pricey-2);
+  }
+  [data-class="none"] {
+    --fill: var(--color-curb);
+  }
+
+  /* Content rendered once per fuel: only the selected fuel's version shows */
+  [data-fuel="93"] [data-for-fuel]:not([data-for-fuel="93"]),
+  [data-fuel="95"] [data-for-fuel]:not([data-for-fuel="95"]),
+  [data-fuel="97"] [data-for-fuel]:not([data-for-fuel="97"]),
+  [data-fuel="diesel"] [data-for-fuel]:not([data-for-fuel="diesel"]) {
+    display: none;
+  }
 }

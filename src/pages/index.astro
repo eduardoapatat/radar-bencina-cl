@@ -1,28 +1,10 @@
 ---
-import { getCollection } from "astro:content";
+import ComunaRanking from "../components/ComunaRanking.astro";
 import PriceBoard from "../components/PriceBoard.astro";
 import RegionMap from "../components/RegionMap.astro";
 import Layout from "../layouts/Layout.astro";
-import { comunas } from "../lib/geo";
-import { FUEL_LABELS } from "../lib/prices";
-import { FUELS } from "../lib/schema";
 
 const selectedFuel = "95";
-const stations = (await getCollection("stations")).map((entry) => entry.data);
-const comunaName = new Map(comunas.map((c) => [c.cut, c.name]));
-
-// Lowest single-station price per fuel, for the price board.
-const rows = FUELS.map((fuel) => {
-  const best = stations
-    .filter((s) => s.prices[fuel] !== undefined)
-    .sort((a, b) => a.prices[fuel]! - b.prices[fuel]!)[0];
-  return {
-    fuel,
-    label: fuel === "diesel" ? "D" : FUEL_LABELS[fuel],
-    price: best?.prices[fuel],
-    comuna: best && comunaName.get(best.comunaCut),
-  };
-});
 ---
 
 <Layout>
@@ -30,8 +12,18 @@ const rows = FUELS.map((fuel) => {
     Dónde cargar más barato en la Región Metropolitana
   </h1>
 
-  <div class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start">
+  <div
+    data-fuel={selectedFuel}
+    class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start"
+  >
     <RegionMap fuel={selectedFuel} />
-    <PriceBoard rows={rows} selected={selectedFuel} />
+    <div class="space-y-8">
+      <PriceBoard selected={selectedFuel} />
+      <ComunaRanking />
+    </div>
   </div>
 </Layout>
+
+<script>
+  import "../scripts/fuel-explorer";
+</script>

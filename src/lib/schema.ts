@@ -1,10 +1,10 @@
 // Data contract shared by the site (content collections) and the data scripts.
 // Mock data and, later, CNE data must both match these schemas.
 import { z } from "astro/zod";
+import { FUELS } from "./fuels.ts";
 
-export const FUELS = ["93", "95", "97", "diesel"] as const;
+export { FUELS, type Fuel } from "./fuels.ts";
 export const FuelSchema = z.enum(FUELS);
-export type Fuel = z.infer<typeof FuelSchema>;
 
 // Price per liter in CLP. Chilean prices are whole pesos.
 const PriceSchema = z.int().min(300).max(5000);

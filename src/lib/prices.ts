@@ -1,4 +1,5 @@
-import { FUELS, type Fuel, type Station } from "./schema";
+import { FUELS, type Fuel } from "./fuels";
+import type { Station } from "./schema";
 
 export interface FuelStats {
   median: number;
