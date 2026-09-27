@@ -6,20 +6,27 @@ import {
   type GeoGeometryObjects,
 } from "d3-geo";
 import { feature } from "topojson-client";
-import topology from "../data/rm.topo.json";
+import topology from "../data/chile.topo.json";
 
 export interface ComunaProps {
   cut: string;
   name: string;
   provincia: string;
+  region: string;
 }
 type ComunaFeature = ExtendedFeature<GeoGeometryObjects, ComunaProps>;
 
 const topo = topology as unknown as Parameters<typeof feature>[0];
-const collection = feature(
+const allComunas = feature(
   topo,
   topo.objects.comunas,
 ) as unknown as ExtendedFeatureCollection<ComunaFeature>;
+
+// Only the Región Metropolitana is drawn until region pages arrive (step 2.3c).
+const collection: ExtendedFeatureCollection<ComunaFeature> = {
+  type: "FeatureCollection",
+  features: allComunas.features.filter((f) => f.properties.region === "13"),
+};
 
 export const comunas: ComunaProps[] = collection.features.map((f) => f.properties);
 

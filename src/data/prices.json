@@ -9519,8 +9519,8 @@
     "prices": {
       "93": {
         "price": 1446,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1501,
@@ -9579,8 +9579,8 @@
     "prices": {
       "93": {
         "price": 1451,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1508,
@@ -9689,8 +9689,8 @@
     "prices": {
       "93": {
         "price": 1459,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1497,
@@ -9779,8 +9779,8 @@
     "prices": {
       "93": {
         "price": 1438,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1470,
@@ -10019,8 +10019,8 @@
     "prices": {
       "93": {
         "price": 1438,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1478,
@@ -10139,8 +10139,8 @@
     "prices": {
       "93": {
         "price": 1430,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1487,
@@ -10169,8 +10169,8 @@
     "prices": {
       "93": {
         "price": 1453,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1509,
@@ -10199,8 +10199,8 @@
     "prices": {
       "93": {
         "price": 1498,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1548,
@@ -10319,8 +10319,8 @@
     "prices": {
       "93": {
         "price": 1492,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1542,
@@ -10349,8 +10349,8 @@
     "prices": {
       "93": {
         "price": 1495,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1545,
@@ -10379,8 +10379,8 @@
     "prices": {
       "93": {
         "price": 1499,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1548,
@@ -10469,8 +10469,8 @@
     "prices": {
       "93": {
         "price": 1499,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:50.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:17.000Z"
       },
       "95": {
         "price": 1548,
@@ -10499,8 +10499,8 @@
     "prices": {
       "93": {
         "price": 1499,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:50.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:17.000Z"
       },
       "95": {
         "price": 1548,
@@ -10529,8 +10529,8 @@
     "prices": {
       "93": {
         "price": 1480,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:14.000Z"
       },
       "95": {
         "price": 1529,
@@ -10709,8 +10709,8 @@
     "prices": {
       "93": {
         "price": 1428,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1462,
@@ -10739,8 +10739,8 @@
     "prices": {
       "93": {
         "price": 1413,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1446,
@@ -10919,8 +10919,8 @@
     "prices": {
       "93": {
         "price": 1425,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1477,
@@ -10999,8 +10999,8 @@
     "prices": {
       "93": {
         "price": 1480,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:14.000Z"
       },
       "95": {
         "price": 1529,
@@ -11169,8 +11169,8 @@
     "prices": {
       "93": {
         "price": 1453,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1490,
@@ -11709,8 +11709,8 @@
     "prices": {
       "93": {
         "price": 1491,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1540,
@@ -11739,8 +11739,8 @@
     "prices": {
       "93": {
         "price": 1496,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:45.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:13.000Z"
       },
       "95": {
         "price": 1547,
@@ -12154,8 +12154,8 @@
     "prices": {
       "93": {
         "price": 1507,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:48.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:15.000Z"
       },
       "95": {
         "price": 1556,
@@ -12334,8 +12334,8 @@
     "prices": {
       "93": {
         "price": 1480,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:50.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:17.000Z"
       },
       "95": {
         "price": 1529,
@@ -12364,8 +12364,8 @@
     "prices": {
       "93": {
         "price": 1480,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:46.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:14.000Z"
       },
       "95": {
         "price": 1529,
@@ -12394,8 +12394,8 @@
     "prices": {
       "93": {
         "price": 1480,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:47.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:14.000Z"
       },
       "95": {
         "price": 1529,
@@ -12424,8 +12424,8 @@
     "prices": {
       "93": {
         "price": 1480,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:47.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:14.000Z"
       },
       "95": {
         "price": 1529,
@@ -12719,8 +12719,8 @@
     "prices": {
       "93": {
         "price": 1488,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:50.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:17.000Z"
       },
       "95": {
         "price": 1533,
@@ -12974,8 +12974,8 @@
     "prices": {
       "93": {
         "price": 1444,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:48.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:15.000Z"
       },
       "95": {
         "price": 1487,
@@ -13004,8 +13004,8 @@
     "prices": {
       "93": {
         "price": 1428,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:49.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:16.000Z"
       },
       "95": {
         "price": 1476,
@@ -13094,8 +13094,8 @@
     "prices": {
       "93": {
         "price": 1437,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:49.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:16.000Z"
       },
       "95": {
         "price": 1478,
@@ -13184,8 +13184,8 @@
     "prices": {
       "93": {
         "price": 1443,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:48.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:15.000Z"
       },
       "95": {
         "price": 1493,
@@ -13244,8 +13244,8 @@
     "prices": {
       "93": {
         "price": 1423,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:49.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:16.000Z"
       },
       "95": {
         "price": 1468,
@@ -13664,8 +13664,8 @@
     "prices": {
       "93": {
         "price": 1459,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:49.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:16.000Z"
       },
       "95": {
         "price": 1512,
@@ -13754,8 +13754,8 @@
     "prices": {
       "93": {
         "price": 1453,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:49.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:16.000Z"
       },
       "95": {
         "price": 1509,
@@ -13814,8 +13814,8 @@
     "prices": {
       "93": {
         "price": 1451,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:49.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:16.000Z"
       },
       "95": {
         "price": 1498,
@@ -14044,8 +14044,8 @@
     "prices": {
       "93": {
         "price": 1412,
-        "selfService": true,
-        "updatedAt": "2026-09-27T03:05:48.000Z"
+        "selfService": false,
+        "updatedAt": "2026-09-27T03:35:15.000Z"
       },
       "95": {
         "price": 1439,

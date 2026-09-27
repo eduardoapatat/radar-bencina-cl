@@ -9,7 +9,7 @@ const BASE_URL = "https://api.cne.cl";
 const REGION_CODES = new Set(["13"]); // Región Metropolitana for now
 const OUTPUT_PATH = "src/data/prices.json";
 const META_PATH = "src/data/prices.meta.json";
-const TOPOLOGY_PATH = "src/data/rm.topo.json";
+const TOPOLOGY_PATH = "src/data/chile.topo.json";
 const STALE_AFTER_MS = 30 * 86_400_000; // keep in sync with STALE_AFTER_DAYS in src/lib/prices.ts
 
 // CNE codes per fuel: full service first, then self-service.

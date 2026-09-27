@@ -7,7 +7,8 @@ import { feature } from "topojson-client";
 import { z } from "astro/zod";
 import { PricesMetaSchema, StationSchema } from "../src/lib/schema.ts";
 
-const TOPOLOGY_PATH = "src/data/rm.topo.json";
+const TOPOLOGY_PATH = "src/data/chile.topo.json";
+const MOCK_REGION = "13"; // mock data only covers the Región Metropolitana
 const OUTPUT_PATH = "src/data/prices.json";
 const META_PATH = "src/data/prices.meta.json";
 const FETCHED_AT = Date.parse("2026-09-26T12:00:00-03:00");
@@ -46,7 +47,9 @@ function randomPointInside(comuna) {
 }
 
 const topology = JSON.parse(await readFile(TOPOLOGY_PATH, "utf8"));
-const comunas = feature(topology, topology.objects.comunas).features;
+const comunas = feature(topology, topology.objects.comunas).features.filter(
+  (f) => f.properties.region === MOCK_REGION,
+);
 
 const stations = comunas.flatMap((comuna) => {
   const { cut, name, provincia } = comuna.properties;
