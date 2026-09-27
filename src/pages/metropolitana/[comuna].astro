@@ -1,0 +1,204 @@
+---
+import type { GetStaticPaths } from "astro";
+import FuelTabs from "../../components/FuelTabs.astro";
+import Layout from "../../layouts/Layout.astro";
+import { comunas, projectComuna } from "../../lib/geo";
+import { FUEL_LABELS, formatClp } from "../../lib/prices";
+import { getRegionData } from "../../lib/region";
+import { FUELS } from "../../lib/fuels";
+import { slugify } from "../../lib/slug";
+
+export const getStaticPaths = (() => {
+  const slugs = new Set<string>();
+  return comunas.map((comuna) => {
+    const slug = slugify(comuna.name);
+    if (slugs.has(slug)) throw new Error(`Duplicate comuna slug "${slug}"`);
+    slugs.add(slug);
+    return { params: { comuna: slug }, props: { comuna } };
+  });
+}) satisfies GetStaticPaths;
+
+const { comuna } = Astro.props;
+const selectedFuel = "95";
+const { stats, medians, classFor, stationsIn } = await getRegionData();
+
+const stations = stationsIn(comuna.cut);
+const comunaStats = stats.get(comuna.cut) ?? {};
+const shape = projectComuna(
+  comuna.cut,
+  400,
+  stations.map((s) => [s.lng, s.lat]),
+);
+
+const reportedAt = new Intl.DateTimeFormat("es-CL", {
+  day: "numeric",
+  month: "short",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZone: "America/Santiago",
+});
+
+const wazeUrl = (lat: number, lng: number) => `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
+const mapsUrl = (lat: number, lng: number) =>
+  `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+---
+
+<Layout
+  title={`Bencina en ${comuna.name}: precios por estación | Radar Bencina`}
+  description={`Precios de 93, 95, 97 y diésel en las estaciones de ${comuna.name}, Región Metropolitana.`}
+>
+  <nav aria-label="Ruta">
+    <a href="/" class="text-sm text-dust underline-offset-2 hover:text-paint hover:underline">
+      Región Metropolitana
+    </a>
+  </nav>
+  <h1 class="mt-1 font-display text-4xl font-bold sm:text-5xl">{comuna.name}</h1>
+
+  <div data-fuel={selectedFuel} class="mt-6 space-y-6">
+    <FuelTabs selected={selectedFuel} />
+
+    <div class="grid gap-8 lg:grid-cols-[minmax(0,22rem)_1fr] lg:items-start">
+      <div class="space-y-4">
+        <div style="view-transition-name: comuna-shape" class="mx-auto max-w-xs lg:max-w-none">
+          <svg
+            viewBox={shape.viewBox}
+            class="h-auto w-full"
+            role="img"
+            aria-label={`Silueta de ${comuna.name} con sus ${stations.length} estaciones`}
+          >
+            <path
+              d={shape.d}
+              class="silhouette"
+              data-class={classFor(comuna.cut, selectedFuel)}
+              {...Object.fromEntries(
+                FUELS.map((f) => [`data-class-${f}`, classFor(comuna.cut, f)]),
+              )}
+            />
+            {shape.points.map(([x, y]) => (
+              <circle cx={x} cy={y} r="6" class="station-dot" />
+            ))}
+          </svg>
+        </div>
+
+        {FUELS.map((fuel) => {
+          const s = comunaStats[fuel];
+          const reference = medians[fuel];
+          const diff = s && reference !== undefined ? s.median - reference : undefined;
+          return (
+            <dl data-for-fuel={fuel} class="grid grid-cols-2 gap-4">
+              {s ? (
+                <>
+                  <div>
+                    <dt class="text-sm text-dust">Mediana {FUEL_LABELS[fuel]}</dt>
+                    <dd class="font-display text-3xl font-bold tabular-nums">
+                      {formatClp(s.median)}
+                    </dd>
+                    {diff !== undefined && (
+                      <dd class="text-sm text-dust">
+                        {diff === 0
+                          ? "Igual a la región"
+                          : `${formatClp(Math.abs(diff))} ${diff < 0 ? "menos" : "más"} que la región`}
+                      </dd>
+                    )}
+                  </div>
+                  <div>
+                    <dt class="text-sm text-dust">Más barata</dt>
+                    <dd class="font-display text-3xl font-bold text-led tabular-nums">
+                      {formatClp(s.min)}
+                    </dd>
+                    <dd class="text-sm text-dust">{s.count} estaciones informan</dd>
+                  </div>
+                </>
+              ) : (
+                <div class="col-span-2 text-dust">
+                  Ninguna estación de {comuna.name} informa {FUEL_LABELS[fuel]}.
+                </div>
+              )}
+            </dl>
+          );
+        })}
+      </div>
+
+      <section aria-labelledby="stations-title">
+        <h2 id="stations-title" class="font-display text-lg font-semibold text-dust">
+          Estaciones de más barata a más cara
+        </h2>
+
+        {FUELS.map((fuel) => {
+          const selling = stations
+            .filter((s) => s.prices[fuel] !== undefined)
+            .sort((a, b) => a.prices[fuel]! - b.prices[fuel]!);
+          const missing = stations.length - selling.length;
+          return (
+            <div data-for-fuel={fuel}>
+              <ol class="mt-2 divide-y divide-lane">
+                {selling.map((station) => {
+                  return (
+                    <li class="flex gap-4 py-4">
+                      <span class="w-24 shrink-0 font-display text-4xl leading-none font-bold text-led tabular-nums">
+                        {formatClp(station.prices[fuel]!).slice(1)}
+                      </span>
+                      <div class="min-w-0 space-y-1">
+                        <p class="font-semibold">{station.brand}</p>
+                        <p class="text-dust">{station.address}</p>
+                        <p class="text-sm text-dust">
+                          Precio informado el {reportedAt.format(station.updatedAt)}
+                        </p>
+                        <p class="flex flex-wrap gap-2 pt-1">
+                          <a
+                            href={wazeUrl(station.lat, station.lng)}
+                            target="_blank"
+                            rel="noopener"
+                            class="rounded-md border border-lane px-3 py-1 text-sm hover:border-paint"
+                          >
+                            Abrir en Waze
+                          </a>
+                          <a
+                            href={mapsUrl(station.lat, station.lng)}
+                            target="_blank"
+                            rel="noopener"
+                            class="rounded-md border border-lane px-3 py-1 text-sm hover:border-paint"
+                          >
+                            Abrir en Google Maps
+                          </a>
+                        </p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+              {missing > 0 && (
+                <p class="pt-2 text-sm text-dust">
+                  {missing === 1
+                    ? `1 estación no informa ${FUEL_LABELS[fuel]}.`
+                    : `${missing} estaciones no informan ${FUEL_LABELS[fuel]}.`}
+                </p>
+              )}
+            </div>
+          );
+        })}
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import "../../scripts/fuel-selector";
+</script>
+
+<style>
+  .silhouette {
+    fill: var(--fill);
+    stroke: var(--color-paint);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .station-dot {
+    fill: var(--color-led);
+    stroke: var(--color-asphalt);
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+  }
+</style>

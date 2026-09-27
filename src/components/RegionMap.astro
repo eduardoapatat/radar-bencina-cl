@@ -2,9 +2,11 @@
 // RM choropleth rendered entirely at build time: no client JS needed to see it.
 // Everything that depends on the fuel is rendered for all four fuels; the page's
 // `data-fuel` root attribute decides what shows (see global.css), and the fuel
-// selector script only swaps each comuna's `data-class`.
+// selector script only swaps each comuna's `data-class`. Each comuna is a link
+// to its page, so the map also works with the keyboard and without JS.
 import { CLASS_LABELS, FUEL_LABELS, PRICE_CLASSES, formatClp } from "../lib/prices";
 import { getRegionData } from "../lib/region";
+import { comunaHref } from "../lib/slug";
 import { FUELS, type Fuel } from "../lib/schema";
 
 interface Props {
@@ -47,19 +49,26 @@ const perFuelAttrs = (cut: string) =>
     {shapes.map((shape) => {
       const fuelStats = stats.get(shape.cut)?.[fuel];
       return (
-        <path
-          d={shape.d}
-          class="comuna"
+        <a
+          href={comunaHref(shape.name)}
+          data-comuna-link
+          data-cut={shape.cut}
           data-name={shape.name}
-          data-class={classFor(shape.cut, fuel)}
-          {...perFuelAttrs(shape.cut)}
+          aria-label={`Ver estaciones de ${shape.name}`}
         >
-          <title>
+          <path
+            d={shape.d}
+            class="comuna"
+            data-class={classFor(shape.cut, fuel)}
+            {...perFuelAttrs(shape.cut)}
+          >
+            <title>
               {fuelStats
                 ? `${shape.name}: mediana ${formatClp(fuelStats.median)}`
                 : `${shape.name}: sin datos`}
             </title>
-        </path>
+          </path>
+        </a>
       );
     })}
 
@@ -121,6 +130,16 @@ const perFuelAttrs = (cut: string) =>
     stroke-linejoin: round;
     vector-effect: non-scaling-stroke;
     transition: fill 250ms ease-out;
+  }
+
+  /* Browsers draw focus on SVG links as a bounding rectangle. The shaped highlight
+     (region-map.ts shows it on focus) replaces it; the stroke below is the no-JS fallback. */
+  [data-comuna-link]:focus {
+    outline: none;
+  }
+  [data-comuna-link]:focus-visible .comuna {
+    stroke: var(--color-paint);
+    stroke-width: 2;
   }
 
   .highlight-outline {

@@ -1,0 +1,24 @@
+---
+// Compact fuel selector for pages without the price board.
+import { FUEL_LABELS } from "../lib/prices";
+import { FUELS, type Fuel } from "../lib/fuels";
+
+interface Props {
+  selected: Fuel;
+}
+
+const { selected } = Astro.props;
+---
+
+<div class="flex gap-2" role="group" aria-label="Combustible">
+  {FUELS.map((fuel) => (
+    <button
+      type="button"
+      class="min-w-14 rounded-md border-2 border-lane px-3 py-1.5 font-display text-lg font-bold text-dust hover:text-paint aria-pressed:border-sign aria-pressed:bg-sign aria-pressed:text-paint"
+      data-fuel-option={fuel}
+      aria-pressed={fuel === selected ? "true" : "false"}
+    >
+      {FUEL_LABELS[fuel]}
+    </button>
+  ))}
+</div>

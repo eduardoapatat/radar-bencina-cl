@@ -43,3 +43,19 @@ export function projectComunas(width: number) {
 
   return { width, height: Math.ceil(bottom), shapes };
 }
+
+// Projects a single comuna to fill a `size` × `size` box, plus any points inside it.
+export function projectComuna(cut: string, size: number, points: [number, number][] = []) {
+  const comuna = collection.features.find((f) => f.properties.cut === cut);
+  if (!comuna) throw new Error(`Unknown comuna ${cut}`);
+
+  const projection = geoMercator().fitSize([size, size], comuna);
+  const path = geoPath(projection).digits(1);
+  const [[left, top], [right, bottom]] = path.bounds(comuna);
+
+  return {
+    viewBox: [left, top, right - left, bottom - top].map((n) => Math.round(n)).join(" "),
+    d: path(comuna) ?? "",
+    points: points.map((p) => projection(p) ?? [0, 0]),
+  };
+}

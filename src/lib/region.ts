@@ -42,7 +42,11 @@ async function load() {
     return best && { price: best.prices[fuel]!, comuna: nameByCut.get(best.comunaCut) };
   }
 
-  return { stations, stats, medians, map, classFor, ranking, cheapestStation };
+  function stationsIn(cut: string) {
+    return stations.filter((s) => s.comunaCut === cut);
+  }
+
+  return { stations, stats, medians, map, classFor, ranking, cheapestStation, stationsIn };
 }
 
 let cache: ReturnType<typeof load> | undefined;

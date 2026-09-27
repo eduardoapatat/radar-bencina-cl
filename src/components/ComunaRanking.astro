@@ -3,6 +3,7 @@
 // Gives the same information as the colors without relying on them.
 import { CLASS_LABELS, FUEL_LABELS, formatClp } from "../lib/prices";
 import { getRegionData } from "../lib/region";
+import { comunaHref } from "../lib/slug";
 import { FUELS } from "../lib/schema";
 
 const TOP = 10;
@@ -24,7 +25,13 @@ const { ranking } = await getRegionData();
           data-class={row.priceClass}
           title={row.priceClass === "none" ? undefined : CLASS_LABELS[row.priceClass]}
         />
-        <span class="flex-1">{row.name}</span>
+        <a
+          href={comunaHref(row.name)}
+          data-cut={row.cut}
+          class="flex-1 underline-offset-2 hover:underline"
+        >
+          {row.name}
+        </a>
         <span class="font-display text-lg font-semibold tabular-nums">{formatClp(row.median)}</span>
       </li>
     );
