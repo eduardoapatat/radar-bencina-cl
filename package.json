@@ -22,12 +22,15 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "data:boundaries": "node scripts/prepare-boundaries.mjs"
+    "data:boundaries": "node scripts/prepare-boundaries.mjs",
+    "data:mock": "node scripts/mock-prices.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.5",
-    "tailwindcss": "^4.3.3"
+    "d3-geo": "^3.1.1",
+    "tailwindcss": "^4.3.3",
+    "topojson-client": "^3.1.0"
   },
   "allowScripts": {
     "esbuild": true
@@ -35,6 +38,8 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@eslint/js": "^10.0.1",
+    "@types/d3-geo": "^3.1.1",
+    "@types/topojson-client": "^3.1.5",
     "eslint": "^10.11.0",
     "eslint-plugin-astro": "^3.2.1",
     "eslint-plugin-jsx-a11y-x": "^0.2.0",

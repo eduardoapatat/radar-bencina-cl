@@ -1,0 +1,5634 @@
+[
+  {
+    "id": "mock-13129-1",
+    "brand": "Aramco",
+    "address": "Av. Central 1222, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.488562,
+    "lng": -70.621661,
+    "prices": {
+      "93": 1225,
+      "95": 1269,
+      "97": 1348,
+      "diesel": 970
+    },
+    "updatedAt": "2026-09-26T07:40:27.008Z"
+  },
+  {
+    "id": "mock-13129-2",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 7599, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.502581,
+    "lng": -70.636434,
+    "prices": {
+      "93": 1238,
+      "95": 1304,
+      "97": 1308,
+      "diesel": 982
+    },
+    "updatedAt": "2026-09-23T12:05:05.898Z"
+  },
+  {
+    "id": "mock-13129-3",
+    "brand": "Copec",
+    "address": "Av. Central 7679, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.505359,
+    "lng": -70.633397,
+    "prices": {
+      "93": 1238,
+      "95": 1272,
+      "97": 1350,
+      "diesel": 1014
+    },
+    "updatedAt": "2026-09-26T06:21:50.639Z"
+  },
+  {
+    "id": "mock-13129-4",
+    "brand": "Copec",
+    "address": "Av. Las Torres 8244, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.499466,
+    "lng": -70.619183,
+    "prices": {
+      "93": 1266,
+      "95": 1292,
+      "97": 1326
+    },
+    "updatedAt": "2026-09-22T15:40:09.928Z"
+  },
+  {
+    "id": "mock-13129-5",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 7624, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.494698,
+    "lng": -70.633524,
+    "prices": {
+      "93": 1227,
+      "95": 1307,
+      "97": 1351,
+      "diesel": 998
+    },
+    "updatedAt": "2026-09-24T18:07:55.516Z"
+  },
+  {
+    "id": "mock-13129-6",
+    "brand": "Independiente",
+    "address": "Av. Principal 1770, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.48589,
+    "lng": -70.624266,
+    "prices": {
+      "93": 1266,
+      "95": 1276,
+      "diesel": 972
+    },
+    "updatedAt": "2026-09-22T19:35:10.026Z"
+  },
+  {
+    "id": "mock-13129-7",
+    "brand": "Copec",
+    "address": "Camino Real 5509, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.490011,
+    "lng": -70.627064,
+    "prices": {
+      "93": 1232,
+      "95": 1305,
+      "97": 1309,
+      "diesel": 999
+    },
+    "updatedAt": "2026-09-23T01:56:08.586Z"
+  },
+  {
+    "id": "mock-13129-8",
+    "brand": "Shell",
+    "address": "Av. Las Torres 8353, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.496228,
+    "lng": -70.627349,
+    "prices": {
+      "93": 1218,
+      "95": 1270,
+      "97": 1354,
+      "diesel": 977
+    },
+    "updatedAt": "2026-09-26T04:44:57.547Z"
+  },
+  {
+    "id": "mock-13129-9",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 6030, San Joaquín",
+    "comunaCut": "13129",
+    "lat": -33.503036,
+    "lng": -70.63505,
+    "prices": {
+      "93": 1253,
+      "95": 1301,
+      "97": 1338,
+      "diesel": 970
+    },
+    "updatedAt": "2026-09-24T09:34:31.871Z"
+  },
+  {
+    "id": "mock-13130-1",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 7441, San Miguel",
+    "comunaCut": "13130",
+    "lat": -33.511885,
+    "lng": -70.660128,
+    "prices": {
+      "93": 1256,
+      "95": 1269,
+      "diesel": 979
+    },
+    "updatedAt": "2026-09-22T23:15:34.522Z"
+  },
+  {
+    "id": "mock-13130-2",
+    "brand": "Copec",
+    "address": "Av. Las Torres 9747, San Miguel",
+    "comunaCut": "13130",
+    "lat": -33.508267,
+    "lng": -70.658628,
+    "prices": {
+      "93": 1234,
+      "95": 1262
+    },
+    "updatedAt": "2026-09-22T18:56:21.261Z"
+  },
+  {
+    "id": "mock-13130-3",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 3657, San Miguel",
+    "comunaCut": "13130",
+    "lat": -33.511717,
+    "lng": -70.667457,
+    "prices": {
+      "93": 1220,
+      "95": 1266,
+      "97": 1305,
+      "diesel": 963
+    },
+    "updatedAt": "2026-09-24T05:54:21.642Z"
+  },
+  {
+    "id": "mock-13130-4",
+    "brand": "Shell",
+    "address": "Camino Real 4263, San Miguel",
+    "comunaCut": "13130",
+    "lat": -33.49433,
+    "lng": -70.653431,
+    "prices": {
+      "93": 1244,
+      "95": 1294,
+      "97": 1321,
+      "diesel": 998
+    },
+    "updatedAt": "2026-09-26T01:16:46.622Z"
+  },
+  {
+    "id": "mock-13130-5",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 3182, San Miguel",
+    "comunaCut": "13130",
+    "lat": -33.511648,
+    "lng": -70.666945,
+    "prices": {
+      "93": 1228,
+      "95": 1254,
+      "97": 1324,
+      "diesel": 971
+    },
+    "updatedAt": "2026-09-25T12:56:32.076Z"
+  },
+  {
+    "id": "mock-13130-6",
+    "brand": "Independiente",
+    "address": "Camino Real 3134, San Miguel",
+    "comunaCut": "13130",
+    "lat": -33.50956,
+    "lng": -70.667496,
+    "prices": {
+      "93": 1254,
+      "95": 1297,
+      "97": 1336,
+      "diesel": 975
+    },
+    "updatedAt": "2026-09-25T00:31:17.628Z"
+  },
+  {
+    "id": "mock-13130-7",
+    "brand": "Shell",
+    "address": "Av. Principal 1375, San Miguel",
+    "comunaCut": "13130",
+    "lat": -33.496878,
+    "lng": -70.656302,
+    "prices": {
+      "93": 1250,
+      "95": 1288,
+      "97": 1349
+    },
+    "updatedAt": "2026-09-26T04:37:33.737Z"
+  },
+  {
+    "id": "mock-13131-1",
+    "brand": "Aramco",
+    "address": "Camino Real 8470, San Ramón",
+    "comunaCut": "13131",
+    "lat": -33.555754,
+    "lng": -70.644707,
+    "prices": {
+      "93": 1247,
+      "95": 1261,
+      "97": 1312,
+      "diesel": 985
+    },
+    "updatedAt": "2026-09-24T15:16:31.425Z"
+  },
+  {
+    "id": "mock-13131-2",
+    "brand": "Aramco",
+    "address": "Av. Principal 7042, San Ramón",
+    "comunaCut": "13131",
+    "lat": -33.540157,
+    "lng": -70.645385,
+    "prices": {
+      "93": 1225,
+      "95": 1295,
+      "97": 1348,
+      "diesel": 983
+    },
+    "updatedAt": "2026-09-23T15:42:47.116Z"
+  },
+  {
+    "id": "mock-13131-3",
+    "brand": "Independiente",
+    "address": "Av. Central 3868, San Ramón",
+    "comunaCut": "13131",
+    "lat": -33.537602,
+    "lng": -70.638248,
+    "prices": {
+      "93": 1224,
+      "95": 1307,
+      "97": 1333,
+      "diesel": 997
+    },
+    "updatedAt": "2026-09-23T18:20:24.986Z"
+  },
+  {
+    "id": "mock-13131-4",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 9382, San Ramón",
+    "comunaCut": "13131",
+    "lat": -33.522124,
+    "lng": -70.63711,
+    "prices": {
+      "93": 1218,
+      "95": 1308,
+      "97": 1316,
+      "diesel": 1014
+    },
+    "updatedAt": "2026-09-24T06:47:37.116Z"
+  },
+  {
+    "id": "mock-13131-5",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 7664, San Ramón",
+    "comunaCut": "13131",
+    "lat": -33.529873,
+    "lng": -70.646416,
+    "prices": {
+      "93": 1224,
+      "95": 1275,
+      "97": 1329,
+      "diesel": 984
+    },
+    "updatedAt": "2026-09-25T20:43:06.773Z"
+  },
+  {
+    "id": "mock-13108-1",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 5051, Independencia",
+    "comunaCut": "13108",
+    "lat": -33.405207,
+    "lng": -70.677738,
+    "prices": {
+      "93": 1263,
+      "95": 1308,
+      "97": 1374,
+      "diesel": 1007
+    },
+    "updatedAt": "2026-09-22T18:17:27.482Z"
+  },
+  {
+    "id": "mock-13108-2",
+    "brand": "Copec",
+    "address": "Av. Las Torres 5679, Independencia",
+    "comunaCut": "13108",
+    "lat": -33.431081,
+    "lng": -70.651909,
+    "prices": {
+      "93": 1244,
+      "95": 1304,
+      "97": 1332,
+      "diesel": 992
+    },
+    "updatedAt": "2026-09-24T09:35:03.960Z"
+  },
+  {
+    "id": "mock-13108-3",
+    "brand": "Shell",
+    "address": "Av. Las Torres 2848, Independencia",
+    "comunaCut": "13108",
+    "lat": -33.412533,
+    "lng": -70.669724,
+    "prices": {
+      "93": 1246,
+      "95": 1284,
+      "97": 1352,
+      "diesel": 1027
+    },
+    "updatedAt": "2026-09-25T01:30:42.721Z"
+  },
+  {
+    "id": "mock-13108-4",
+    "brand": "Aramco",
+    "address": "Camino Real 2874, Independencia",
+    "comunaCut": "13108",
+    "lat": -33.419465,
+    "lng": -70.670015,
+    "prices": {
+      "93": 1261,
+      "95": 1286,
+      "97": 1344
+    },
+    "updatedAt": "2026-09-26T05:39:15.050Z"
+  },
+  {
+    "id": "mock-13108-5",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 4878, Independencia",
+    "comunaCut": "13108",
+    "lat": -33.406238,
+    "lng": -70.661219,
+    "prices": {
+      "93": 1239,
+      "95": 1308,
+      "97": 1336
+    },
+    "updatedAt": "2026-09-24T19:22:44.723Z"
+  },
+  {
+    "id": "mock-13108-6",
+    "brand": "Copec",
+    "address": "Av. Principal 6785, Independencia",
+    "comunaCut": "13108",
+    "lat": -33.405727,
+    "lng": -70.679304,
+    "prices": {
+      "93": 1274,
+      "95": 1321,
+      "97": 1368,
+      "diesel": 994
+    },
+    "updatedAt": "2026-09-25T18:35:37.590Z"
+  },
+  {
+    "id": "mock-13108-7",
+    "brand": "Shell",
+    "address": "Av. Central 2464, Independencia",
+    "comunaCut": "13108",
+    "lat": -33.423044,
+    "lng": -70.652658,
+    "prices": {
+      "93": 1266,
+      "95": 1302,
+      "97": 1329,
+      "diesel": 1006
+    },
+    "updatedAt": "2026-09-24T23:38:36.539Z"
+  },
+  {
+    "id": "mock-13109-1",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 4873, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.542885,
+    "lng": -70.659497,
+    "prices": {
+      "93": 1249,
+      "95": 1309,
+      "97": 1339,
+      "diesel": 1026
+    },
+    "updatedAt": "2026-09-23T02:25:17.628Z"
+  },
+  {
+    "id": "mock-13109-2",
+    "brand": "Aramco",
+    "address": "Camino Real 8428, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.520018,
+    "lng": -70.65627,
+    "prices": {
+      "93": 1264,
+      "95": 1284,
+      "97": 1336,
+      "diesel": 994
+    },
+    "updatedAt": "2026-09-25T23:55:54.971Z"
+  },
+  {
+    "id": "mock-13109-3",
+    "brand": "Copec",
+    "address": "Camino Real 2584, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.521952,
+    "lng": -70.654831,
+    "prices": {
+      "93": 1243,
+      "95": 1270,
+      "97": 1338,
+      "diesel": 1003
+    },
+    "updatedAt": "2026-09-23T13:19:04.330Z"
+  },
+  {
+    "id": "mock-13109-4",
+    "brand": "Independiente",
+    "address": "Av. Principal 9354, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.538,
+    "lng": -70.650675,
+    "prices": {
+      "93": 1246,
+      "95": 1270,
+      "diesel": 982
+    },
+    "updatedAt": "2026-09-23T16:16:18.397Z"
+  },
+  {
+    "id": "mock-13109-5",
+    "brand": "Aramco",
+    "address": "Camino Real 8440, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.520473,
+    "lng": -70.656314,
+    "prices": {
+      "93": 1232,
+      "95": 1317,
+      "97": 1319,
+      "diesel": 1015
+    },
+    "updatedAt": "2026-09-22T18:47:09.183Z"
+  },
+  {
+    "id": "mock-13109-6",
+    "brand": "Independiente",
+    "address": "Av. Central 5207, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.520147,
+    "lng": -70.668591,
+    "prices": {
+      "93": 1248,
+      "95": 1312,
+      "97": 1336
+    },
+    "updatedAt": "2026-09-24T00:58:11.237Z"
+  },
+  {
+    "id": "mock-13109-7",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 7279, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.543818,
+    "lng": -70.670106,
+    "prices": {
+      "93": 1228,
+      "95": 1288,
+      "diesel": 988
+    },
+    "updatedAt": "2026-09-23T02:02:02.105Z"
+  },
+  {
+    "id": "mock-13109-8",
+    "brand": "Shell",
+    "address": "Av. Central 9071, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.534376,
+    "lng": -70.67323,
+    "prices": {
+      "93": 1264,
+      "95": 1297,
+      "97": 1334,
+      "diesel": 1026
+    },
+    "updatedAt": "2026-09-25T17:09:24.318Z"
+  },
+  {
+    "id": "mock-13109-9",
+    "brand": "Independiente",
+    "address": "Camino Real 4043, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.538276,
+    "lng": -70.673492,
+    "prices": {
+      "93": 1237,
+      "95": 1292,
+      "97": 1335,
+      "diesel": 999
+    },
+    "updatedAt": "2026-09-25T14:58:39.508Z"
+  },
+  {
+    "id": "mock-13109-10",
+    "brand": "Aramco",
+    "address": "Av. Central 865, La Cisterna",
+    "comunaCut": "13109",
+    "lat": -33.541735,
+    "lng": -70.670753,
+    "prices": {
+      "93": 1259,
+      "95": 1304,
+      "97": 1364,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-25T23:44:42.223Z"
+  },
+  {
+    "id": "mock-13122-1",
+    "brand": "Shell",
+    "address": "Av. Las Torres 6450, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.502068,
+    "lng": -70.525597,
+    "prices": {
+      "93": 1241,
+      "95": 1242,
+      "diesel": 983
+    },
+    "updatedAt": "2026-09-24T23:12:49.005Z"
+  },
+  {
+    "id": "mock-13122-2",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 9415, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.472329,
+    "lng": -70.517162,
+    "prices": {
+      "93": 1233,
+      "95": 1258,
+      "97": 1312,
+      "diesel": 968
+    },
+    "updatedAt": "2026-09-24T01:12:45.983Z"
+  },
+  {
+    "id": "mock-13122-3",
+    "brand": "Independiente",
+    "address": "Av. Central 6710, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.489317,
+    "lng": -70.47115,
+    "prices": {
+      "93": 1233,
+      "95": 1272,
+      "97": 1287,
+      "diesel": 956
+    },
+    "updatedAt": "2026-09-23T23:55:03.389Z"
+  },
+  {
+    "id": "mock-13122-4",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 2836, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.49089,
+    "lng": -70.579847,
+    "prices": {
+      "93": 1212,
+      "95": 1239,
+      "97": 1328,
+      "diesel": 980
+    },
+    "updatedAt": "2026-09-24T22:13:30.096Z"
+  },
+  {
+    "id": "mock-13122-5",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 9441, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.485298,
+    "lng": -70.533218,
+    "prices": {
+      "93": 1243,
+      "95": 1273,
+      "97": 1290,
+      "diesel": 971
+    },
+    "updatedAt": "2026-09-23T19:52:03.414Z"
+  },
+  {
+    "id": "mock-13122-6",
+    "brand": "Aramco",
+    "address": "Av. Central 1640, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.488078,
+    "lng": -70.445878,
+    "prices": {
+      "93": 1244,
+      "95": 1247,
+      "97": 1300,
+      "diesel": 973
+    },
+    "updatedAt": "2026-09-22T21:43:05.196Z"
+  },
+  {
+    "id": "mock-13122-7",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 9427, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.480963,
+    "lng": -70.576637,
+    "prices": {
+      "93": 1210,
+      "95": 1286,
+      "97": 1293,
+      "diesel": 979
+    },
+    "updatedAt": "2026-09-25T05:00:38.518Z"
+  },
+  {
+    "id": "mock-13122-8",
+    "brand": "Copec",
+    "address": "Av. Las Torres 9420, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.510182,
+    "lng": -70.555717,
+    "prices": {
+      "93": 1217,
+      "95": 1253,
+      "97": 1292,
+      "diesel": 960
+    },
+    "updatedAt": "2026-09-23T14:55:27.840Z"
+  },
+  {
+    "id": "mock-13122-9",
+    "brand": "Copec",
+    "address": "Av. Central 4226, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.491857,
+    "lng": -70.487336,
+    "prices": {
+      "93": 1231,
+      "95": 1275,
+      "97": 1296,
+      "diesel": 993
+    },
+    "updatedAt": "2026-09-24T02:17:55.911Z"
+  },
+  {
+    "id": "mock-13122-10",
+    "brand": "Aramco",
+    "address": "Av. Central 2432, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.481211,
+    "lng": -70.553307,
+    "prices": {
+      "93": 1232,
+      "95": 1250,
+      "97": 1317
+    },
+    "updatedAt": "2026-09-22T18:34:46.370Z"
+  },
+  {
+    "id": "mock-13122-11",
+    "brand": "Copec",
+    "address": "Av. Principal 6696, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.492938,
+    "lng": -70.556455,
+    "prices": {
+      "93": 1229,
+      "95": 1246
+    },
+    "updatedAt": "2026-09-22T23:46:50.317Z"
+  },
+  {
+    "id": "mock-13122-12",
+    "brand": "Copec",
+    "address": "Av. Central 6855, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.472055,
+    "lng": -70.517775,
+    "prices": {
+      "93": 1217,
+      "95": 1277,
+      "97": 1319,
+      "diesel": 976
+    },
+    "updatedAt": "2026-09-25T15:05:51.170Z"
+  },
+  {
+    "id": "mock-13122-13",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 9686, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.480709,
+    "lng": -70.497435,
+    "prices": {
+      "93": 1230,
+      "95": 1262,
+      "97": 1328,
+      "diesel": 991
+    },
+    "updatedAt": "2026-09-24T05:18:33.397Z"
+  },
+  {
+    "id": "mock-13122-14",
+    "brand": "Aramco",
+    "address": "Av. Central 3042, Peñalolén",
+    "comunaCut": "13122",
+    "lat": -33.505132,
+    "lng": -70.586673,
+    "prices": {
+      "93": 1218,
+      "95": 1280,
+      "97": 1319,
+      "diesel": 993
+    },
+    "updatedAt": "2026-09-25T13:17:50.861Z"
+  },
+  {
+    "id": "mock-13123-1",
+    "brand": "Shell",
+    "address": "Av. Las Torres 1777, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.439868,
+    "lng": -70.590569,
+    "prices": {
+      "93": 1292,
+      "95": 1302,
+      "97": 1384,
+      "diesel": 1053
+    },
+    "updatedAt": "2026-09-26T05:12:45.592Z"
+  },
+  {
+    "id": "mock-13123-2",
+    "brand": "Shell",
+    "address": "Av. Central 1463, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.441893,
+    "lng": -70.594356,
+    "prices": {
+      "93": 1257,
+      "95": 1298,
+      "97": 1374,
+      "diesel": 1009
+    },
+    "updatedAt": "2026-09-25T00:03:29.527Z"
+  },
+  {
+    "id": "mock-13123-3",
+    "brand": "Independiente",
+    "address": "Av. Principal 3755, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.425968,
+    "lng": -70.614219,
+    "prices": {
+      "93": 1265,
+      "95": 1329,
+      "97": 1357,
+      "diesel": 1007
+    },
+    "updatedAt": "2026-09-25T23:37:17.650Z"
+  },
+  {
+    "id": "mock-13123-4",
+    "brand": "Aramco",
+    "address": "Camino Real 2724, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.43639,
+    "lng": -70.595597,
+    "prices": {
+      "93": 1283,
+      "95": 1339,
+      "97": 1394,
+      "diesel": 1025
+    },
+    "updatedAt": "2026-09-23T09:20:11.730Z"
+  },
+  {
+    "id": "mock-13123-5",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 388, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.440845,
+    "lng": -70.604327,
+    "prices": {
+      "93": 1259,
+      "95": 1345,
+      "97": 1366,
+      "diesel": 1047
+    },
+    "updatedAt": "2026-09-22T22:52:59.382Z"
+  },
+  {
+    "id": "mock-13123-6",
+    "brand": "Aramco",
+    "address": "Camino Real 8977, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.444216,
+    "lng": -70.612843,
+    "prices": {
+      "93": 1304,
+      "95": 1298,
+      "97": 1360,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-24T01:25:45.388Z"
+  },
+  {
+    "id": "mock-13123-7",
+    "brand": "Copec",
+    "address": "Av. Central 7147, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.436328,
+    "lng": -70.609153,
+    "prices": {
+      "93": 1293,
+      "95": 1341
+    },
+    "updatedAt": "2026-09-25T20:30:54.569Z"
+  },
+  {
+    "id": "mock-13123-8",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 9155, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.441067,
+    "lng": -70.605722,
+    "prices": {
+      "93": 1283,
+      "95": 1327,
+      "diesel": 1052
+    },
+    "updatedAt": "2026-09-25T00:57:29.576Z"
+  },
+  {
+    "id": "mock-13123-9",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 9727, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.420524,
+    "lng": -70.5996,
+    "prices": {
+      "93": 1293,
+      "95": 1322,
+      "97": 1381,
+      "diesel": 1044
+    },
+    "updatedAt": "2026-09-26T03:29:21.966Z"
+  },
+  {
+    "id": "mock-13123-10",
+    "brand": "Independiente",
+    "address": "Camino Real 3163, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.440608,
+    "lng": -70.605483,
+    "prices": {
+      "93": 1298,
+      "95": 1343,
+      "97": 1368,
+      "diesel": 1017
+    },
+    "updatedAt": "2026-09-24T23:27:18.626Z"
+  },
+  {
+    "id": "mock-13123-11",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 787, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.441214,
+    "lng": -70.61435,
+    "prices": {
+      "93": 1304,
+      "95": 1317,
+      "97": 1366,
+      "diesel": 1007
+    },
+    "updatedAt": "2026-09-25T01:02:06.684Z"
+  },
+  {
+    "id": "mock-13123-12",
+    "brand": "Copec",
+    "address": "Av. Central 8353, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.430618,
+    "lng": -70.626039,
+    "prices": {
+      "93": 1296,
+      "95": 1329,
+      "97": 1350,
+      "diesel": 1033
+    },
+    "updatedAt": "2026-09-23T02:45:40.970Z"
+  },
+  {
+    "id": "mock-13123-13",
+    "brand": "Aramco",
+    "address": "Camino Real 4192, Providencia",
+    "comunaCut": "13123",
+    "lat": -33.433883,
+    "lng": -70.60383,
+    "prices": {
+      "93": 1285,
+      "95": 1297,
+      "97": 1356,
+      "diesel": 1007
+    },
+    "updatedAt": "2026-09-24T19:56:17.516Z"
+  },
+  {
+    "id": "mock-13113-1",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 2455, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.433281,
+    "lng": -70.550534,
+    "prices": {
+      "93": 1268,
+      "95": 1311,
+      "97": 1364,
+      "diesel": 979
+    },
+    "updatedAt": "2026-09-23T07:16:36.748Z"
+  },
+  {
+    "id": "mock-13113-2",
+    "brand": "Independiente",
+    "address": "Camino Real 7231, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.455145,
+    "lng": -70.560861,
+    "prices": {
+      "93": 1276,
+      "95": 1301,
+      "97": 1338,
+      "diesel": 1027
+    },
+    "updatedAt": "2026-09-23T19:58:39.707Z"
+  },
+  {
+    "id": "mock-13113-3",
+    "brand": "Aramco",
+    "address": "Camino Real 7603, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.45087,
+    "lng": -70.529877,
+    "prices": {
+      "93": 1252,
+      "95": 1276,
+      "97": 1324
+    },
+    "updatedAt": "2026-09-24T03:04:15.957Z"
+  },
+  {
+    "id": "mock-13113-4",
+    "brand": "Aramco",
+    "address": "Camino Real 4368, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.442786,
+    "lng": -70.536901,
+    "prices": {
+      "93": 1246,
+      "95": 1314,
+      "97": 1328,
+      "diesel": 1003
+    },
+    "updatedAt": "2026-09-25T21:01:41.699Z"
+  },
+  {
+    "id": "mock-13113-5",
+    "brand": "Independiente",
+    "address": "Av. Central 8836, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.454487,
+    "lng": -70.510443,
+    "prices": {
+      "93": 1265,
+      "95": 1296,
+      "97": 1345,
+      "diesel": 996
+    },
+    "updatedAt": "2026-09-23T12:49:11.751Z"
+  },
+  {
+    "id": "mock-13113-6",
+    "brand": "Aramco",
+    "address": "Av. Principal 1131, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.438312,
+    "lng": -70.534028,
+    "prices": {
+      "93": 1277,
+      "95": 1316,
+      "97": 1364
+    },
+    "updatedAt": "2026-09-25T07:24:09.353Z"
+  },
+  {
+    "id": "mock-13113-7",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 7816, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.458125,
+    "lng": -70.528699,
+    "prices": {
+      "93": 1276,
+      "95": 1302,
+      "97": 1324,
+      "diesel": 1015
+    },
+    "updatedAt": "2026-09-25T21:27:45.223Z"
+  },
+  {
+    "id": "mock-13113-8",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 3580, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.454545,
+    "lng": -70.547159,
+    "prices": {
+      "93": 1248,
+      "95": 1270,
+      "97": 1339,
+      "diesel": 991
+    },
+    "updatedAt": "2026-09-26T08:07:31.697Z"
+  },
+  {
+    "id": "mock-13113-9",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 2477, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.440797,
+    "lng": -70.513017,
+    "prices": {
+      "93": 1263,
+      "95": 1311,
+      "97": 1320,
+      "diesel": 999
+    },
+    "updatedAt": "2026-09-22T17:00:21.849Z"
+  },
+  {
+    "id": "mock-13113-10",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 2819, La Reina",
+    "comunaCut": "13113",
+    "lat": -33.446263,
+    "lng": -70.533558,
+    "prices": {
+      "93": 1232,
+      "95": 1273,
+      "diesel": 1002
+    },
+    "updatedAt": "2026-09-25T20:22:51.474Z"
+  },
+  {
+    "id": "mock-13403-1",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 6289, Calera de Tango",
+    "comunaCut": "13403",
+    "lat": -33.627684,
+    "lng": -70.835503,
+    "prices": {
+      "93": 1257,
+      "95": 1304,
+      "97": 1385,
+      "diesel": 1043
+    },
+    "updatedAt": "2026-09-22T16:01:34.854Z"
+  },
+  {
+    "id": "mock-13403-2",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 1917, Calera de Tango",
+    "comunaCut": "13403",
+    "lat": -33.607683,
+    "lng": -70.803191,
+    "prices": {
+      "93": 1259,
+      "95": 1336,
+      "97": 1360,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-24T14:18:16.398Z"
+  },
+  {
+    "id": "mock-13403-3",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 2683, Calera de Tango",
+    "comunaCut": "13403",
+    "lat": -33.594736,
+    "lng": -70.757282,
+    "prices": {
+      "93": 1273,
+      "95": 1306,
+      "97": 1366,
+      "diesel": 1032
+    },
+    "updatedAt": "2026-09-24T03:29:53.869Z"
+  },
+  {
+    "id": "mock-13403-4",
+    "brand": "Independiente",
+    "address": "Av. Principal 6678, Calera de Tango",
+    "comunaCut": "13403",
+    "lat": -33.648868,
+    "lng": -70.77596,
+    "prices": {
+      "93": 1293,
+      "95": 1333,
+      "97": 1346,
+      "diesel": 1018
+    },
+    "updatedAt": "2026-09-23T18:21:08.474Z"
+  },
+  {
+    "id": "mock-13403-5",
+    "brand": "Shell",
+    "address": "Camino Real 5669, Calera de Tango",
+    "comunaCut": "13403",
+    "lat": -33.638177,
+    "lng": -70.745984,
+    "prices": {
+      "93": 1260,
+      "95": 1296,
+      "97": 1356,
+      "diesel": 1037
+    },
+    "updatedAt": "2026-09-23T19:11:33.074Z"
+  },
+  {
+    "id": "mock-13403-6",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 3309, Calera de Tango",
+    "comunaCut": "13403",
+    "lat": -33.588994,
+    "lng": -70.749476,
+    "prices": {
+      "93": 1279,
+      "95": 1300,
+      "diesel": 1001
+    },
+    "updatedAt": "2026-09-26T07:44:47.167Z"
+  },
+  {
+    "id": "mock-13403-7",
+    "brand": "Aramco",
+    "address": "Av. Principal 2298, Calera de Tango",
+    "comunaCut": "13403",
+    "lat": -33.58128,
+    "lng": -70.76096,
+    "prices": {
+      "93": 1253,
+      "95": 1304,
+      "97": 1378,
+      "diesel": 1043
+    },
+    "updatedAt": "2026-09-23T00:10:37.957Z"
+  },
+  {
+    "id": "mock-13301-1",
+    "brand": "Independiente",
+    "address": "Camino Real 1430, Colina",
+    "comunaCut": "13301",
+    "lat": -33.145882,
+    "lng": -70.67049,
+    "prices": {
+      "93": 1221,
+      "95": 1266
+    },
+    "updatedAt": "2026-09-24T05:20:31.908Z"
+  },
+  {
+    "id": "mock-13301-2",
+    "brand": "Shell",
+    "address": "Camino Real 4883, Colina",
+    "comunaCut": "13301",
+    "lat": -33.063922,
+    "lng": -70.42567,
+    "prices": {
+      "93": 1240,
+      "95": 1262,
+      "97": 1317
+    },
+    "updatedAt": "2026-09-24T18:13:35.917Z"
+  },
+  {
+    "id": "mock-13301-3",
+    "brand": "Independiente",
+    "address": "Av. Central 1032, Colina",
+    "comunaCut": "13301",
+    "lat": -33.117341,
+    "lng": -70.705811,
+    "prices": {
+      "93": 1221,
+      "95": 1252,
+      "97": 1337,
+      "diesel": 997
+    },
+    "updatedAt": "2026-09-24T19:29:23.852Z"
+  },
+  {
+    "id": "mock-13101-1",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 4918, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.469931,
+    "lng": -70.678423,
+    "prices": {
+      "93": 1296,
+      "95": 1303,
+      "97": 1364,
+      "diesel": 1043
+    },
+    "updatedAt": "2026-09-24T06:14:09.323Z"
+  },
+  {
+    "id": "mock-13101-2",
+    "brand": "Shell",
+    "address": "Av. Las Torres 1286, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.473409,
+    "lng": -70.649469,
+    "prices": {
+      "93": 1262,
+      "95": 1346,
+      "diesel": 1045
+    },
+    "updatedAt": "2026-09-23T04:07:13.132Z"
+  },
+  {
+    "id": "mock-13101-3",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 4220, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.44885,
+    "lng": -70.664385,
+    "prices": {
+      "93": 1283,
+      "95": 1346,
+      "97": 1398
+    },
+    "updatedAt": "2026-09-24T23:02:02.125Z"
+  },
+  {
+    "id": "mock-13101-4",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 5415, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.46915,
+    "lng": -70.676047,
+    "prices": {
+      "93": 1306,
+      "95": 1311,
+      "97": 1359,
+      "diesel": 1011
+    },
+    "updatedAt": "2026-09-25T14:33:31.285Z"
+  },
+  {
+    "id": "mock-13101-5",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 6834, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.47019,
+    "lng": -70.675984,
+    "prices": {
+      "93": 1308,
+      "95": 1308,
+      "97": 1395,
+      "diesel": 1042
+    },
+    "updatedAt": "2026-09-26T10:34:27.703Z"
+  },
+  {
+    "id": "mock-13101-6",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 6569, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.466899,
+    "lng": -70.653988,
+    "prices": {
+      "93": 1282,
+      "95": 1341,
+      "97": 1371,
+      "diesel": 1032
+    },
+    "updatedAt": "2026-09-23T01:53:40.698Z"
+  },
+  {
+    "id": "mock-13101-7",
+    "brand": "Aramco",
+    "address": "Av. Central 7095, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.472417,
+    "lng": -70.642936,
+    "prices": {
+      "93": 1294,
+      "95": 1306,
+      "diesel": 1012
+    },
+    "updatedAt": "2026-09-22T18:40:42.324Z"
+  },
+  {
+    "id": "mock-13101-8",
+    "brand": "Independiente",
+    "address": "Camino Real 8429, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.464304,
+    "lng": -70.628209,
+    "prices": {
+      "93": 1299,
+      "95": 1325,
+      "97": 1367,
+      "diesel": 1033
+    },
+    "updatedAt": "2026-09-25T14:32:43.957Z"
+  },
+  {
+    "id": "mock-13101-9",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 7600, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.473404,
+    "lng": -70.654078,
+    "prices": {
+      "93": 1269,
+      "95": 1317,
+      "97": 1374,
+      "diesel": 1058
+    },
+    "updatedAt": "2026-09-25T07:04:01.066Z"
+  },
+  {
+    "id": "mock-13101-10",
+    "brand": "Aramco",
+    "address": "Camino Real 8961, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.468174,
+    "lng": -70.646374,
+    "prices": {
+      "93": 1291,
+      "95": 1328,
+      "diesel": 1031
+    },
+    "updatedAt": "2026-09-24T13:20:04.114Z"
+  },
+  {
+    "id": "mock-13101-11",
+    "brand": "Independiente",
+    "address": "Av. Principal 3053, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.445883,
+    "lng": -70.670456,
+    "prices": {
+      "93": 1301,
+      "95": 1322,
+      "97": 1395,
+      "diesel": 1042
+    },
+    "updatedAt": "2026-09-25T12:57:05.339Z"
+  },
+  {
+    "id": "mock-13101-12",
+    "brand": "Independiente",
+    "address": "Av. Central 6779, Santiago",
+    "comunaCut": "13101",
+    "lat": -33.441039,
+    "lng": -70.672371,
+    "prices": {
+      "93": 1270,
+      "95": 1321,
+      "97": 1378
+    },
+    "updatedAt": "2026-09-25T04:46:38.304Z"
+  },
+  {
+    "id": "mock-13302-1",
+    "brand": "Aramco",
+    "address": "Av. Central 5234, Lampa",
+    "comunaCut": "13302",
+    "lat": -33.323644,
+    "lng": -70.827789,
+    "prices": {
+      "93": 1229,
+      "95": 1278,
+      "97": 1317,
+      "diesel": 974
+    },
+    "updatedAt": "2026-09-24T15:45:42.972Z"
+  },
+  {
+    "id": "mock-13302-2",
+    "brand": "Copec",
+    "address": "Av. Principal 3795, Lampa",
+    "comunaCut": "13302",
+    "lat": -33.229377,
+    "lng": -70.912125,
+    "prices": {
+      "93": 1210,
+      "95": 1265,
+      "97": 1291,
+      "diesel": 982
+    },
+    "updatedAt": "2026-09-23T17:23:56.719Z"
+  },
+  {
+    "id": "mock-13302-3",
+    "brand": "Independiente",
+    "address": "Camino Real 8382, Lampa",
+    "comunaCut": "13302",
+    "lat": -33.254899,
+    "lng": -70.883924,
+    "prices": {
+      "93": 1206,
+      "95": 1253,
+      "97": 1322,
+      "diesel": 952
+    },
+    "updatedAt": "2026-09-25T04:05:47.956Z"
+  },
+  {
+    "id": "mock-13302-4",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 1567, Lampa",
+    "comunaCut": "13302",
+    "lat": -33.342801,
+    "lng": -70.908961,
+    "prices": {
+      "93": 1218,
+      "95": 1287,
+      "97": 1332,
+      "diesel": 967
+    },
+    "updatedAt": "2026-09-23T11:51:00.705Z"
+  },
+  {
+    "id": "mock-13202-1",
+    "brand": "Copec",
+    "address": "Av. Principal 5376, Pirque",
+    "comunaCut": "13202",
+    "lat": -33.728885,
+    "lng": -70.572179,
+    "prices": {
+      "93": 1253,
+      "95": 1290,
+      "97": 1362,
+      "diesel": 981
+    },
+    "updatedAt": "2026-09-26T11:46:50.928Z"
+  },
+  {
+    "id": "mock-13202-2",
+    "brand": "Shell",
+    "address": "Av. Central 9432, Pirque",
+    "comunaCut": "13202",
+    "lat": -33.699543,
+    "lng": -70.519192,
+    "prices": {
+      "93": 1268,
+      "95": 1314,
+      "97": 1340,
+      "diesel": 1016
+    },
+    "updatedAt": "2026-09-24T10:56:42.843Z"
+  },
+  {
+    "id": "mock-13202-3",
+    "brand": "Independiente",
+    "address": "Av. Central 3694, Pirque",
+    "comunaCut": "13202",
+    "lat": -33.717714,
+    "lng": -70.562743,
+    "prices": {
+      "93": 1269,
+      "95": 1320,
+      "97": 1351
+    },
+    "updatedAt": "2026-09-25T19:55:23.904Z"
+  },
+  {
+    "id": "mock-13201-1",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 6213, Puente Alto",
+    "comunaCut": "13201",
+    "lat": -33.600039,
+    "lng": -70.571638,
+    "prices": {
+      "93": 1234,
+      "95": 1264,
+      "diesel": 980
+    },
+    "updatedAt": "2026-09-22T21:25:29.603Z"
+  },
+  {
+    "id": "mock-13201-2",
+    "brand": "Shell",
+    "address": "Av. Principal 5630, Puente Alto",
+    "comunaCut": "13201",
+    "lat": -33.572056,
+    "lng": -70.558175,
+    "prices": {
+      "93": 1240,
+      "95": 1277,
+      "97": 1308,
+      "diesel": 975
+    },
+    "updatedAt": "2026-09-25T23:50:40.982Z"
+  },
+  {
+    "id": "mock-13201-3",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 5309, Puente Alto",
+    "comunaCut": "13201",
+    "lat": -33.575032,
+    "lng": -70.54515,
+    "prices": {
+      "93": 1237,
+      "95": 1296,
+      "97": 1355,
+      "diesel": 999
+    },
+    "updatedAt": "2026-09-26T11:01:44.616Z"
+  },
+  {
+    "id": "mock-13201-4",
+    "brand": "Shell",
+    "address": "Av. Central 1746, Puente Alto",
+    "comunaCut": "13201",
+    "lat": -33.61268,
+    "lng": -70.525043,
+    "prices": {
+      "93": 1258,
+      "95": 1288,
+      "97": 1328,
+      "diesel": 979
+    },
+    "updatedAt": "2026-09-23T23:24:39.546Z"
+  },
+  {
+    "id": "mock-13107-1",
+    "brand": "Independiente",
+    "address": "Av. Principal 8639, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.357514,
+    "lng": -70.632298,
+    "prices": {
+      "93": 1208,
+      "95": 1260,
+      "97": 1289,
+      "diesel": 989
+    },
+    "updatedAt": "2026-09-23T19:29:26.635Z"
+  },
+  {
+    "id": "mock-13107-2",
+    "brand": "Independiente",
+    "address": "Camino Real 3937, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.342859,
+    "lng": -70.677379,
+    "prices": {
+      "93": 1219,
+      "95": 1267,
+      "97": 1289,
+      "diesel": 950
+    },
+    "updatedAt": "2026-09-25T02:09:40.627Z"
+  },
+  {
+    "id": "mock-13107-3",
+    "brand": "Independiente",
+    "address": "Av. Central 1457, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.346955,
+    "lng": -70.609937,
+    "prices": {
+      "93": 1233,
+      "95": 1279,
+      "diesel": 981
+    },
+    "updatedAt": "2026-09-24T13:26:51.055Z"
+  },
+  {
+    "id": "mock-13107-4",
+    "brand": "Copec",
+    "address": "Av. Central 4668, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.373627,
+    "lng": -70.611985,
+    "prices": {
+      "93": 1202,
+      "95": 1249,
+      "diesel": 987
+    },
+    "updatedAt": "2026-09-25T02:25:57.883Z"
+  },
+  {
+    "id": "mock-13107-5",
+    "brand": "Shell",
+    "address": "Camino Real 7751, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.351439,
+    "lng": -70.638298,
+    "prices": {
+      "93": 1238,
+      "95": 1268,
+      "97": 1330,
+      "diesel": 970
+    },
+    "updatedAt": "2026-09-25T09:05:20.531Z"
+  },
+  {
+    "id": "mock-13107-6",
+    "brand": "Copec",
+    "address": "Av. Principal 5148, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.34955,
+    "lng": -70.609884,
+    "prices": {
+      "93": 1216,
+      "95": 1239,
+      "97": 1324
+    },
+    "updatedAt": "2026-09-26T07:03:25.178Z"
+  },
+  {
+    "id": "mock-13107-7",
+    "brand": "Copec",
+    "address": "Av. Principal 6942, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.38335,
+    "lng": -70.623932,
+    "prices": {
+      "93": 1206,
+      "95": 1281,
+      "97": 1293,
+      "diesel": 946
+    },
+    "updatedAt": "2026-09-23T23:29:59.931Z"
+  },
+  {
+    "id": "mock-13107-8",
+    "brand": "Copec",
+    "address": "Av. Central 9351, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.339701,
+    "lng": -70.605276,
+    "prices": {
+      "93": 1235,
+      "95": 1236,
+      "97": 1291,
+      "diesel": 991
+    },
+    "updatedAt": "2026-09-25T09:55:53.066Z"
+  },
+  {
+    "id": "mock-13107-9",
+    "brand": "Shell",
+    "address": "Av. Central 1326, Huechuraba",
+    "comunaCut": "13107",
+    "lat": -33.362213,
+    "lng": -70.61971,
+    "prices": {
+      "93": 1204,
+      "95": 1261,
+      "97": 1305
+    },
+    "updatedAt": "2026-09-25T09:48:33.048Z"
+  },
+  {
+    "id": "mock-13401-1",
+    "brand": "Independiente",
+    "address": "Av. Principal 4380, San Bernardo",
+    "comunaCut": "13401",
+    "lat": -33.579532,
+    "lng": -70.742754,
+    "prices": {
+      "93": 1206,
+      "95": 1248,
+      "97": 1326,
+      "diesel": 992
+    },
+    "updatedAt": "2026-09-24T22:15:31.101Z"
+  },
+  {
+    "id": "mock-13401-2",
+    "brand": "Independiente",
+    "address": "Camino Real 7581, San Bernardo",
+    "comunaCut": "13401",
+    "lat": -33.584983,
+    "lng": -70.748474,
+    "prices": {
+      "93": 1224,
+      "95": 1272,
+      "97": 1297,
+      "diesel": 996
+    },
+    "updatedAt": "2026-09-25T10:33:42.776Z"
+  },
+  {
+    "id": "mock-13503-1",
+    "brand": "Shell",
+    "address": "Av. Central 1830, Curacaví",
+    "comunaCut": "13503",
+    "lat": -33.297844,
+    "lng": -71.158001,
+    "prices": {
+      "93": 1276,
+      "95": 1317,
+      "97": 1336
+    },
+    "updatedAt": "2026-09-24T11:01:49.651Z"
+  },
+  {
+    "id": "mock-13503-2",
+    "brand": "Aramco",
+    "address": "Camino Real 7321, Curacaví",
+    "comunaCut": "13503",
+    "lat": -33.446475,
+    "lng": -71.132959,
+    "prices": {
+      "93": 1287,
+      "95": 1304,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-25T10:19:09.111Z"
+  },
+  {
+    "id": "mock-13503-3",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 7655, Curacaví",
+    "comunaCut": "13503",
+    "lat": -33.304624,
+    "lng": -71.022882,
+    "prices": {
+      "93": 1265,
+      "95": 1312,
+      "97": 1343,
+      "diesel": 1003
+    },
+    "updatedAt": "2026-09-24T18:58:16.162Z"
+  },
+  {
+    "id": "mock-13503-4",
+    "brand": "Independiente",
+    "address": "Av. Central 7795, Curacaví",
+    "comunaCut": "13503",
+    "lat": -33.280841,
+    "lng": -71.006825,
+    "prices": {
+      "93": 1245,
+      "95": 1307,
+      "97": 1330,
+      "diesel": 994
+    },
+    "updatedAt": "2026-09-23T07:54:42.676Z"
+  },
+  {
+    "id": "mock-13504-1",
+    "brand": "Independiente",
+    "address": "Av. Principal 2308, María Pinto",
+    "comunaCut": "13504",
+    "lat": -33.51251,
+    "lng": -71.082532,
+    "prices": {
+      "93": 1318,
+      "95": 1318,
+      "97": 1362,
+      "diesel": 1068
+    },
+    "updatedAt": "2026-09-23T11:55:31.811Z"
+  },
+  {
+    "id": "mock-13504-2",
+    "brand": "Aramco",
+    "address": "Av. Principal 2924, María Pinto",
+    "comunaCut": "13504",
+    "lat": -33.44744,
+    "lng": -71.090805,
+    "prices": {
+      "93": 1320,
+      "95": 1360,
+      "97": 1386,
+      "diesel": 1040
+    },
+    "updatedAt": "2026-09-24T12:15:32.020Z"
+  },
+  {
+    "id": "mock-13504-3",
+    "brand": "Independiente",
+    "address": "Av. Principal 1209, María Pinto",
+    "comunaCut": "13504",
+    "lat": -33.422971,
+    "lng": -71.257944,
+    "prices": {
+      "93": 1309,
+      "95": 1335,
+      "97": 1408,
+      "diesel": 1063
+    },
+    "updatedAt": "2026-09-23T00:32:04.201Z"
+  },
+  {
+    "id": "mock-13504-4",
+    "brand": "Aramco",
+    "address": "Camino Real 7490, María Pinto",
+    "comunaCut": "13504",
+    "lat": -33.549059,
+    "lng": -71.11187,
+    "prices": {
+      "93": 1318,
+      "95": 1322,
+      "97": 1375,
+      "diesel": 1056
+    },
+    "updatedAt": "2026-09-26T05:51:29.237Z"
+  },
+  {
+    "id": "mock-13504-5",
+    "brand": "Shell",
+    "address": "Av. Central 8070, María Pinto",
+    "comunaCut": "13504",
+    "lat": -33.420257,
+    "lng": -71.285854,
+    "prices": {
+      "93": 1273,
+      "95": 1332,
+      "97": 1373,
+      "diesel": 1057
+    },
+    "updatedAt": "2026-09-26T10:02:05.303Z"
+  },
+  {
+    "id": "mock-13504-6",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 2157, María Pinto",
+    "comunaCut": "13504",
+    "lat": -33.470917,
+    "lng": -71.246069,
+    "prices": {
+      "93": 1303,
+      "95": 1320,
+      "diesel": 1036
+    },
+    "updatedAt": "2026-09-25T19:03:25.535Z"
+  },
+  {
+    "id": "mock-13504-7",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 7914, María Pinto",
+    "comunaCut": "13504",
+    "lat": -33.541517,
+    "lng": -71.046009,
+    "prices": {
+      "93": 1292,
+      "95": 1354,
+      "97": 1390,
+      "diesel": 1051
+    },
+    "updatedAt": "2026-09-25T22:08:19.858Z"
+  },
+  {
+    "id": "mock-13102-1",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 1854, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.479854,
+    "lng": -70.721612,
+    "prices": {
+      "93": 1286,
+      "95": 1310,
+      "97": 1372,
+      "diesel": 1027
+    },
+    "updatedAt": "2026-09-24T13:58:43.974Z"
+  },
+  {
+    "id": "mock-13102-2",
+    "brand": "Copec",
+    "address": "Camino Real 1105, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.487931,
+    "lng": -70.707417,
+    "prices": {
+      "93": 1298,
+      "95": 1321,
+      "97": 1398,
+      "diesel": 1048
+    },
+    "updatedAt": "2026-09-24T06:41:26.698Z"
+  },
+  {
+    "id": "mock-13102-3",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 884, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.495457,
+    "lng": -70.707105,
+    "prices": {
+      "93": 1272,
+      "95": 1321,
+      "97": 1400,
+      "diesel": 1058
+    },
+    "updatedAt": "2026-09-25T03:06:34.718Z"
+  },
+  {
+    "id": "mock-13102-4",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 1354, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.489598,
+    "lng": -70.692628,
+    "prices": {
+      "93": 1277,
+      "95": 1331,
+      "97": 1367,
+      "diesel": 1045
+    },
+    "updatedAt": "2026-09-25T06:42:35.059Z"
+  },
+  {
+    "id": "mock-13102-5",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 9845, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.508952,
+    "lng": -70.737551,
+    "prices": {
+      "93": 1312,
+      "95": 1323,
+      "97": 1379,
+      "diesel": 1023
+    },
+    "updatedAt": "2026-09-24T04:01:41.333Z"
+  },
+  {
+    "id": "mock-13102-6",
+    "brand": "Shell",
+    "address": "Av. Principal 9330, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.475382,
+    "lng": -70.722062,
+    "prices": {
+      "93": 1283,
+      "95": 1347,
+      "97": 1383,
+      "diesel": 1051
+    },
+    "updatedAt": "2026-09-24T12:26:19.382Z"
+  },
+  {
+    "id": "mock-13102-7",
+    "brand": "Shell",
+    "address": "Camino Real 3251, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.500441,
+    "lng": -70.709874,
+    "prices": {
+      "93": 1271,
+      "95": 1334,
+      "97": 1389,
+      "diesel": 1065
+    },
+    "updatedAt": "2026-09-23T13:56:05.007Z"
+  },
+  {
+    "id": "mock-13102-8",
+    "brand": "Copec",
+    "address": "Av. Central 1713, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.478879,
+    "lng": -70.72224,
+    "prices": {
+      "93": 1291,
+      "95": 1351,
+      "97": 1375,
+      "diesel": 1043
+    },
+    "updatedAt": "2026-09-25T22:22:42.615Z"
+  },
+  {
+    "id": "mock-13102-9",
+    "brand": "Shell",
+    "address": "Av. Las Torres 8847, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.508379,
+    "lng": -70.706159,
+    "prices": {
+      "93": 1311,
+      "95": 1329,
+      "diesel": 1047
+    },
+    "updatedAt": "2026-09-26T13:40:56.467Z"
+  },
+  {
+    "id": "mock-13102-10",
+    "brand": "Copec",
+    "address": "Av. Central 2024, Cerrillos",
+    "comunaCut": "13102",
+    "lat": -33.484041,
+    "lng": -70.708697,
+    "prices": {
+      "93": 1281,
+      "95": 1349,
+      "97": 1371,
+      "diesel": 1054
+    },
+    "updatedAt": "2026-09-26T04:11:13.455Z"
+  },
+  {
+    "id": "mock-13103-1",
+    "brand": "Shell",
+    "address": "Av. Las Torres 1706, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.418931,
+    "lng": -70.723602,
+    "prices": {
+      "93": 1231,
+      "95": 1254,
+      "97": 1311,
+      "diesel": 1008
+    },
+    "updatedAt": "2026-09-25T05:38:28.646Z"
+  },
+  {
+    "id": "mock-13103-2",
+    "brand": "Aramco",
+    "address": "Av. Central 8336, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.433441,
+    "lng": -70.736792,
+    "prices": {
+      "93": 1259,
+      "95": 1287,
+      "97": 1310,
+      "diesel": 981
+    },
+    "updatedAt": "2026-09-23T18:13:55.344Z"
+  },
+  {
+    "id": "mock-13103-3",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 5830, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.434345,
+    "lng": -70.736933,
+    "prices": {
+      "93": 1226,
+      "95": 1259,
+      "97": 1303,
+      "diesel": 977
+    },
+    "updatedAt": "2026-09-26T12:06:10.555Z"
+  },
+  {
+    "id": "mock-13103-4",
+    "brand": "Copec",
+    "address": "Av. Las Torres 867, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.420134,
+    "lng": -70.77277,
+    "prices": {
+      "93": 1222,
+      "95": 1255,
+      "97": 1337,
+      "diesel": 1001
+    },
+    "updatedAt": "2026-09-22T19:52:36.455Z"
+  },
+  {
+    "id": "mock-13103-5",
+    "brand": "Independiente",
+    "address": "Av. Principal 7921, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.425087,
+    "lng": -70.735567,
+    "prices": {
+      "93": 1258,
+      "95": 1272
+    },
+    "updatedAt": "2026-09-25T00:46:13.530Z"
+  },
+  {
+    "id": "mock-13103-6",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 3393, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.414731,
+    "lng": -70.766068,
+    "prices": {
+      "93": 1255,
+      "95": 1296,
+      "97": 1333,
+      "diesel": 984
+    },
+    "updatedAt": "2026-09-23T20:26:32.302Z"
+  },
+  {
+    "id": "mock-13103-7",
+    "brand": "Independiente",
+    "address": "Camino Real 4824, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.416677,
+    "lng": -70.770817,
+    "prices": {
+      "93": 1259,
+      "95": 1277,
+      "97": 1334,
+      "diesel": 977
+    },
+    "updatedAt": "2026-09-25T22:01:39.846Z"
+  },
+  {
+    "id": "mock-13103-8",
+    "brand": "Independiente",
+    "address": "Av. Principal 1241, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.417428,
+    "lng": -70.761167,
+    "prices": {
+      "93": 1253,
+      "95": 1296,
+      "97": 1309,
+      "diesel": 986
+    },
+    "updatedAt": "2026-09-24T19:54:57.802Z"
+  },
+  {
+    "id": "mock-13103-9",
+    "brand": "Shell",
+    "address": "Camino Real 3138, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.418973,
+    "lng": -70.766814,
+    "prices": {
+      "93": 1254,
+      "95": 1272,
+      "97": 1322,
+      "diesel": 1008
+    },
+    "updatedAt": "2026-09-24T23:33:36.224Z"
+  },
+  {
+    "id": "mock-13103-10",
+    "brand": "Copec",
+    "address": "Av. Principal 443, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.426252,
+    "lng": -70.76328,
+    "prices": {
+      "93": 1256,
+      "95": 1286,
+      "97": 1341,
+      "diesel": 1010
+    },
+    "updatedAt": "2026-09-23T19:37:51.540Z"
+  },
+  {
+    "id": "mock-13103-11",
+    "brand": "Copec",
+    "address": "Av. Principal 4680, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.422486,
+    "lng": -70.764372,
+    "prices": {
+      "93": 1214,
+      "95": 1289,
+      "97": 1338
+    },
+    "updatedAt": "2026-09-25T08:33:40.339Z"
+  },
+  {
+    "id": "mock-13103-12",
+    "brand": "Shell",
+    "address": "Av. Central 3313, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.416102,
+    "lng": -70.770333,
+    "prices": {
+      "93": 1232,
+      "95": 1302,
+      "diesel": 993
+    },
+    "updatedAt": "2026-09-24T20:02:46.413Z"
+  },
+  {
+    "id": "mock-13103-13",
+    "brand": "Independiente",
+    "address": "Av. Principal 3446, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.421544,
+    "lng": -70.73274,
+    "prices": {
+      "93": 1245,
+      "95": 1262,
+      "97": 1328,
+      "diesel": 980
+    },
+    "updatedAt": "2026-09-24T12:36:08.770Z"
+  },
+  {
+    "id": "mock-13103-14",
+    "brand": "Aramco",
+    "address": "Av. Central 8725, Cerro Navia",
+    "comunaCut": "13103",
+    "lat": -33.42392,
+    "lng": -70.738528,
+    "prices": {
+      "93": 1232,
+      "95": 1277,
+      "97": 1328,
+      "diesel": 974
+    },
+    "updatedAt": "2026-09-24T12:30:54.659Z"
+  },
+  {
+    "id": "mock-13132-1",
+    "brand": "Copec",
+    "address": "Av. Central 1332, Vitacura",
+    "comunaCut": "13132",
+    "lat": -33.396408,
+    "lng": -70.576255,
+    "prices": {
+      "93": 1246,
+      "95": 1312,
+      "diesel": 1002
+    },
+    "updatedAt": "2026-09-26T02:05:45.699Z"
+  },
+  {
+    "id": "mock-13132-2",
+    "brand": "Aramco",
+    "address": "Av. Central 4576, Vitacura",
+    "comunaCut": "13132",
+    "lat": -33.400356,
+    "lng": -70.599473,
+    "prices": {
+      "93": 1230,
+      "95": 1308,
+      "97": 1364,
+      "diesel": 1010
+    },
+    "updatedAt": "2026-09-25T09:02:55.179Z"
+  },
+  {
+    "id": "mock-13132-3",
+    "brand": "Copec",
+    "address": "Av. Central 9872, Vitacura",
+    "comunaCut": "13132",
+    "lat": -33.400612,
+    "lng": -70.581288,
+    "prices": {
+      "93": 1242,
+      "95": 1285,
+      "97": 1365
+    },
+    "updatedAt": "2026-09-23T11:25:44.313Z"
+  },
+  {
+    "id": "mock-13132-4",
+    "brand": "Shell",
+    "address": "Av. Central 2726, Vitacura",
+    "comunaCut": "13132",
+    "lat": -33.387743,
+    "lng": -70.583834,
+    "prices": {
+      "93": 1233,
+      "95": 1295,
+      "97": 1322,
+      "diesel": 994
+    },
+    "updatedAt": "2026-09-23T05:41:53.874Z"
+  },
+  {
+    "id": "mock-13132-5",
+    "brand": "Shell",
+    "address": "Camino Real 8457, Vitacura",
+    "comunaCut": "13132",
+    "lat": -33.393678,
+    "lng": -70.584834,
+    "prices": {
+      "93": 1253,
+      "95": 1319,
+      "97": 1328
+    },
+    "updatedAt": "2026-09-26T03:31:18.005Z"
+  },
+  {
+    "id": "mock-13132-6",
+    "brand": "Copec",
+    "address": "Av. Las Torres 3301, Vitacura",
+    "comunaCut": "13132",
+    "lat": -33.40657,
+    "lng": -70.602259,
+    "prices": {
+      "93": 1234,
+      "95": 1315,
+      "97": 1327,
+      "diesel": 1015
+    },
+    "updatedAt": "2026-09-24T06:36:36.971Z"
+  },
+  {
+    "id": "mock-13132-7",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 3320, Vitacura",
+    "comunaCut": "13132",
+    "lat": -33.371789,
+    "lng": -70.558349,
+    "prices": {
+      "93": 1274,
+      "95": 1276,
+      "97": 1357,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-23T03:59:46.757Z"
+  },
+  {
+    "id": "mock-13104-1",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 7829, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.389644,
+    "lng": -70.659543,
+    "prices": {
+      "93": 1273,
+      "95": 1326,
+      "97": 1332,
+      "diesel": 993
+    },
+    "updatedAt": "2026-09-24T17:12:37.324Z"
+  },
+  {
+    "id": "mock-13104-2",
+    "brand": "Aramco",
+    "address": "Camino Real 4140, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.387608,
+    "lng": -70.68912,
+    "prices": {
+      "93": 1251,
+      "95": 1321,
+      "97": 1347,
+      "diesel": 997
+    },
+    "updatedAt": "2026-09-25T19:21:13.291Z"
+  },
+  {
+    "id": "mock-13104-3",
+    "brand": "Shell",
+    "address": "Av. Las Torres 2615, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.38418,
+    "lng": -70.674813,
+    "prices": {
+      "93": 1275,
+      "95": 1306,
+      "97": 1360,
+      "diesel": 1040
+    },
+    "updatedAt": "2026-09-25T22:19:59.116Z"
+  },
+  {
+    "id": "mock-13104-4",
+    "brand": "Shell",
+    "address": "Av. Principal 4327, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.384948,
+    "lng": -70.682925,
+    "prices": {
+      "93": 1280,
+      "95": 1306,
+      "97": 1334
+    },
+    "updatedAt": "2026-09-25T15:02:51.484Z"
+  },
+  {
+    "id": "mock-13104-5",
+    "brand": "Shell",
+    "address": "Av. Principal 3838, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.369853,
+    "lng": -70.691132,
+    "prices": {
+      "93": 1264,
+      "95": 1324,
+      "97": 1347,
+      "diesel": 1001
+    },
+    "updatedAt": "2026-09-23T09:01:45.380Z"
+  },
+  {
+    "id": "mock-13104-6",
+    "brand": "Aramco",
+    "address": "Camino Real 2187, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.397917,
+    "lng": -70.676124,
+    "prices": {
+      "93": 1247,
+      "95": 1294,
+      "97": 1339,
+      "diesel": 1037
+    },
+    "updatedAt": "2026-09-22T21:40:56.992Z"
+  },
+  {
+    "id": "mock-13104-7",
+    "brand": "Copec",
+    "address": "Av. Principal 6176, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.380993,
+    "lng": -70.685747,
+    "prices": {
+      "93": 1282,
+      "95": 1311,
+      "97": 1332,
+      "diesel": 1013
+    },
+    "updatedAt": "2026-09-26T07:33:03.164Z"
+  },
+  {
+    "id": "mock-13104-8",
+    "brand": "Aramco",
+    "address": "Camino Real 4144, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.375804,
+    "lng": -70.668766,
+    "prices": {
+      "93": 1261,
+      "95": 1294,
+      "97": 1355,
+      "diesel": 1020
+    },
+    "updatedAt": "2026-09-23T10:32:41.582Z"
+  },
+  {
+    "id": "mock-13104-9",
+    "brand": "Independiente",
+    "address": "Av. Principal 9063, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.397706,
+    "lng": -70.671456,
+    "prices": {
+      "93": 1277,
+      "95": 1285
+    },
+    "updatedAt": "2026-09-25T19:21:44.031Z"
+  },
+  {
+    "id": "mock-13104-10",
+    "brand": "Copec",
+    "address": "Av. Principal 4750, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.396295,
+    "lng": -70.670364,
+    "prices": {
+      "93": 1290,
+      "95": 1303,
+      "97": 1338
+    },
+    "updatedAt": "2026-09-25T10:38:19.894Z"
+  },
+  {
+    "id": "mock-13104-11",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 944, Conchalí",
+    "comunaCut": "13104",
+    "lat": -33.389971,
+    "lng": -70.65788,
+    "prices": {
+      "93": 1246,
+      "95": 1312,
+      "97": 1366,
+      "diesel": 991
+    },
+    "updatedAt": "2026-09-23T22:32:13.250Z"
+  },
+  {
+    "id": "mock-13105-1",
+    "brand": "Shell",
+    "address": "Av. Central 4411, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.54859,
+    "lng": -70.65938,
+    "prices": {
+      "93": 1276,
+      "95": 1293,
+      "97": 1384
+    },
+    "updatedAt": "2026-09-24T20:40:12.001Z"
+  },
+  {
+    "id": "mock-13105-2",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 7916, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.557924,
+    "lng": -70.668327,
+    "prices": {
+      "93": 1261,
+      "95": 1319,
+      "97": 1339,
+      "diesel": 1009
+    },
+    "updatedAt": "2026-09-23T15:26:34.043Z"
+  },
+  {
+    "id": "mock-13105-3",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 1701, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.568928,
+    "lng": -70.669718,
+    "prices": {
+      "93": 1289,
+      "95": 1297,
+      "97": 1369,
+      "diesel": 1015
+    },
+    "updatedAt": "2026-09-25T04:25:20.180Z"
+  },
+  {
+    "id": "mock-13105-4",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 1696, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.543621,
+    "lng": -70.678781,
+    "prices": {
+      "93": 1274,
+      "95": 1293,
+      "97": 1357,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-22T20:46:46.185Z"
+  },
+  {
+    "id": "mock-13105-5",
+    "brand": "Copec",
+    "address": "Av. Las Torres 5405, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.56165,
+    "lng": -70.658272,
+    "prices": {
+      "93": 1297,
+      "95": 1294,
+      "diesel": 1017
+    },
+    "updatedAt": "2026-09-25T13:45:25.619Z"
+  },
+  {
+    "id": "mock-13105-6",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 2849, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.566933,
+    "lng": -70.687562,
+    "prices": {
+      "93": 1283,
+      "95": 1302,
+      "97": 1387,
+      "diesel": 1030
+    },
+    "updatedAt": "2026-09-25T19:01:13.850Z"
+  },
+  {
+    "id": "mock-13105-7",
+    "brand": "Independiente",
+    "address": "Camino Real 6400, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.544123,
+    "lng": -70.672423,
+    "prices": {
+      "93": 1296,
+      "95": 1303
+    },
+    "updatedAt": "2026-09-22T19:04:01.810Z"
+  },
+  {
+    "id": "mock-13105-8",
+    "brand": "Copec",
+    "address": "Camino Real 4694, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.559365,
+    "lng": -70.688541,
+    "prices": {
+      "93": 1276,
+      "95": 1305,
+      "97": 1356,
+      "diesel": 998
+    },
+    "updatedAt": "2026-09-23T22:24:42.825Z"
+  },
+  {
+    "id": "mock-13105-9",
+    "brand": "Independiente",
+    "address": "Camino Real 975, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.563288,
+    "lng": -70.691618,
+    "prices": {
+      "93": 1280,
+      "95": 1301,
+      "97": 1365,
+      "diesel": 1010
+    },
+    "updatedAt": "2026-09-26T01:08:19.242Z"
+  },
+  {
+    "id": "mock-13105-10",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 8553, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.552948,
+    "lng": -70.667218,
+    "prices": {
+      "93": 1296,
+      "95": 1306,
+      "97": 1384,
+      "diesel": 1024
+    },
+    "updatedAt": "2026-09-25T15:47:41.956Z"
+  },
+  {
+    "id": "mock-13105-11",
+    "brand": "Independiente",
+    "address": "Av. Principal 4097, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.547013,
+    "lng": -70.669363,
+    "prices": {
+      "93": 1286,
+      "95": 1303,
+      "97": 1346,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-24T15:49:15.749Z"
+  },
+  {
+    "id": "mock-13105-12",
+    "brand": "Copec",
+    "address": "Av. Principal 1347, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.540655,
+    "lng": -70.683803,
+    "prices": {
+      "93": 1271,
+      "95": 1324,
+      "97": 1353,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-24T10:07:14.296Z"
+  },
+  {
+    "id": "mock-13105-13",
+    "brand": "Copec",
+    "address": "Av. Principal 963, El Bosque",
+    "comunaCut": "13105",
+    "lat": -33.578622,
+    "lng": -70.663244,
+    "prices": {
+      "93": 1289,
+      "95": 1288,
+      "97": 1346,
+      "diesel": 1045
+    },
+    "updatedAt": "2026-09-24T17:08:00.694Z"
+  },
+  {
+    "id": "mock-13106-1",
+    "brand": "Aramco",
+    "address": "Av. Principal 3403, Estación Central",
+    "comunaCut": "13106",
+    "lat": -33.450134,
+    "lng": -70.685085,
+    "prices": {
+      "93": 1258,
+      "95": 1317,
+      "diesel": 1015
+    },
+    "updatedAt": "2026-09-25T23:46:04.163Z"
+  },
+  {
+    "id": "mock-13106-2",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 6708, Estación Central",
+    "comunaCut": "13106",
+    "lat": -33.446994,
+    "lng": -70.68303,
+    "prices": {
+      "93": 1270,
+      "95": 1306,
+      "97": 1367,
+      "diesel": 1028
+    },
+    "updatedAt": "2026-09-25T09:08:15.964Z"
+  },
+  {
+    "id": "mock-13106-3",
+    "brand": "Independiente",
+    "address": "Av. Central 7862, Estación Central",
+    "comunaCut": "13106",
+    "lat": -33.480576,
+    "lng": -70.708076,
+    "prices": {
+      "93": 1255,
+      "95": 1321,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-25T06:02:19.381Z"
+  },
+  {
+    "id": "mock-13106-4",
+    "brand": "Aramco",
+    "address": "Av. Principal 1237, Estación Central",
+    "comunaCut": "13106",
+    "lat": -33.481532,
+    "lng": -70.709389,
+    "prices": {
+      "93": 1297,
+      "95": 1294,
+      "97": 1376,
+      "diesel": 1034
+    },
+    "updatedAt": "2026-09-25T21:39:09.258Z"
+  },
+  {
+    "id": "mock-13106-5",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 1147, Estación Central",
+    "comunaCut": "13106",
+    "lat": -33.452579,
+    "lng": -70.682515,
+    "prices": {
+      "93": 1297,
+      "95": 1298,
+      "97": 1359,
+      "diesel": 1042
+    },
+    "updatedAt": "2026-09-26T08:41:21.568Z"
+  },
+  {
+    "id": "mock-13106-6",
+    "brand": "Copec",
+    "address": "Av. Principal 8777, Estación Central",
+    "comunaCut": "13106",
+    "lat": -33.451212,
+    "lng": -70.704542,
+    "prices": {
+      "93": 1295,
+      "95": 1302,
+      "97": 1378,
+      "diesel": 1039
+    },
+    "updatedAt": "2026-09-23T04:39:13.985Z"
+  },
+  {
+    "id": "mock-13110-1",
+    "brand": "Copec",
+    "address": "Av. Principal 4105, La Florida",
+    "comunaCut": "13110",
+    "lat": -33.568968,
+    "lng": -70.585478,
+    "prices": {
+      "93": 1265,
+      "95": 1278,
+      "97": 1352,
+      "diesel": 1000
+    },
+    "updatedAt": "2026-09-25T02:28:23.769Z"
+  },
+  {
+    "id": "mock-13110-2",
+    "brand": "Shell",
+    "address": "Av. Las Torres 1570, La Florida",
+    "comunaCut": "13110",
+    "lat": -33.531738,
+    "lng": -70.564921,
+    "prices": {
+      "93": 1264,
+      "95": 1287,
+      "97": 1363,
+      "diesel": 988
+    },
+    "updatedAt": "2026-09-24T12:39:51.734Z"
+  },
+  {
+    "id": "mock-13110-3",
+    "brand": "Shell",
+    "address": "Av. Principal 7679, La Florida",
+    "comunaCut": "13110",
+    "lat": -33.522738,
+    "lng": -70.5538,
+    "prices": {
+      "93": 1241,
+      "95": 1300
+    },
+    "updatedAt": "2026-09-24T06:58:58.887Z"
+  },
+  {
+    "id": "mock-13110-4",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 1154, La Florida",
+    "comunaCut": "13110",
+    "lat": -33.531207,
+    "lng": -70.566034,
+    "prices": {
+      "93": 1262,
+      "95": 1280,
+      "97": 1368,
+      "diesel": 1030
+    },
+    "updatedAt": "2026-09-23T17:01:34.576Z"
+  },
+  {
+    "id": "mock-13110-5",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 4689, La Florida",
+    "comunaCut": "13110",
+    "lat": -33.523463,
+    "lng": -70.499713,
+    "prices": {
+      "93": 1243,
+      "95": 1319,
+      "97": 1340,
+      "diesel": 999
+    },
+    "updatedAt": "2026-09-25T08:33:18.824Z"
+  },
+  {
+    "id": "mock-13110-6",
+    "brand": "Copec",
+    "address": "Av. Las Torres 8691, La Florida",
+    "comunaCut": "13110",
+    "lat": -33.522422,
+    "lng": -70.545479,
+    "prices": {
+      "93": 1232,
+      "95": 1313,
+      "97": 1335,
+      "diesel": 982
+    },
+    "updatedAt": "2026-09-24T02:53:41.987Z"
+  },
+  {
+    "id": "mock-13111-1",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 7786, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.551332,
+    "lng": -70.619256,
+    "prices": {
+      "93": 1312,
+      "95": 1318,
+      "97": 1409,
+      "diesel": 1050
+    },
+    "updatedAt": "2026-09-23T04:31:21.279Z"
+  },
+  {
+    "id": "mock-13111-2",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 7529, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.53901,
+    "lng": -70.626103,
+    "prices": {
+      "93": 1278,
+      "95": 1354,
+      "97": 1395,
+      "diesel": 1025
+    },
+    "updatedAt": "2026-09-26T02:37:24.789Z"
+  },
+  {
+    "id": "mock-13111-3",
+    "brand": "Copec",
+    "address": "Camino Real 2527, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.556248,
+    "lng": -70.627545,
+    "prices": {
+      "93": 1283,
+      "95": 1318,
+      "97": 1407,
+      "diesel": 1028
+    },
+    "updatedAt": "2026-09-24T19:09:05.044Z"
+  },
+  {
+    "id": "mock-13111-4",
+    "brand": "Shell",
+    "address": "Av. Principal 7771, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.556859,
+    "lng": -70.618092,
+    "prices": {
+      "93": 1277,
+      "95": 1336,
+      "97": 1360
+    },
+    "updatedAt": "2026-09-26T06:42:24.239Z"
+  },
+  {
+    "id": "mock-13111-5",
+    "brand": "Independiente",
+    "address": "Av. Principal 5699, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.518541,
+    "lng": -70.625392,
+    "prices": {
+      "93": 1313,
+      "95": 1355,
+      "97": 1385,
+      "diesel": 1059
+    },
+    "updatedAt": "2026-09-26T07:40:15.357Z"
+  },
+  {
+    "id": "mock-13111-6",
+    "brand": "Shell",
+    "address": "Camino Real 2334, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.524348,
+    "lng": -70.629312,
+    "prices": {
+      "93": 1304,
+      "95": 1352,
+      "97": 1401,
+      "diesel": 1038
+    },
+    "updatedAt": "2026-09-23T14:59:43.379Z"
+  },
+  {
+    "id": "mock-13111-7",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 8397, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.542556,
+    "lng": -70.63385,
+    "prices": {
+      "93": 1282,
+      "95": 1316,
+      "97": 1385
+    },
+    "updatedAt": "2026-09-25T00:48:19.159Z"
+  },
+  {
+    "id": "mock-13111-8",
+    "brand": "Independiente",
+    "address": "Av. Central 4120, La Granja",
+    "comunaCut": "13111",
+    "lat": -33.551839,
+    "lng": -70.615863,
+    "prices": {
+      "93": 1276,
+      "95": 1343,
+      "97": 1377,
+      "diesel": 1037
+    },
+    "updatedAt": "2026-09-24T13:19:56.951Z"
+  },
+  {
+    "id": "mock-13112-1",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 5712, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.565935,
+    "lng": -70.619406,
+    "prices": {
+      "93": 1230,
+      "95": 1269,
+      "97": 1327,
+      "diesel": 995
+    },
+    "updatedAt": "2026-09-25T10:08:03.156Z"
+  },
+  {
+    "id": "mock-13112-2",
+    "brand": "Shell",
+    "address": "Av. Principal 7202, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.567315,
+    "lng": -70.64009,
+    "prices": {
+      "93": 1261,
+      "95": 1282,
+      "97": 1333,
+      "diesel": 1013
+    },
+    "updatedAt": "2026-09-24T06:52:00.417Z"
+  },
+  {
+    "id": "mock-13112-3",
+    "brand": "Aramco",
+    "address": "Camino Real 5491, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.591586,
+    "lng": -70.614424,
+    "prices": {
+      "93": 1232,
+      "95": 1257,
+      "97": 1318,
+      "diesel": 977
+    },
+    "updatedAt": "2026-09-23T13:59:28.868Z"
+  },
+  {
+    "id": "mock-13112-4",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 5511, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.566239,
+    "lng": -70.652965,
+    "prices": {
+      "93": 1243,
+      "95": 1293,
+      "97": 1329,
+      "diesel": 1006
+    },
+    "updatedAt": "2026-09-24T19:10:22.269Z"
+  },
+  {
+    "id": "mock-13112-5",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 2691, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.56189,
+    "lng": -70.646757,
+    "prices": {
+      "93": 1257,
+      "95": 1292,
+      "97": 1314,
+      "diesel": 1003
+    },
+    "updatedAt": "2026-09-26T00:28:44.085Z"
+  },
+  {
+    "id": "mock-13112-6",
+    "brand": "Aramco",
+    "address": "Camino Real 9656, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.589994,
+    "lng": -70.6091,
+    "prices": {
+      "93": 1255,
+      "95": 1261,
+      "97": 1333
+    },
+    "updatedAt": "2026-09-25T23:48:24.607Z"
+  },
+  {
+    "id": "mock-13112-7",
+    "brand": "Copec",
+    "address": "Av. Las Torres 7671, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.572797,
+    "lng": -70.655744,
+    "prices": {
+      "93": 1246,
+      "95": 1292,
+      "diesel": 1009
+    },
+    "updatedAt": "2026-09-22T18:04:36.177Z"
+  },
+  {
+    "id": "mock-13112-8",
+    "brand": "Independiente",
+    "address": "Av. Central 2183, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.593999,
+    "lng": -70.657809,
+    "prices": {
+      "93": 1227,
+      "95": 1265,
+      "97": 1339,
+      "diesel": 982
+    },
+    "updatedAt": "2026-09-22T22:41:00.183Z"
+  },
+  {
+    "id": "mock-13112-9",
+    "brand": "Independiente",
+    "address": "Camino Real 7014, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.566049,
+    "lng": -70.642242,
+    "prices": {
+      "93": 1236,
+      "95": 1260,
+      "97": 1354,
+      "diesel": 1003
+    },
+    "updatedAt": "2026-09-23T14:00:56.121Z"
+  },
+  {
+    "id": "mock-13112-10",
+    "brand": "Copec",
+    "address": "Av. Las Torres 272, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.558974,
+    "lng": -70.651782,
+    "prices": {
+      "93": 1233,
+      "95": 1280,
+      "97": 1331,
+      "diesel": 992
+    },
+    "updatedAt": "2026-09-24T06:52:00.283Z"
+  },
+  {
+    "id": "mock-13112-11",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 8024, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.626888,
+    "lng": -70.641272,
+    "prices": {
+      "93": 1225,
+      "95": 1299,
+      "97": 1329
+    },
+    "updatedAt": "2026-09-23T03:14:53.465Z"
+  },
+  {
+    "id": "mock-13112-12",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 2047, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.556613,
+    "lng": -70.653593,
+    "prices": {
+      "93": 1216,
+      "95": 1295,
+      "97": 1335,
+      "diesel": 968
+    },
+    "updatedAt": "2026-09-24T02:35:25.950Z"
+  },
+  {
+    "id": "mock-13112-13",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 5266, La Pintana",
+    "comunaCut": "13112",
+    "lat": -33.598916,
+    "lng": -70.625406,
+    "prices": {
+      "93": 1264,
+      "95": 1295,
+      "97": 1326,
+      "diesel": 1013
+    },
+    "updatedAt": "2026-09-23T06:16:29.694Z"
+  },
+  {
+    "id": "mock-13114-1",
+    "brand": "Shell",
+    "address": "Av. Principal 2028, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.38492,
+    "lng": -70.485285,
+    "prices": {
+      "93": 1255,
+      "95": 1301,
+      "97": 1349,
+      "diesel": 1021
+    },
+    "updatedAt": "2026-09-22T15:35:20.981Z"
+  },
+  {
+    "id": "mock-13114-2",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 415, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.410011,
+    "lng": -70.568805,
+    "prices": {
+      "93": 1244,
+      "95": 1319,
+      "97": 1352,
+      "diesel": 1003
+    },
+    "updatedAt": "2026-09-25T20:20:39.818Z"
+  },
+  {
+    "id": "mock-13114-3",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 3135, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.396021,
+    "lng": -70.526022,
+    "prices": {
+      "93": 1248,
+      "95": 1284,
+      "97": 1366,
+      "diesel": 1024
+    },
+    "updatedAt": "2026-09-23T22:03:40.487Z"
+  },
+  {
+    "id": "mock-13114-4",
+    "brand": "Independiente",
+    "address": "Av. Central 842, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.366402,
+    "lng": -70.487373,
+    "prices": {
+      "93": 1291,
+      "95": 1329,
+      "97": 1347,
+      "diesel": 1025
+    },
+    "updatedAt": "2026-09-23T08:48:27.455Z"
+  },
+  {
+    "id": "mock-13114-5",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 2834, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.424977,
+    "lng": -70.450527,
+    "prices": {
+      "93": 1245,
+      "95": 1285,
+      "97": 1371,
+      "diesel": 1039
+    },
+    "updatedAt": "2026-09-24T14:14:57.545Z"
+  },
+  {
+    "id": "mock-13114-6",
+    "brand": "Shell",
+    "address": "Camino Real 7404, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.405225,
+    "lng": -70.539347,
+    "prices": {
+      "93": 1287,
+      "95": 1291,
+      "97": 1363
+    },
+    "updatedAt": "2026-09-24T02:01:54.032Z"
+  },
+  {
+    "id": "mock-13114-7",
+    "brand": "Independiente",
+    "address": "Av. Principal 1243, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.391138,
+    "lng": -70.494193,
+    "prices": {
+      "93": 1268,
+      "95": 1282,
+      "97": 1348,
+      "diesel": 1017
+    },
+    "updatedAt": "2026-09-26T06:53:25.489Z"
+  },
+  {
+    "id": "mock-13114-8",
+    "brand": "Independiente",
+    "address": "Camino Real 9497, Las Condes",
+    "comunaCut": "13114",
+    "lat": -33.436032,
+    "lng": -70.482947,
+    "prices": {
+      "93": 1262,
+      "95": 1331,
+      "97": 1349,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-23T20:52:00.106Z"
+  },
+  {
+    "id": "mock-13115-1",
+    "brand": "Copec",
+    "address": "Camino Real 9449, Lo Barnechea",
+    "comunaCut": "13115",
+    "lat": -33.253549,
+    "lng": -70.455669,
+    "prices": {
+      "93": 1272,
+      "95": 1322,
+      "97": 1368,
+      "diesel": 1049
+    },
+    "updatedAt": "2026-09-24T00:45:46.340Z"
+  },
+  {
+    "id": "mock-13115-2",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 5887, Lo Barnechea",
+    "comunaCut": "13115",
+    "lat": -33.277479,
+    "lng": -70.435595,
+    "prices": {
+      "93": 1281,
+      "95": 1340,
+      "97": 1380,
+      "diesel": 1018
+    },
+    "updatedAt": "2026-09-23T16:49:33.465Z"
+  },
+  {
+    "id": "mock-13115-3",
+    "brand": "Shell",
+    "address": "Av. Principal 1530, Lo Barnechea",
+    "comunaCut": "13115",
+    "lat": -33.282736,
+    "lng": -70.293403,
+    "prices": {
+      "93": 1283,
+      "95": 1336,
+      "diesel": 1053
+    },
+    "updatedAt": "2026-09-24T03:03:31.303Z"
+  },
+  {
+    "id": "mock-13115-4",
+    "brand": "Copec",
+    "address": "Av. Central 9540, Lo Barnechea",
+    "comunaCut": "13115",
+    "lat": -33.304271,
+    "lng": -70.354238,
+    "prices": {
+      "93": 1316,
+      "95": 1317,
+      "97": 1369,
+      "diesel": 1025
+    },
+    "updatedAt": "2026-09-25T03:37:00.430Z"
+  },
+  {
+    "id": "mock-13115-5",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 1461, Lo Barnechea",
+    "comunaCut": "13115",
+    "lat": -33.292072,
+    "lng": -70.434531,
+    "prices": {
+      "93": 1315,
+      "95": 1313,
+      "97": 1389,
+      "diesel": 1056
+    },
+    "updatedAt": "2026-09-26T10:11:49.093Z"
+  },
+  {
+    "id": "mock-13115-6",
+    "brand": "Independiente",
+    "address": "Av. Principal 7084, Lo Barnechea",
+    "comunaCut": "13115",
+    "lat": -33.253193,
+    "lng": -70.517448,
+    "prices": {
+      "93": 1314,
+      "95": 1326,
+      "97": 1390,
+      "diesel": 1051
+    },
+    "updatedAt": "2026-09-24T05:57:59.090Z"
+  },
+  {
+    "id": "mock-13115-7",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 4559, Lo Barnechea",
+    "comunaCut": "13115",
+    "lat": -33.320651,
+    "lng": -70.290294,
+    "prices": {
+      "93": 1269,
+      "95": 1346,
+      "97": 1405,
+      "diesel": 1063
+    },
+    "updatedAt": "2026-09-26T12:26:18.671Z"
+  },
+  {
+    "id": "mock-13116-1",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 7718, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.531315,
+    "lng": -70.698025,
+    "prices": {
+      "93": 1297,
+      "95": 1334,
+      "diesel": 1021
+    },
+    "updatedAt": "2026-09-24T18:09:34.412Z"
+  },
+  {
+    "id": "mock-13116-2",
+    "brand": "Copec",
+    "address": "Av. Principal 7776, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.525716,
+    "lng": -70.684157,
+    "prices": {
+      "93": 1308,
+      "95": 1309,
+      "diesel": 1033
+    },
+    "updatedAt": "2026-09-25T11:29:16.200Z"
+  },
+  {
+    "id": "mock-13116-3",
+    "brand": "Aramco",
+    "address": "Av. Principal 7234, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.512342,
+    "lng": -70.682041,
+    "prices": {
+      "93": 1259,
+      "95": 1323,
+      "97": 1369,
+      "diesel": 1057
+    },
+    "updatedAt": "2026-09-25T08:24:08.008Z"
+  },
+  {
+    "id": "mock-13116-4",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 5436, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.529877,
+    "lng": -70.696854,
+    "prices": {
+      "93": 1296,
+      "95": 1348,
+      "97": 1382,
+      "diesel": 1028
+    },
+    "updatedAt": "2026-09-26T01:45:24.424Z"
+  },
+  {
+    "id": "mock-13116-5",
+    "brand": "Copec",
+    "address": "Av. Central 5942, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.519106,
+    "lng": -70.680869,
+    "prices": {
+      "93": 1290,
+      "95": 1326,
+      "97": 1355,
+      "diesel": 1017
+    },
+    "updatedAt": "2026-09-24T09:47:58.863Z"
+  },
+  {
+    "id": "mock-13116-6",
+    "brand": "Copec",
+    "address": "Av. Las Torres 3061, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.51275,
+    "lng": -70.683311,
+    "prices": {
+      "93": 1293,
+      "95": 1329,
+      "97": 1387
+    },
+    "updatedAt": "2026-09-22T22:45:09.731Z"
+  },
+  {
+    "id": "mock-13116-7",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 7645, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.526408,
+    "lng": -70.703774,
+    "prices": {
+      "93": 1284,
+      "95": 1298,
+      "97": 1388,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-24T23:22:18.098Z"
+  },
+  {
+    "id": "mock-13116-8",
+    "brand": "Aramco",
+    "address": "Av. Principal 8266, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.529939,
+    "lng": -70.69578,
+    "prices": {
+      "93": 1300,
+      "95": 1301,
+      "97": 1394
+    },
+    "updatedAt": "2026-09-24T12:17:10.292Z"
+  },
+  {
+    "id": "mock-13116-9",
+    "brand": "Copec",
+    "address": "Av. Las Torres 139, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.518976,
+    "lng": -70.687655,
+    "prices": {
+      "93": 1290,
+      "95": 1329,
+      "97": 1374,
+      "diesel": 1012
+    },
+    "updatedAt": "2026-09-22T15:34:56.512Z"
+  },
+  {
+    "id": "mock-13116-10",
+    "brand": "Copec",
+    "address": "Av. Central 9451, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.519127,
+    "lng": -70.689616,
+    "prices": {
+      "93": 1297,
+      "95": 1347,
+      "97": 1365,
+      "diesel": 1046
+    },
+    "updatedAt": "2026-09-25T15:30:28.897Z"
+  },
+  {
+    "id": "mock-13116-11",
+    "brand": "Copec",
+    "address": "Av. Principal 3912, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.517709,
+    "lng": -70.699276,
+    "prices": {
+      "93": 1280,
+      "95": 1319,
+      "97": 1371
+    },
+    "updatedAt": "2026-09-24T07:11:18.580Z"
+  },
+  {
+    "id": "mock-13116-12",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 430, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.515347,
+    "lng": -70.685892,
+    "prices": {
+      "93": 1290,
+      "95": 1324,
+      "97": 1385,
+      "diesel": 1037
+    },
+    "updatedAt": "2026-09-25T19:07:27.880Z"
+  },
+  {
+    "id": "mock-13116-13",
+    "brand": "Shell",
+    "address": "Av. Las Torres 9306, Lo Espejo",
+    "comunaCut": "13116",
+    "lat": -33.532421,
+    "lng": -70.69879,
+    "prices": {
+      "93": 1281,
+      "95": 1339,
+      "diesel": 1014
+    },
+    "updatedAt": "2026-09-24T10:24:47.555Z"
+  },
+  {
+    "id": "mock-13117-1",
+    "brand": "Shell",
+    "address": "Av. Principal 6079, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.455757,
+    "lng": -70.723215,
+    "prices": {
+      "93": 1236,
+      "95": 1300,
+      "97": 1321,
+      "diesel": 985
+    },
+    "updatedAt": "2026-09-22T20:19:42.855Z"
+  },
+  {
+    "id": "mock-13117-2",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 9009, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.438713,
+    "lng": -70.73021,
+    "prices": {
+      "93": 1252,
+      "95": 1288,
+      "97": 1353,
+      "diesel": 1014
+    },
+    "updatedAt": "2026-09-25T14:00:21.616Z"
+  },
+  {
+    "id": "mock-13117-3",
+    "brand": "Shell",
+    "address": "Av. Las Torres 9572, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.452763,
+    "lng": -70.729632,
+    "prices": {
+      "93": 1228,
+      "95": 1268,
+      "97": 1357,
+      "diesel": 1007
+    },
+    "updatedAt": "2026-09-24T09:20:06.851Z"
+  },
+  {
+    "id": "mock-13117-4",
+    "brand": "Shell",
+    "address": "Av. Central 5557, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.453002,
+    "lng": -70.738066,
+    "prices": {
+      "93": 1247,
+      "95": 1291,
+      "97": 1366,
+      "diesel": 986
+    },
+    "updatedAt": "2026-09-23T13:10:13.834Z"
+  },
+  {
+    "id": "mock-13117-5",
+    "brand": "Independiente",
+    "address": "Av. Central 6832, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.451881,
+    "lng": -70.712493,
+    "prices": {
+      "93": 1239,
+      "95": 1317,
+      "97": 1318
+    },
+    "updatedAt": "2026-09-24T14:31:39.434Z"
+  },
+  {
+    "id": "mock-13117-6",
+    "brand": "Copec",
+    "address": "Av. Principal 561, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.445185,
+    "lng": -70.713374,
+    "prices": {
+      "93": 1233,
+      "95": 1301,
+      "97": 1351
+    },
+    "updatedAt": "2026-09-25T16:14:31.019Z"
+  },
+  {
+    "id": "mock-13117-7",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 7723, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.456228,
+    "lng": -70.72248,
+    "prices": {
+      "93": 1238,
+      "95": 1307,
+      "97": 1329,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-23T09:51:23.699Z"
+  },
+  {
+    "id": "mock-13117-8",
+    "brand": "Copec",
+    "address": "Camino Real 3124, Lo Prado",
+    "comunaCut": "13117",
+    "lat": -33.439441,
+    "lng": -70.738993,
+    "prices": {
+      "93": 1264,
+      "95": 1283,
+      "97": 1348,
+      "diesel": 1026
+    },
+    "updatedAt": "2026-09-23T11:59:55.085Z"
+  },
+  {
+    "id": "mock-13118-1",
+    "brand": "Independiente",
+    "address": "Av. Central 8361, Macul",
+    "comunaCut": "13118",
+    "lat": -33.485423,
+    "lng": -70.583888,
+    "prices": {
+      "93": 1298,
+      "95": 1319,
+      "97": 1392,
+      "diesel": 1050
+    },
+    "updatedAt": "2026-09-24T13:11:17.211Z"
+  },
+  {
+    "id": "mock-13118-2",
+    "brand": "Independiente",
+    "address": "Av. Central 8434, Macul",
+    "comunaCut": "13118",
+    "lat": -33.48756,
+    "lng": -70.593823,
+    "prices": {
+      "93": 1305,
+      "95": 1316,
+      "97": 1390,
+      "diesel": 1020
+    },
+    "updatedAt": "2026-09-24T15:37:35.880Z"
+  },
+  {
+    "id": "mock-13118-3",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 5726, Macul",
+    "comunaCut": "13118",
+    "lat": -33.493513,
+    "lng": -70.605186,
+    "prices": {
+      "93": 1309,
+      "95": 1320,
+      "97": 1376,
+      "diesel": 1042
+    },
+    "updatedAt": "2026-09-23T23:18:25.748Z"
+  },
+  {
+    "id": "mock-13118-4",
+    "brand": "Shell",
+    "address": "Av. Principal 6362, Macul",
+    "comunaCut": "13118",
+    "lat": -33.497939,
+    "lng": -70.591484,
+    "prices": {
+      "93": 1308,
+      "95": 1340,
+      "97": 1357,
+      "diesel": 1034
+    },
+    "updatedAt": "2026-09-23T01:17:58.199Z"
+  },
+  {
+    "id": "mock-13118-5",
+    "brand": "Shell",
+    "address": "Av. Las Torres 5049, Macul",
+    "comunaCut": "13118",
+    "lat": -33.501387,
+    "lng": -70.593325,
+    "prices": {
+      "93": 1283,
+      "95": 1313,
+      "97": 1367,
+      "diesel": 1064
+    },
+    "updatedAt": "2026-09-23T06:56:45.060Z"
+  },
+  {
+    "id": "mock-13118-6",
+    "brand": "Aramco",
+    "address": "Av. Principal 4477, Macul",
+    "comunaCut": "13118",
+    "lat": -33.48684,
+    "lng": -70.59267,
+    "prices": {
+      "93": 1312,
+      "95": 1352,
+      "97": 1359,
+      "diesel": 1027
+    },
+    "updatedAt": "2026-09-25T11:32:59.211Z"
+  },
+  {
+    "id": "mock-13118-7",
+    "brand": "Shell",
+    "address": "Av. Las Torres 8171, Macul",
+    "comunaCut": "13118",
+    "lat": -33.475785,
+    "lng": -70.58967,
+    "prices": {
+      "93": 1304,
+      "95": 1340,
+      "diesel": 1054
+    },
+    "updatedAt": "2026-09-25T08:43:40.387Z"
+  },
+  {
+    "id": "mock-13118-8",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 4040, Macul",
+    "comunaCut": "13118",
+    "lat": -33.491644,
+    "lng": -70.582235,
+    "prices": {
+      "93": 1285,
+      "95": 1320,
+      "97": 1365,
+      "diesel": 1030
+    },
+    "updatedAt": "2026-09-25T19:28:00.433Z"
+  },
+  {
+    "id": "mock-13118-9",
+    "brand": "Aramco",
+    "address": "Av. Central 4879, Macul",
+    "comunaCut": "13118",
+    "lat": -33.509346,
+    "lng": -70.59294,
+    "prices": {
+      "93": 1302,
+      "95": 1339,
+      "97": 1381,
+      "diesel": 1048
+    },
+    "updatedAt": "2026-09-24T00:52:08.798Z"
+  },
+  {
+    "id": "mock-13118-10",
+    "brand": "Aramco",
+    "address": "Camino Real 6327, Macul",
+    "comunaCut": "13118",
+    "lat": -33.500361,
+    "lng": -70.600381,
+    "prices": {
+      "93": 1280,
+      "95": 1345,
+      "97": 1357,
+      "diesel": 1029
+    },
+    "updatedAt": "2026-09-23T14:12:00.264Z"
+  },
+  {
+    "id": "mock-13119-1",
+    "brand": "Copec",
+    "address": "Av. Las Torres 7839, Maipú",
+    "comunaCut": "13119",
+    "lat": -33.504378,
+    "lng": -70.753925,
+    "prices": {
+      "93": 1252,
+      "95": 1291,
+      "97": 1302
+    },
+    "updatedAt": "2026-09-25T19:09:55.535Z"
+  },
+  {
+    "id": "mock-13119-2",
+    "brand": "Aramco",
+    "address": "Av. Central 6095, Maipú",
+    "comunaCut": "13119",
+    "lat": -33.522013,
+    "lng": -70.848113,
+    "prices": {
+      "93": 1255,
+      "95": 1272,
+      "97": 1344,
+      "diesel": 986
+    },
+    "updatedAt": "2026-09-26T02:46:41.398Z"
+  },
+  {
+    "id": "mock-13119-3",
+    "brand": "Aramco",
+    "address": "Av. Central 4434, Maipú",
+    "comunaCut": "13119",
+    "lat": -33.473896,
+    "lng": -70.818278,
+    "prices": {
+      "93": 1236,
+      "95": 1274,
+      "diesel": 957
+    },
+    "updatedAt": "2026-09-25T19:42:20.341Z"
+  },
+  {
+    "id": "mock-13119-4",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 9784, Maipú",
+    "comunaCut": "13119",
+    "lat": -33.488809,
+    "lng": -70.783593,
+    "prices": {
+      "93": 1251,
+      "95": 1252,
+      "97": 1298
+    },
+    "updatedAt": "2026-09-26T13:50:05.543Z"
+  },
+  {
+    "id": "mock-13119-5",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 5786, Maipú",
+    "comunaCut": "13119",
+    "lat": -33.512431,
+    "lng": -70.812492,
+    "prices": {
+      "93": 1218,
+      "95": 1266,
+      "diesel": 981
+    },
+    "updatedAt": "2026-09-25T15:58:13.607Z"
+  },
+  {
+    "id": "mock-13119-6",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 5018, Maipú",
+    "comunaCut": "13119",
+    "lat": -33.508481,
+    "lng": -70.873487,
+    "prices": {
+      "93": 1242,
+      "95": 1250,
+      "97": 1301,
+      "diesel": 956
+    },
+    "updatedAt": "2026-09-25T23:40:24.617Z"
+  },
+  {
+    "id": "mock-13119-7",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 6364, Maipú",
+    "comunaCut": "13119",
+    "lat": -33.550212,
+    "lng": -70.804861,
+    "prices": {
+      "93": 1239,
+      "95": 1279,
+      "97": 1343,
+      "diesel": 974
+    },
+    "updatedAt": "2026-09-25T14:17:02.552Z"
+  },
+  {
+    "id": "mock-13120-1",
+    "brand": "Shell",
+    "address": "Av. Central 8837, Ñuñoa",
+    "comunaCut": "13120",
+    "lat": -33.467035,
+    "lng": -70.626338,
+    "prices": {
+      "93": 1264,
+      "95": 1279,
+      "97": 1317
+    },
+    "updatedAt": "2026-09-25T14:33:22.479Z"
+  },
+  {
+    "id": "mock-13120-2",
+    "brand": "Aramco",
+    "address": "Av. Principal 8245, Ñuñoa",
+    "comunaCut": "13120",
+    "lat": -33.464326,
+    "lng": -70.624058,
+    "prices": {
+      "93": 1236,
+      "95": 1276,
+      "97": 1308,
+      "diesel": 967
+    },
+    "updatedAt": "2026-09-23T06:26:35.968Z"
+  },
+  {
+    "id": "mock-13120-3",
+    "brand": "Shell",
+    "address": "Av. Principal 3426, Ñuñoa",
+    "comunaCut": "13120",
+    "lat": -33.460635,
+    "lng": -70.599957,
+    "prices": {
+      "93": 1243,
+      "95": 1301,
+      "diesel": 998
+    },
+    "updatedAt": "2026-09-23T07:31:31.610Z"
+  },
+  {
+    "id": "mock-13120-4",
+    "brand": "Shell",
+    "address": "Av. Las Torres 576, Ñuñoa",
+    "comunaCut": "13120",
+    "lat": -33.457137,
+    "lng": -70.593098,
+    "prices": {
+      "93": 1256,
+      "95": 1284,
+      "97": 1315,
+      "diesel": 1009
+    },
+    "updatedAt": "2026-09-22T20:13:30.415Z"
+  },
+  {
+    "id": "mock-13120-5",
+    "brand": "Shell",
+    "address": "Av. Las Torres 7605, Ñuñoa",
+    "comunaCut": "13120",
+    "lat": -33.447034,
+    "lng": -70.580474,
+    "prices": {
+      "93": 1260,
+      "95": 1301,
+      "97": 1314,
+      "diesel": 964
+    },
+    "updatedAt": "2026-09-25T08:36:52.866Z"
+  },
+  {
+    "id": "mock-13121-1",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 5627, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.500633,
+    "lng": -70.674207,
+    "prices": {
+      "93": 1277,
+      "95": 1348,
+      "97": 1391,
+      "diesel": 1025
+    },
+    "updatedAt": "2026-09-24T00:12:57.199Z"
+  },
+  {
+    "id": "mock-13121-2",
+    "brand": "Copec",
+    "address": "Av. Principal 3949, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.490073,
+    "lng": -70.669076,
+    "prices": {
+      "93": 1301,
+      "95": 1333,
+      "diesel": 1038
+    },
+    "updatedAt": "2026-09-26T12:23:11.376Z"
+  },
+  {
+    "id": "mock-13121-3",
+    "brand": "Copec",
+    "address": "Av. Principal 8777, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.503815,
+    "lng": -70.67549,
+    "prices": {
+      "93": 1279,
+      "95": 1340,
+      "97": 1368,
+      "diesel": 1064
+    },
+    "updatedAt": "2026-09-23T22:47:45.960Z"
+  },
+  {
+    "id": "mock-13121-4",
+    "brand": "Shell",
+    "address": "Av. Las Torres 8946, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.48222,
+    "lng": -70.680594,
+    "prices": {
+      "93": 1287,
+      "95": 1344,
+      "diesel": 1068
+    },
+    "updatedAt": "2026-09-25T20:49:41.979Z"
+  },
+  {
+    "id": "mock-13121-5",
+    "brand": "Copec",
+    "address": "Av. Las Torres 3122, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.503702,
+    "lng": -70.6892,
+    "prices": {
+      "93": 1281,
+      "95": 1349,
+      "97": 1366,
+      "diesel": 1060
+    },
+    "updatedAt": "2026-09-23T03:21:44.671Z"
+  },
+  {
+    "id": "mock-13121-6",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 5904, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.488332,
+    "lng": -70.686765,
+    "prices": {
+      "93": 1292,
+      "95": 1335,
+      "97": 1384,
+      "diesel": 1061
+    },
+    "updatedAt": "2026-09-24T21:57:12.561Z"
+  },
+  {
+    "id": "mock-13121-7",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 8826, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.489933,
+    "lng": -70.666668,
+    "prices": {
+      "93": 1325,
+      "95": 1317,
+      "diesel": 1045
+    },
+    "updatedAt": "2026-09-25T06:30:27.134Z"
+  },
+  {
+    "id": "mock-13121-8",
+    "brand": "Aramco",
+    "address": "Av. Principal 2342, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.494048,
+    "lng": -70.686771,
+    "prices": {
+      "93": 1313,
+      "95": 1326,
+      "97": 1414,
+      "diesel": 1065
+    },
+    "updatedAt": "2026-09-23T06:13:18.769Z"
+  },
+  {
+    "id": "mock-13121-9",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 6553, Pedro Aguirre Cerda",
+    "comunaCut": "13121",
+    "lat": -33.476644,
+    "lng": -70.656645,
+    "prices": {
+      "93": 1289,
+      "95": 1343,
+      "97": 1410,
+      "diesel": 1063
+    },
+    "updatedAt": "2026-09-25T05:41:11.743Z"
+  },
+  {
+    "id": "mock-13124-1",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 6035, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.447717,
+    "lng": -70.749181,
+    "prices": {
+      "93": 1256,
+      "95": 1297,
+      "97": 1368,
+      "diesel": 1014
+    },
+    "updatedAt": "2026-09-25T16:37:28.191Z"
+  },
+  {
+    "id": "mock-13124-2",
+    "brand": "Shell",
+    "address": "Camino Real 8576, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.452635,
+    "lng": -70.792098,
+    "prices": {
+      "93": 1252,
+      "95": 1295,
+      "diesel": 1018
+    },
+    "updatedAt": "2026-09-24T07:31:41.371Z"
+  },
+  {
+    "id": "mock-13124-3",
+    "brand": "Aramco",
+    "address": "Av. Central 5321, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.385979,
+    "lng": -70.783326,
+    "prices": {
+      "93": 1282,
+      "95": 1319
+    },
+    "updatedAt": "2026-09-25T12:26:41.425Z"
+  },
+  {
+    "id": "mock-13124-4",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 1878, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.401156,
+    "lng": -70.887439,
+    "prices": {
+      "93": 1251,
+      "95": 1309,
+      "diesel": 1033
+    },
+    "updatedAt": "2026-09-22T16:55:24.040Z"
+  },
+  {
+    "id": "mock-13124-5",
+    "brand": "Copec",
+    "address": "Av. Central 7093, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.374419,
+    "lng": -70.873032,
+    "prices": {
+      "93": 1250,
+      "95": 1311,
+      "97": 1356,
+      "diesel": 999
+    },
+    "updatedAt": "2026-09-25T21:03:09.341Z"
+  },
+  {
+    "id": "mock-13124-6",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 4172, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.399537,
+    "lng": -70.825347,
+    "prices": {
+      "93": 1270,
+      "95": 1298,
+      "97": 1373,
+      "diesel": 1032
+    },
+    "updatedAt": "2026-09-22T18:51:45.755Z"
+  },
+  {
+    "id": "mock-13124-7",
+    "brand": "Aramco",
+    "address": "Av. Central 4522, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.446936,
+    "lng": -70.916884,
+    "prices": {
+      "93": 1289,
+      "95": 1323,
+      "97": 1373,
+      "diesel": 1010
+    },
+    "updatedAt": "2026-09-24T05:47:51.158Z"
+  },
+  {
+    "id": "mock-13124-8",
+    "brand": "Aramco",
+    "address": "Av. Principal 6249, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.38375,
+    "lng": -70.806634,
+    "prices": {
+      "93": 1276,
+      "95": 1327,
+      "97": 1376
+    },
+    "updatedAt": "2026-09-25T09:39:10.107Z"
+  },
+  {
+    "id": "mock-13124-9",
+    "brand": "Aramco",
+    "address": "Camino Real 9479, Pudahuel",
+    "comunaCut": "13124",
+    "lat": -33.40982,
+    "lng": -70.944855,
+    "prices": {
+      "93": 1242,
+      "95": 1310,
+      "97": 1352,
+      "diesel": 1006
+    },
+    "updatedAt": "2026-09-22T15:23:44.881Z"
+  },
+  {
+    "id": "mock-13125-1",
+    "brand": "Copec",
+    "address": "Av. Central 4482, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.384225,
+    "lng": -70.725014,
+    "prices": {
+      "93": 1319,
+      "95": 1320,
+      "97": 1397,
+      "diesel": 1065
+    },
+    "updatedAt": "2026-09-24T09:32:24.391Z"
+  },
+  {
+    "id": "mock-13125-2",
+    "brand": "Shell",
+    "address": "Av. Principal 8799, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.372831,
+    "lng": -70.711112,
+    "prices": {
+      "93": 1318,
+      "95": 1353,
+      "97": 1407,
+      "diesel": 1048
+    },
+    "updatedAt": "2026-09-26T07:35:38.128Z"
+  },
+  {
+    "id": "mock-13125-3",
+    "brand": "Shell",
+    "address": "Av. Principal 3644, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.377126,
+    "lng": -70.739358,
+    "prices": {
+      "93": 1272,
+      "95": 1334,
+      "diesel": 1046
+    },
+    "updatedAt": "2026-09-26T01:58:01.378Z"
+  },
+  {
+    "id": "mock-13125-4",
+    "brand": "Aramco",
+    "address": "Av. Principal 3328, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.346297,
+    "lng": -70.715839,
+    "prices": {
+      "93": 1282,
+      "95": 1336,
+      "97": 1402,
+      "diesel": 1036
+    },
+    "updatedAt": "2026-09-24T21:04:26.513Z"
+  },
+  {
+    "id": "mock-13125-5",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 1888, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.323605,
+    "lng": -70.70955,
+    "prices": {
+      "93": 1276,
+      "95": 1361,
+      "97": 1404,
+      "diesel": 1056
+    },
+    "updatedAt": "2026-09-22T21:13:35.433Z"
+  },
+  {
+    "id": "mock-13125-6",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 4096, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.337229,
+    "lng": -70.689681,
+    "prices": {
+      "93": 1303,
+      "95": 1340,
+      "97": 1363,
+      "diesel": 1058
+    },
+    "updatedAt": "2026-09-23T08:42:21.411Z"
+  },
+  {
+    "id": "mock-13125-7",
+    "brand": "Aramco",
+    "address": "Av. Central 4885, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.384999,
+    "lng": -70.746727,
+    "prices": {
+      "93": 1312,
+      "95": 1337,
+      "97": 1373,
+      "diesel": 1061
+    },
+    "updatedAt": "2026-09-22T16:05:43.893Z"
+  },
+  {
+    "id": "mock-13125-8",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 200, Quilicura",
+    "comunaCut": "13125",
+    "lat": -33.37098,
+    "lng": -70.738928,
+    "prices": {
+      "93": 1273,
+      "95": 1314,
+      "97": 1409,
+      "diesel": 1055
+    },
+    "updatedAt": "2026-09-25T01:11:27.843Z"
+  },
+  {
+    "id": "mock-13126-1",
+    "brand": "Shell",
+    "address": "Av. Central 9414, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.426087,
+    "lng": -70.688323,
+    "prices": {
+      "93": 1269,
+      "95": 1289,
+      "97": 1343
+    },
+    "updatedAt": "2026-09-24T04:47:40.656Z"
+  },
+  {
+    "id": "mock-13126-2",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 4433, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.441159,
+    "lng": -70.697787,
+    "prices": {
+      "93": 1244,
+      "95": 1287,
+      "97": 1316,
+      "diesel": 970
+    },
+    "updatedAt": "2026-09-24T16:54:12.078Z"
+  },
+  {
+    "id": "mock-13126-3",
+    "brand": "Copec",
+    "address": "Av. Las Torres 4458, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.435717,
+    "lng": -70.704242,
+    "prices": {
+      "93": 1257,
+      "95": 1265,
+      "diesel": 983
+    },
+    "updatedAt": "2026-09-23T04:41:59.445Z"
+  },
+  {
+    "id": "mock-13126-4",
+    "brand": "Copec",
+    "address": "Av. Las Torres 6343, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.418702,
+    "lng": -70.707451,
+    "prices": {
+      "93": 1224,
+      "95": 1307,
+      "97": 1353,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-26T07:06:06.554Z"
+  },
+  {
+    "id": "mock-13126-5",
+    "brand": "Shell",
+    "address": "Av. Las Torres 3579, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.431635,
+    "lng": -70.717707,
+    "prices": {
+      "93": 1261,
+      "95": 1287,
+      "97": 1356,
+      "diesel": 976
+    },
+    "updatedAt": "2026-09-26T01:04:03.575Z"
+  },
+  {
+    "id": "mock-13126-6",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 8501, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.433599,
+    "lng": -70.686758,
+    "prices": {
+      "93": 1246,
+      "95": 1308,
+      "97": 1324,
+      "diesel": 996
+    },
+    "updatedAt": "2026-09-22T21:39:37.016Z"
+  },
+  {
+    "id": "mock-13126-7",
+    "brand": "Independiente",
+    "address": "Av. Principal 7953, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.447168,
+    "lng": -70.692393,
+    "prices": {
+      "93": 1262,
+      "95": 1301,
+      "diesel": 1014
+    },
+    "updatedAt": "2026-09-23T16:59:42.738Z"
+  },
+  {
+    "id": "mock-13126-8",
+    "brand": "Shell",
+    "address": "Av. Las Torres 8066, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.432038,
+    "lng": -70.690938,
+    "prices": {
+      "93": 1257,
+      "95": 1288,
+      "97": 1320,
+      "diesel": 1000
+    },
+    "updatedAt": "2026-09-22T17:07:57.886Z"
+  },
+  {
+    "id": "mock-13126-9",
+    "brand": "Aramco",
+    "address": "Av. Principal 7715, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.419421,
+    "lng": -70.706095,
+    "prices": {
+      "93": 1267,
+      "95": 1259,
+      "diesel": 1010
+    },
+    "updatedAt": "2026-09-25T10:15:28.905Z"
+  },
+  {
+    "id": "mock-13126-10",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 477, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.433054,
+    "lng": -70.696412,
+    "prices": {
+      "93": 1224,
+      "95": 1295,
+      "97": 1358,
+      "diesel": 1000
+    },
+    "updatedAt": "2026-09-23T12:40:01.186Z"
+  },
+  {
+    "id": "mock-13126-11",
+    "brand": "Shell",
+    "address": "Av. Principal 683, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.422463,
+    "lng": -70.690019,
+    "prices": {
+      "93": 1250,
+      "95": 1272,
+      "97": 1349,
+      "diesel": 993
+    },
+    "updatedAt": "2026-09-24T18:57:31.472Z"
+  },
+  {
+    "id": "mock-13126-12",
+    "brand": "Independiente",
+    "address": "Av. Central 4393, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.434353,
+    "lng": -70.703459,
+    "prices": {
+      "93": 1267,
+      "95": 1289,
+      "97": 1314,
+      "diesel": 1009
+    },
+    "updatedAt": "2026-09-24T01:44:00.362Z"
+  },
+  {
+    "id": "mock-13126-13",
+    "brand": "Independiente",
+    "address": "Av. Principal 2630, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.431554,
+    "lng": -70.712637,
+    "prices": {
+      "93": 1221,
+      "95": 1281,
+      "97": 1328,
+      "diesel": 971
+    },
+    "updatedAt": "2026-09-25T02:50:00.043Z"
+  },
+  {
+    "id": "mock-13126-14",
+    "brand": "Copec",
+    "address": "Av. Principal 1159, Quinta Normal",
+    "comunaCut": "13126",
+    "lat": -33.417139,
+    "lng": -70.705469,
+    "prices": {
+      "93": 1224,
+      "95": 1265,
+      "97": 1357,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-24T06:56:21.252Z"
+  },
+  {
+    "id": "mock-13127-1",
+    "brand": "Shell",
+    "address": "Av. Las Torres 5757, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.411072,
+    "lng": -70.65191,
+    "prices": {
+      "93": 1309,
+      "95": 1318,
+      "97": 1415,
+      "diesel": 1044
+    },
+    "updatedAt": "2026-09-25T11:16:40.652Z"
+  },
+  {
+    "id": "mock-13127-2",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 5374, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.40288,
+    "lng": -70.628637,
+    "prices": {
+      "93": 1292,
+      "95": 1363,
+      "diesel": 1044
+    },
+    "updatedAt": "2026-09-25T19:41:01.786Z"
+  },
+  {
+    "id": "mock-13127-3",
+    "brand": "Copec",
+    "address": "Av. Principal 7712, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.406319,
+    "lng": -70.625326,
+    "prices": {
+      "93": 1296,
+      "95": 1343,
+      "97": 1399
+    },
+    "updatedAt": "2026-09-22T18:06:22.009Z"
+  },
+  {
+    "id": "mock-13127-4",
+    "brand": "Copec",
+    "address": "Av. Principal 4674, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.410467,
+    "lng": -70.647807,
+    "prices": {
+      "93": 1296,
+      "95": 1346,
+      "97": 1397,
+      "diesel": 1063
+    },
+    "updatedAt": "2026-09-26T06:28:52.068Z"
+  },
+  {
+    "id": "mock-13127-5",
+    "brand": "Aramco",
+    "address": "Camino Real 8414, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.406927,
+    "lng": -70.641398,
+    "prices": {
+      "93": 1290,
+      "95": 1353,
+      "97": 1410,
+      "diesel": 1036
+    },
+    "updatedAt": "2026-09-23T14:19:48.263Z"
+  },
+  {
+    "id": "mock-13127-6",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 5879, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.385792,
+    "lng": -70.652809,
+    "prices": {
+      "93": 1276,
+      "95": 1331,
+      "97": 1393,
+      "diesel": 1040
+    },
+    "updatedAt": "2026-09-24T13:58:35.638Z"
+  },
+  {
+    "id": "mock-13127-7",
+    "brand": "Copec",
+    "address": "Av. Central 5807, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.397447,
+    "lng": -70.656227,
+    "prices": {
+      "93": 1291,
+      "95": 1351,
+      "97": 1402,
+      "diesel": 1053
+    },
+    "updatedAt": "2026-09-25T14:25:42.899Z"
+  },
+  {
+    "id": "mock-13127-8",
+    "brand": "Shell",
+    "address": "Camino Real 1390, Recoleta",
+    "comunaCut": "13127",
+    "lat": -33.425838,
+    "lng": -70.636122,
+    "prices": {
+      "93": 1320,
+      "95": 1360,
+      "97": 1410,
+      "diesel": 1035
+    },
+    "updatedAt": "2026-09-26T09:48:32.480Z"
+  },
+  {
+    "id": "mock-13128-1",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 5464, Renca",
+    "comunaCut": "13128",
+    "lat": -33.391224,
+    "lng": -70.743153,
+    "prices": {
+      "93": 1282,
+      "95": 1358,
+      "97": 1393,
+      "diesel": 1076
+    },
+    "updatedAt": "2026-09-26T06:48:06.198Z"
+  },
+  {
+    "id": "mock-13128-2",
+    "brand": "Copec",
+    "address": "Av. Principal 5910, Renca",
+    "comunaCut": "13128",
+    "lat": -33.391545,
+    "lng": -70.750666,
+    "prices": {
+      "93": 1286,
+      "95": 1343,
+      "97": 1374
+    },
+    "updatedAt": "2026-09-24T03:41:03.671Z"
+  },
+  {
+    "id": "mock-13128-3",
+    "brand": "Shell",
+    "address": "Av. Central 9264, Renca",
+    "comunaCut": "13128",
+    "lat": -33.409433,
+    "lng": -70.721325,
+    "prices": {
+      "93": 1321,
+      "95": 1342,
+      "diesel": 1044
+    },
+    "updatedAt": "2026-09-26T05:15:52.097Z"
+  },
+  {
+    "id": "mock-13128-4",
+    "brand": "Copec",
+    "address": "Av. Principal 7467, Renca",
+    "comunaCut": "13128",
+    "lat": -33.396993,
+    "lng": -70.74962,
+    "prices": {
+      "93": 1298,
+      "95": 1336,
+      "97": 1397,
+      "diesel": 1065
+    },
+    "updatedAt": "2026-09-24T16:59:00.022Z"
+  },
+  {
+    "id": "mock-13128-5",
+    "brand": "Aramco",
+    "address": "Av. Principal 3526, Renca",
+    "comunaCut": "13128",
+    "lat": -33.387012,
+    "lng": -70.698311,
+    "prices": {
+      "93": 1324,
+      "95": 1333,
+      "97": 1395,
+      "diesel": 1035
+    },
+    "updatedAt": "2026-09-23T09:32:50.978Z"
+  },
+  {
+    "id": "mock-13128-6",
+    "brand": "Copec",
+    "address": "Av. Las Torres 1783, Renca",
+    "comunaCut": "13128",
+    "lat": -33.405041,
+    "lng": -70.732384,
+    "prices": {
+      "93": 1292,
+      "95": 1354,
+      "97": 1369,
+      "diesel": 1043
+    },
+    "updatedAt": "2026-09-26T06:38:24.703Z"
+  },
+  {
+    "id": "mock-13128-7",
+    "brand": "Copec",
+    "address": "Av. Las Torres 5303, Renca",
+    "comunaCut": "13128",
+    "lat": -33.394596,
+    "lng": -70.736646,
+    "prices": {
+      "93": 1296,
+      "95": 1339,
+      "97": 1409
+    },
+    "updatedAt": "2026-09-24T07:54:24.592Z"
+  },
+  {
+    "id": "mock-13128-8",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 2791, Renca",
+    "comunaCut": "13128",
+    "lat": -33.401692,
+    "lng": -70.734792,
+    "prices": {
+      "93": 1302,
+      "95": 1323,
+      "97": 1406,
+      "diesel": 1033
+    },
+    "updatedAt": "2026-09-23T11:45:34.899Z"
+  },
+  {
+    "id": "mock-13128-9",
+    "brand": "Independiente",
+    "address": "Av. Principal 2833, Renca",
+    "comunaCut": "13128",
+    "lat": -33.41594,
+    "lng": -70.681886,
+    "prices": {
+      "93": 1297,
+      "95": 1352
+    },
+    "updatedAt": "2026-09-23T22:45:24.623Z"
+  },
+  {
+    "id": "mock-13128-10",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 585, Renca",
+    "comunaCut": "13128",
+    "lat": -33.388688,
+    "lng": -70.756909,
+    "prices": {
+      "93": 1293,
+      "95": 1343,
+      "97": 1403,
+      "diesel": 1057
+    },
+    "updatedAt": "2026-09-23T22:59:57.917Z"
+  },
+  {
+    "id": "mock-13602-1",
+    "brand": "Shell",
+    "address": "Av. Principal 4340, El Monte",
+    "comunaCut": "13602",
+    "lat": -33.65336,
+    "lng": -71.031632,
+    "prices": {
+      "93": 1244,
+      "95": 1305,
+      "97": 1337,
+      "diesel": 1017
+    },
+    "updatedAt": "2026-09-25T03:26:35.328Z"
+  },
+  {
+    "id": "mock-13602-2",
+    "brand": "Shell",
+    "address": "Av. Central 5097, El Monte",
+    "comunaCut": "13602",
+    "lat": -33.634335,
+    "lng": -71.016692,
+    "prices": {
+      "93": 1239,
+      "95": 1293,
+      "97": 1334,
+      "diesel": 999
+    },
+    "updatedAt": "2026-09-26T06:40:03.262Z"
+  },
+  {
+    "id": "mock-13602-3",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 2076, El Monte",
+    "comunaCut": "13602",
+    "lat": -33.635543,
+    "lng": -71.003124,
+    "prices": {
+      "93": 1236,
+      "95": 1298,
+      "97": 1337,
+      "diesel": 973
+    },
+    "updatedAt": "2026-09-22T19:59:01.467Z"
+  },
+  {
+    "id": "mock-13602-4",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 4126, El Monte",
+    "comunaCut": "13602",
+    "lat": -33.641255,
+    "lng": -71.072553,
+    "prices": {
+      "93": 1232,
+      "95": 1297,
+      "97": 1346,
+      "diesel": 975
+    },
+    "updatedAt": "2026-09-23T06:26:29.258Z"
+  },
+  {
+    "id": "mock-13602-5",
+    "brand": "Aramco",
+    "address": "Av. Central 146, El Monte",
+    "comunaCut": "13602",
+    "lat": -33.702748,
+    "lng": -71.089422,
+    "prices": {
+      "93": 1270,
+      "95": 1310,
+      "97": 1340,
+      "diesel": 1019
+    },
+    "updatedAt": "2026-09-22T15:42:08.743Z"
+  },
+  {
+    "id": "mock-13604-1",
+    "brand": "Aramco",
+    "address": "Camino Real 7393, Padre Hurtado",
+    "comunaCut": "13604",
+    "lat": -33.544605,
+    "lng": -70.928307,
+    "prices": {
+      "93": 1281,
+      "95": 1334,
+      "diesel": 1073
+    },
+    "updatedAt": "2026-09-25T21:50:50.762Z"
+  },
+  {
+    "id": "mock-13604-2",
+    "brand": "Copec",
+    "address": "Camino Real 9187, Padre Hurtado",
+    "comunaCut": "13604",
+    "lat": -33.566405,
+    "lng": -70.915488,
+    "prices": {
+      "93": 1284,
+      "95": 1351,
+      "97": 1417,
+      "diesel": 1039
+    },
+    "updatedAt": "2026-09-26T06:30:19.757Z"
+  },
+  {
+    "id": "mock-13604-3",
+    "brand": "Shell",
+    "address": "Av. Central 2945, Padre Hurtado",
+    "comunaCut": "13604",
+    "lat": -33.567675,
+    "lng": -70.919941,
+    "prices": {
+      "93": 1292,
+      "95": 1341,
+      "97": 1389,
+      "diesel": 1047
+    },
+    "updatedAt": "2026-09-24T02:18:19.326Z"
+  },
+  {
+    "id": "mock-13604-4",
+    "brand": "Copec",
+    "address": "Av. Central 5975, Padre Hurtado",
+    "comunaCut": "13604",
+    "lat": -33.558455,
+    "lng": -70.807122,
+    "prices": {
+      "93": 1280,
+      "95": 1367,
+      "97": 1400,
+      "diesel": 1036
+    },
+    "updatedAt": "2026-09-25T13:10:07.178Z"
+  },
+  {
+    "id": "mock-13604-5",
+    "brand": "Independiente",
+    "address": "Av. Central 1680, Padre Hurtado",
+    "comunaCut": "13604",
+    "lat": -33.571102,
+    "lng": -70.914841,
+    "prices": {
+      "93": 1289,
+      "95": 1325,
+      "97": 1418,
+      "diesel": 1072
+    },
+    "updatedAt": "2026-09-26T11:05:06.325Z"
+  },
+  {
+    "id": "mock-13604-6",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 408, Padre Hurtado",
+    "comunaCut": "13604",
+    "lat": -33.573745,
+    "lng": -70.818245,
+    "prices": {
+      "93": 1286,
+      "95": 1364,
+      "97": 1376,
+      "diesel": 1059
+    },
+    "updatedAt": "2026-09-22T19:40:03.277Z"
+  },
+  {
+    "id": "mock-13605-1",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 7149, Peñaflor",
+    "comunaCut": "13605",
+    "lat": -33.613006,
+    "lng": -70.850365,
+    "prices": {
+      "93": 1280,
+      "95": 1334,
+      "97": 1407,
+      "diesel": 1045
+    },
+    "updatedAt": "2026-09-23T02:18:45.447Z"
+  },
+  {
+    "id": "mock-13605-2",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 2021, Peñaflor",
+    "comunaCut": "13605",
+    "lat": -33.639828,
+    "lng": -70.952589,
+    "prices": {
+      "93": 1326,
+      "95": 1324,
+      "97": 1409
+    },
+    "updatedAt": "2026-09-24T06:29:25.060Z"
+  },
+  {
+    "id": "mock-13605-3",
+    "brand": "Independiente",
+    "address": "Camino Real 1401, Peñaflor",
+    "comunaCut": "13605",
+    "lat": -33.60996,
+    "lng": -70.86343,
+    "prices": {
+      "93": 1290,
+      "95": 1345,
+      "97": 1402
+    },
+    "updatedAt": "2026-09-23T19:27:16.729Z"
+  },
+  {
+    "id": "mock-13601-1",
+    "brand": "Aramco",
+    "address": "Camino Real 8525, Talagante",
+    "comunaCut": "13601",
+    "lat": -33.700053,
+    "lng": -70.989432,
+    "prices": {
+      "93": 1293,
+      "95": 1353,
+      "97": 1383,
+      "diesel": 1031
+    },
+    "updatedAt": "2026-09-23T06:26:22.049Z"
+  },
+  {
+    "id": "mock-13601-2",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 4969, Talagante",
+    "comunaCut": "13601",
+    "lat": -33.657442,
+    "lng": -70.818624,
+    "prices": {
+      "93": 1313,
+      "95": 1357,
+      "97": 1378,
+      "diesel": 1044
+    },
+    "updatedAt": "2026-09-25T22:16:35.163Z"
+  },
+  {
+    "id": "mock-13601-3",
+    "brand": "Aramco",
+    "address": "Av. Central 5773, Talagante",
+    "comunaCut": "13601",
+    "lat": -33.649856,
+    "lng": -70.956408,
+    "prices": {
+      "93": 1295,
+      "95": 1338,
+      "97": 1365,
+      "diesel": 1047
+    },
+    "updatedAt": "2026-09-22T17:53:58.040Z"
+  },
+  {
+    "id": "mock-13404-1",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 8183, Paine",
+    "comunaCut": "13404",
+    "lat": -33.865672,
+    "lng": -70.553822,
+    "prices": {
+      "93": 1268,
+      "95": 1310,
+      "97": 1339,
+      "diesel": 1016
+    },
+    "updatedAt": "2026-09-23T09:06:39.479Z"
+  },
+  {
+    "id": "mock-13404-2",
+    "brand": "Shell",
+    "address": "Av. Principal 8778, Paine",
+    "comunaCut": "13404",
+    "lat": -33.872183,
+    "lng": -70.702383,
+    "prices": {
+      "93": 1250,
+      "95": 1276,
+      "97": 1334,
+      "diesel": 1013
+    },
+    "updatedAt": "2026-09-25T21:56:02.981Z"
+  },
+  {
+    "id": "mock-13404-3",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 1198, Paine",
+    "comunaCut": "13404",
+    "lat": -33.901069,
+    "lng": -70.831543,
+    "prices": {
+      "93": 1276,
+      "95": 1311,
+      "97": 1361,
+      "diesel": 1020
+    },
+    "updatedAt": "2026-09-25T12:14:41.213Z"
+  },
+  {
+    "id": "mock-13404-4",
+    "brand": "Copec",
+    "address": "Calle Los Aromos 1364, Paine",
+    "comunaCut": "13404",
+    "lat": -33.824212,
+    "lng": -70.927684,
+    "prices": {
+      "93": 1237,
+      "95": 1313,
+      "97": 1340,
+      "diesel": 1002
+    },
+    "updatedAt": "2026-09-23T06:05:41.286Z"
+  },
+  {
+    "id": "mock-13404-5",
+    "brand": "Aramco",
+    "address": "Av. Principal 1677, Paine",
+    "comunaCut": "13404",
+    "lat": -33.87029,
+    "lng": -70.60417,
+    "prices": {
+      "93": 1241,
+      "95": 1292,
+      "97": 1322,
+      "diesel": 1026
+    },
+    "updatedAt": "2026-09-25T00:13:30.135Z"
+  },
+  {
+    "id": "mock-13404-6",
+    "brand": "Independiente",
+    "address": "Av. Central 1659, Paine",
+    "comunaCut": "13404",
+    "lat": -33.894952,
+    "lng": -70.771743,
+    "prices": {
+      "93": 1239,
+      "95": 1308,
+      "97": 1368,
+      "diesel": 1000
+    },
+    "updatedAt": "2026-09-23T11:56:08.497Z"
+  },
+  {
+    "id": "mock-13603-1",
+    "brand": "Shell",
+    "address": "Calle Los Aromos 6318, Isla de Maipo",
+    "comunaCut": "13603",
+    "lat": -33.707504,
+    "lng": -70.872395,
+    "prices": {
+      "93": 1258,
+      "95": 1327,
+      "97": 1368,
+      "diesel": 1022
+    },
+    "updatedAt": "2026-09-23T07:32:25.109Z"
+  },
+  {
+    "id": "mock-13603-2",
+    "brand": "Copec",
+    "address": "Av. Las Torres 7562, Isla de Maipo",
+    "comunaCut": "13603",
+    "lat": -33.7746,
+    "lng": -70.964187,
+    "prices": {
+      "93": 1252,
+      "95": 1296,
+      "diesel": 1002
+    },
+    "updatedAt": "2026-09-22T22:39:50.963Z"
+  },
+  {
+    "id": "mock-13603-3",
+    "brand": "Aramco",
+    "address": "Av. Central 9476, Isla de Maipo",
+    "comunaCut": "13603",
+    "lat": -33.791611,
+    "lng": -70.874712,
+    "prices": {
+      "93": 1275,
+      "95": 1330,
+      "97": 1355,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-24T17:25:06.952Z"
+  },
+  {
+    "id": "mock-13603-4",
+    "brand": "Shell",
+    "address": "Camino Real 4560, Isla de Maipo",
+    "comunaCut": "13603",
+    "lat": -33.765032,
+    "lng": -70.983668,
+    "prices": {
+      "93": 1273,
+      "95": 1291,
+      "97": 1359,
+      "diesel": 1007
+    },
+    "updatedAt": "2026-09-25T15:54:52.089Z"
+  },
+  {
+    "id": "mock-13603-5",
+    "brand": "Shell",
+    "address": "Av. Principal 2852, Isla de Maipo",
+    "comunaCut": "13603",
+    "lat": -33.744707,
+    "lng": -71.102373,
+    "prices": {
+      "93": 1279,
+      "95": 1293,
+      "97": 1340,
+      "diesel": 1007
+    },
+    "updatedAt": "2026-09-25T05:41:55.163Z"
+  },
+  {
+    "id": "mock-13402-1",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 4557, Buin",
+    "comunaCut": "13402",
+    "lat": -33.806442,
+    "lng": -70.835659,
+    "prices": {
+      "93": 1278,
+      "95": 1334,
+      "97": 1372,
+      "diesel": 1050
+    },
+    "updatedAt": "2026-09-26T11:06:54.747Z"
+  },
+  {
+    "id": "mock-13402-2",
+    "brand": "Shell",
+    "address": "Camino Real 5156, Buin",
+    "comunaCut": "13402",
+    "lat": -33.824596,
+    "lng": -70.777313,
+    "prices": {
+      "93": 1283,
+      "95": 1316,
+      "diesel": 1068
+    },
+    "updatedAt": "2026-09-24T00:39:19.268Z"
+  },
+  {
+    "id": "mock-13402-3",
+    "brand": "Copec",
+    "address": "Av. Central 3524, Buin",
+    "comunaCut": "13402",
+    "lat": -33.816436,
+    "lng": -70.800414,
+    "prices": {
+      "93": 1300,
+      "95": 1319,
+      "diesel": 1029
+    },
+    "updatedAt": "2026-09-23T14:47:26.989Z"
+  },
+  {
+    "id": "mock-13402-4",
+    "brand": "Independiente",
+    "address": "Av. Las Torres 3898, Buin",
+    "comunaCut": "13402",
+    "lat": -33.752689,
+    "lng": -70.6987,
+    "prices": {
+      "93": 1302,
+      "95": 1339,
+      "97": 1378,
+      "diesel": 1047
+    },
+    "updatedAt": "2026-09-26T11:32:00.396Z"
+  },
+  {
+    "id": "mock-13203-1",
+    "brand": "Aramco",
+    "address": "Av. Central 9377, San José de Maipo",
+    "comunaCut": "13203",
+    "lat": -33.498747,
+    "lng": -70.264887,
+    "prices": {
+      "93": 1266,
+      "95": 1305,
+      "diesel": 1036
+    },
+    "updatedAt": "2026-09-26T11:32:03.494Z"
+  },
+  {
+    "id": "mock-13203-2",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 4667, San José de Maipo",
+    "comunaCut": "13203",
+    "lat": -33.306033,
+    "lng": -70.031437,
+    "prices": {
+      "93": 1252,
+      "95": 1322,
+      "97": 1372,
+      "diesel": 1006
+    },
+    "updatedAt": "2026-09-22T17:26:59.423Z"
+  },
+  {
+    "id": "mock-13203-3",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 1177, San José de Maipo",
+    "comunaCut": "13203",
+    "lat": -33.340891,
+    "lng": -70.142128,
+    "prices": {
+      "93": 1272,
+      "95": 1281,
+      "diesel": 1030
+    },
+    "updatedAt": "2026-09-25T06:29:50.514Z"
+  },
+  {
+    "id": "mock-13203-4",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 3669, San José de Maipo",
+    "comunaCut": "13203",
+    "lat": -33.490417,
+    "lng": -70.16247,
+    "prices": {
+      "93": 1272,
+      "95": 1328,
+      "97": 1351,
+      "diesel": 1002
+    },
+    "updatedAt": "2026-09-26T11:45:12.713Z"
+  },
+  {
+    "id": "mock-13203-5",
+    "brand": "Aramco",
+    "address": "Calle Los Aromos 5957, San José de Maipo",
+    "comunaCut": "13203",
+    "lat": -34.089268,
+    "lng": -70.101029,
+    "prices": {
+      "93": 1273,
+      "95": 1317,
+      "97": 1373
+    },
+    "updatedAt": "2026-09-22T17:08:47.242Z"
+  },
+  {
+    "id": "mock-13303-1",
+    "brand": "Aramco",
+    "address": "Av. Central 6840, Tiltil",
+    "comunaCut": "13303",
+    "lat": -33.009498,
+    "lng": -70.889728,
+    "prices": {
+      "93": 1269,
+      "95": 1287,
+      "97": 1359
+    },
+    "updatedAt": "2026-09-25T13:15:10.530Z"
+  },
+  {
+    "id": "mock-13303-2",
+    "brand": "Independiente",
+    "address": "Av. Principal 1591, Tiltil",
+    "comunaCut": "13303",
+    "lat": -33.0238,
+    "lng": -70.997778,
+    "prices": {
+      "93": 1267,
+      "95": 1291,
+      "97": 1353,
+      "diesel": 978
+    },
+    "updatedAt": "2026-09-23T08:17:06.887Z"
+  },
+  {
+    "id": "mock-13303-3",
+    "brand": "Aramco",
+    "address": "Camino Real 1946, Tiltil",
+    "comunaCut": "13303",
+    "lat": -33.063059,
+    "lng": -71.005927,
+    "prices": {
+      "93": 1226,
+      "95": 1299,
+      "97": 1346,
+      "diesel": 1004
+    },
+    "updatedAt": "2026-09-23T05:40:26.148Z"
+  },
+  {
+    "id": "mock-13501-1",
+    "brand": "Aramco",
+    "address": "Av. Las Torres 2342, Melipilla",
+    "comunaCut": "13501",
+    "lat": -33.810746,
+    "lng": -71.00175,
+    "prices": {
+      "93": 1294,
+      "95": 1318,
+      "97": 1385,
+      "diesel": 1025
+    },
+    "updatedAt": "2026-09-22T20:45:01.208Z"
+  },
+  {
+    "id": "mock-13501-2",
+    "brand": "Shell",
+    "address": "Av. Principal 8935, Melipilla",
+    "comunaCut": "13501",
+    "lat": -33.697485,
+    "lng": -71.397165,
+    "prices": {
+      "93": 1295,
+      "95": 1338,
+      "97": 1364,
+      "diesel": 1012
+    },
+    "updatedAt": "2026-09-26T06:46:10.620Z"
+  },
+  {
+    "id": "mock-13501-3",
+    "brand": "Copec",
+    "address": "Av. Las Torres 2307, Melipilla",
+    "comunaCut": "13501",
+    "lat": -33.825394,
+    "lng": -70.999514,
+    "prices": {
+      "93": 1280,
+      "95": 1296,
+      "97": 1390
+    },
+    "updatedAt": "2026-09-23T16:28:19.930Z"
+  },
+  {
+    "id": "mock-13505-1",
+    "brand": "Aramco",
+    "address": "Av. Principal 7049, San Pedro",
+    "comunaCut": "13505",
+    "lat": -33.910363,
+    "lng": -71.359563,
+    "prices": {
+      "93": 1218,
+      "95": 1298,
+      "97": 1339,
+      "diesel": 1002
+    },
+    "updatedAt": "2026-09-24T09:35:55.408Z"
+  },
+  {
+    "id": "mock-13505-2",
+    "brand": "Copec",
+    "address": "Camino Real 8610, San Pedro",
+    "comunaCut": "13505",
+    "lat": -33.80013,
+    "lng": -71.445523,
+    "prices": {
+      "93": 1229,
+      "95": 1270,
+      "97": 1311,
+      "diesel": 995
+    },
+    "updatedAt": "2026-09-25T00:05:55.717Z"
+  },
+  {
+    "id": "mock-13502-1",
+    "brand": "Aramco",
+    "address": "Camino Real 9627, Alhué",
+    "comunaCut": "13502",
+    "lat": -33.958455,
+    "lng": -71.115078,
+    "prices": {
+      "93": 1237,
+      "95": 1252,
+      "97": 1311,
+      "diesel": 955
+    },
+    "updatedAt": "2026-09-23T23:07:30.682Z"
+  },
+  {
+    "id": "mock-13502-2",
+    "brand": "Copec",
+    "address": "Av. Las Torres 6842, Alhué",
+    "comunaCut": "13502",
+    "lat": -34.089946,
+    "lng": -71.121423,
+    "prices": {
+      "93": 1235,
+      "95": 1239,
+      "97": 1294,
+      "diesel": 958
+    },
+    "updatedAt": "2026-09-24T21:00:29.148Z"
+  },
+  {
+    "id": "mock-13502-3",
+    "brand": "Independiente",
+    "address": "Calle Los Aromos 2233, Alhué",
+    "comunaCut": "13502",
+    "lat": -34.119812,
+    "lng": -70.954369,
+    "prices": {
+      "93": 1200,
+      "95": 1249,
+      "97": 1302,
+      "diesel": 987
+    },
+    "updatedAt": "2026-09-26T11:57:47.608Z"
+  },
+  {
+    "id": "mock-13502-4",
+    "brand": "Shell",
+    "address": "Av. Principal 6421, Alhué",
+    "comunaCut": "13502",
+    "lat": -34.019347,
+    "lng": -70.967515,
+    "prices": {
+      "93": 1213,
+      "95": 1275,
+      "97": 1289
+    },
+    "updatedAt": "2026-09-24T23:47:07.043Z"
+  }
+]
