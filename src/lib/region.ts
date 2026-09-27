@@ -1,22 +1,29 @@
-// Build-time view of the region: stations, per-comuna stats and projected shapes,
-// computed once and shared by the map, the price board and the ranking.
+// Build-time view of one region: its stations, per-comuna stats and projected shapes,
+// computed once per region and shared by the map, the price board and the ranking.
+// Comunas are compared against their own region's median.
 import { getCollection } from "astro:content";
 import rawMeta from "../data/prices.meta.json";
-import { comunas, projectComunas } from "./geo";
+import { comunasOf, projectRegion } from "./geo";
 import { classify, freshPrice, regionMedian, statsByComuna, type PriceClass } from "./prices";
 import { FUELS, PricesMetaSchema, type Fuel, type Station } from "./schema";
 
 export const MAP_WIDTH = 600;
 
-async function load() {
-  const meta = PricesMetaSchema.parse(rawMeta);
-  const { fetchedAt } = meta;
-  const stations = (await getCollection("stations")).map((entry) => entry.data);
+export const pricesMeta = PricesMetaSchema.parse(rawMeta);
+
+let allStations: Promise<Station[]> | undefined;
+export const getAllStations = () =>
+  (allStations ??= getCollection("stations").then((entries) => entries.map((e) => e.data)));
+
+async function load(region: string) {
+  const { fetchedAt } = pricesMeta;
+  const comunas = comunasOf(region);
+  const cuts = new Set(comunas.map((c) => c.cut));
+  const stations = (await getAllStations()).filter((s) => cuts.has(s.comunaCut));
   const stats = statsByComuna(stations, fetchedAt);
   const medians = Object.fromEntries(
     FUELS.map((f) => [f, regionMedian(stations, f, fetchedAt)]),
   ) as Record<Fuel, number | undefined>;
-  const map = projectComunas(MAP_WIDTH);
   const nameByCut = new Map(comunas.map((c) => [c.cut, c.name]));
 
   function classFor(cut: string, fuel: Fuel): PriceClass {
@@ -57,11 +64,11 @@ async function load() {
   }
 
   return {
-    meta,
+    meta: pricesMeta,
     stations,
     stats,
     medians,
-    map,
+    map: projectRegion(region, MAP_WIDTH),
     classFor,
     ranking,
     cheapestFirst,
@@ -70,5 +77,9 @@ async function load() {
   };
 }
 
-let cache: ReturnType<typeof load> | undefined;
-export const getRegionData = () => (cache ??= load());
+const cache = new Map<string, ReturnType<typeof load>>();
+export function getRegionData(region: string) {
+  let data = cache.get(region);
+  if (!data) cache.set(region, (data = load(region)));
+  return data;
+}

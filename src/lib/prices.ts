@@ -16,8 +16,15 @@ export function freshPrice(station: Station, fuel: Fuel, fetchedAt: Date): numbe
 
 export interface FuelStats {
   median: number;
+  // Average of fresh prices, rounded to whole pesos
+  mean: number;
   min: number;
   count: number;
+}
+
+export function mean(values: number[]): number | undefined {
+  if (values.length === 0) return undefined;
+  return Math.round(values.reduce((sum, v) => sum + v, 0) / values.length);
 }
 export type ComunaStats = Partial<Record<Fuel, FuelStats>>;
 
@@ -29,38 +36,56 @@ export function median(values: number[]): number | undefined {
 }
 
 export function statsByComuna(stations: Station[], fetchedAt: Date): Map<string, ComunaStats> {
-  const pricesByComuna = new Map<string, Partial<Record<Fuel, number[]>>>();
+  return statsBy(stations, (s) => s.comunaCut, fetchedAt);
+}
+
+// Median, minimum and count of fresh prices per fuel, grouped by `key` (comuna, region…).
+export function statsBy(
+  stations: Station[],
+  key: (station: Station) => string,
+  fetchedAt: Date,
+): Map<string, ComunaStats> {
+  const pricesByKey = new Map<string, Partial<Record<Fuel, number[]>>>();
   for (const station of stations) {
-    const prices = pricesByComuna.get(station.comunaCut) ?? {};
+    const prices = pricesByKey.get(key(station)) ?? {};
     for (const fuel of FUELS) {
       const price = freshPrice(station, fuel, fetchedAt);
       if (price !== undefined) (prices[fuel] ??= []).push(price);
     }
-    pricesByComuna.set(station.comunaCut, prices);
+    pricesByKey.set(key(station), prices);
   }
 
   const stats = new Map<string, ComunaStats>();
-  for (const [cut, prices] of pricesByComuna) {
+  for (const [cut, prices] of pricesByKey) {
     const comuna: ComunaStats = {};
     for (const fuel of FUELS) {
       const values = prices[fuel];
       if (!values?.length) continue;
-      comuna[fuel] = { median: median(values)!, min: Math.min(...values), count: values.length };
+      comuna[fuel] = {
+        median: median(values)!,
+        mean: mean(values)!,
+        min: Math.min(...values),
+        count: values.length,
+      };
     }
     stats.set(cut, comuna);
   }
   return stats;
 }
 
+const freshPrices = (stations: Station[], fuel: Fuel, fetchedAt: Date) =>
+  stations.flatMap((s) => {
+    const price = freshPrice(s, fuel, fetchedAt);
+    return price === undefined ? [] : [price];
+  });
+
 // Median over every station in the region: the "normal" price the map compares against.
-export function regionMedian(stations: Station[], fuel: Fuel, fetchedAt: Date): number | undefined {
-  return median(
-    stations.flatMap((s) => {
-      const price = freshPrice(s, fuel, fetchedAt);
-      return price === undefined ? [] : [price];
-    }),
-  );
-}
+export const regionMedian = (stations: Station[], fuel: Fuel, fetchedAt: Date) =>
+  median(freshPrices(stations, fuel, fetchedAt));
+
+// Average over every station: the national reference on the home map.
+export const stationsMean = (stations: Station[], fuel: Fuel, fetchedAt: Date) =>
+  mean(freshPrices(stations, fuel, fetchedAt));
 
 // Diverging classes: how far a comuna's median sits from the region median, in CLP.
 export const PRICE_CLASSES = ["-2", "-1", "0", "1", "2"] as const;

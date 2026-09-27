@@ -7,16 +7,31 @@
 import { CLASS_LABELS, FUEL_LABELS, PRICE_CLASSES, formatClp } from "../lib/prices";
 import { getRegionData } from "../lib/region";
 import { comunaHref } from "../lib/slug";
+import type { RegionInfo } from "../lib/regions";
 import { FUELS, type Fuel } from "../lib/schema";
 
 interface Props {
+  region: RegionInfo;
   fuel: Fuel;
 }
 
-const { fuel } = Astro.props;
-const { stats, medians, map, classFor, ranking } = await getRegionData();
+const { region, fuel } = Astro.props;
+const { stats, medians, map, classFor, ranking } = await getRegionData(region.code);
 const { width, height, shapes } = map;
 const shapeByCut = new Map(shapes.map((s) => [s.cut, s]));
+
+// One outline per cheapest comuna, shared by every fuel it wins: the same comuna often
+// wins several fuels, and southern comuna outlines are large.
+const fuelsByCheapest = new Map<string, Fuel[]>();
+for (const f of FUELS) {
+  const cut = ranking(f)[0]?.cut;
+  if (cut && shapeByCut.has(cut))
+    fuelsByCheapest.set(cut, [...(fuelsByCheapest.get(cut) ?? []), f]);
+}
+const cheapestOutlines = [...fuelsByCheapest].map(([cut, fuels]) => ({
+  cheapest: shapeByCut.get(cut),
+  fuels,
+}));
 
 const perFuelAttrs = (cut: string) =>
   Object.fromEntries(
@@ -43,14 +58,14 @@ const perFuelAttrs = (cut: string) =>
     aria-labelledby="map-title"
   >
     <title id="map-title">
-      Mapa de comunas de la Región Metropolitana coloreadas según su precio mediano
+      Mapa de comunas de {region.label} coloreadas según su precio mediano
     </title>
 
     {shapes.map((shape) => {
       const fuelStats = stats.get(shape.cut)?.[fuel];
       return (
         <a
-          href={comunaHref(shape.name)}
+          href={comunaHref(region.slug, shape.name)}
           data-comuna-link
           data-cut={shape.cut}
           data-name={shape.name}
@@ -72,11 +87,10 @@ const perFuelAttrs = (cut: string) =>
       );
     })}
 
-    {FUELS.map((f) => {
-      const cheapest = shapeByCut.get(ranking(f)[0]?.cut ?? "");
+    {cheapestOutlines.map(({ cheapest, fuels }) => {
       return (
         cheapest && (
-          <g class="pointer-events-none" data-for-fuel={f}>
+          <g class="pointer-events-none" data-for-fuel={fuels.join(" ")}>
             <path d={cheapest.d} class="cheapest-outline" />
             <text
               x={cheapest.centroid[0]}

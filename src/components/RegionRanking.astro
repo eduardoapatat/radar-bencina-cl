@@ -1,0 +1,54 @@
+---
+// Table view of the Chile map: regions ordered by average price, one list per fuel,
+// with the fuel selector right above it.
+import FuelTabs from "./FuelTabs.astro";
+import { getNationalData } from "../lib/national";
+import { CLASS_LABELS, FUEL_LABELS, formatClp } from "../lib/prices";
+import { FUELS, type Fuel } from "../lib/schema";
+import { regionHref } from "../lib/slug";
+
+interface Props {
+  selected: Fuel;
+}
+
+const { selected } = Astro.props;
+const { ranking } = await getNationalData();
+---
+
+<section aria-labelledby="region-ranking-title" class="w-full">
+  <h2 id="region-ranking-title" class="text-center font-display text-2xl font-bold">
+    Precio promedio por región
+  </h2>
+
+  <div class="mt-3 flex justify-center">
+    <FuelTabs selected={selected} />
+  </div>
+
+  {FUELS.map((fuel) => (
+    <div data-for-fuel={fuel} class="mt-4">
+      <p class="sr-only">Combustible {FUEL_LABELS[fuel]}</p>
+      <ol class="divide-y divide-lane">
+        {ranking(fuel).map((row, i) => (
+          <li class="flex items-center gap-3 py-1.5">
+            <span class="w-6 text-right text-sm text-dust tabular-nums">{i + 1}</span>
+            <span
+              class="size-3 shrink-0 rounded-sm bg-(--fill)"
+              data-class={row.priceClass}
+              title={row.priceClass === "none" ? undefined : CLASS_LABELS[row.priceClass]}
+            />
+            <a
+              href={regionHref(row.slug)}
+              data-cut={row.code}
+              class="flex-1 underline-offset-2 hover:underline"
+            >
+              {row.name}
+            </a>
+            <span class="font-display text-lg font-semibold tabular-nums">
+              {formatClp(row.mean)}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  ))}
+</section>

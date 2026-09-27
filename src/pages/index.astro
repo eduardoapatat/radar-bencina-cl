@@ -1,30 +1,40 @@
 ---
-import ComunaRanking from "../components/ComunaRanking.astro";
-import PriceBoard from "../components/PriceBoard.astro";
-import RegionMap from "../components/RegionMap.astro";
+import ChileMap from "../components/ChileMap.astro";
+import LocationPicker from "../components/LocationPicker.astro";
+import MapLegend from "../components/MapLegend.astro";
+import RegionRanking from "../components/RegionRanking.astro";
 import Layout from "../layouts/Layout.astro";
+import { getNationalData } from "../lib/national";
 
 const selectedFuel = "95";
+const { averages } = await getNationalData();
 ---
 
-<Layout>
-  <h1 class="max-w-prose font-display text-3xl leading-tight font-bold sm:text-4xl">
-    Dónde cargar más barato en la Región Metropolitana
-  </h1>
+<Layout title="Seguimiento de precios de bencina en Chile | Radar Bencina">
+  <!-- Title and location filters: on their own, centered at the top. -->
+  <header class="mx-auto max-w-3xl space-y-6">
+    <h1 class="text-center font-display text-3xl leading-tight font-bold sm:text-4xl">
+      Seguimiento de precios de bencina en Chile
+    </h1>
+    <LocationPicker />
+  </header>
 
-  <div
-    data-fuel={selectedFuel}
-    class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start"
-  >
-    <RegionMap fuel={selectedFuel} />
-    <div class="space-y-8">
-      <PriceBoard selected={selectedFuel} />
-      <ComunaRanking />
+  <!-- Map on the left, average price by region on the right, centered as a pair. -->
+  <div data-fuel={selectedFuel} class="mt-10 flex items-start justify-center gap-3 sm:gap-12">
+    <div class="sticky top-4 shrink-0">
+      <ChileMap fuel={selectedFuel} />
+    </div>
+
+    <!-- min-w-0 lets this column shrink on phones instead of forcing horizontal scroll. -->
+    <div class="w-full max-w-sm min-w-0 space-y-6">
+      <RegionRanking selected={selectedFuel} />
+      <MapLegend text="Diferencia con el promedio nacional" references={averages} />
     </div>
   </div>
 </Layout>
 
 <script>
   import "../scripts/fuel-selector";
+  import "../scripts/location-picker";
   import "../scripts/region-map";
 </script>

@@ -1,0 +1,58 @@
+---
+import type { GetStaticPaths } from "astro";
+import ComunaRanking from "../../components/ComunaRanking.astro";
+import PriceBoard, { type BestPrices } from "../../components/PriceBoard.astro";
+import RegionMap from "../../components/RegionMap.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getRegionData } from "../../lib/region";
+import { REGIONS } from "../../lib/regions";
+import { FUELS } from "../../lib/schema";
+
+export const getStaticPaths = (() =>
+  REGIONS.map((region) => ({
+    params: { region: region.slug },
+    props: { region },
+  }))) satisfies GetStaticPaths;
+
+const { region } = Astro.props;
+const selectedFuel = "95";
+const { cheapestStation } = await getRegionData(region.code);
+
+const best: BestPrices = Object.fromEntries(
+  FUELS.flatMap((fuel) => {
+    const station = cheapestStation(fuel);
+    return station ? [[fuel, { price: station.price, place: station.comuna }]] : [];
+  }),
+);
+---
+
+<Layout
+  title={`Bencina más barata en ${region.label.replace(/^la /, "")} | Radar Bencina`}
+  description={`Precios de combustible comuna por comuna en ${region.label}, con datos oficiales de la CNE.`}
+  area={region.name}
+>
+  <nav aria-label="Ruta">
+    <a href="/" class="text-sm text-dust underline-offset-2 hover:text-paint hover:underline">
+      Chile
+    </a>
+  </nav>
+  <h1 class="mt-1 max-w-prose font-display text-3xl leading-tight font-bold sm:text-4xl">
+    Dónde cargar más barato en {region.label}
+  </h1>
+
+  <div
+    data-fuel={selectedFuel}
+    class="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start"
+  >
+    <RegionMap region={region} fuel={selectedFuel} />
+    <div class="space-y-8">
+      <PriceBoard selected={selectedFuel} best={best} />
+      <ComunaRanking region={region} />
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import "../../scripts/fuel-selector";
+  import "../../scripts/region-map";
+</script>

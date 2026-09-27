@@ -1,16 +1,17 @@
 ---
-// Gas-station price board: one row per fuel with its lowest price in the region.
+// Gas-station price board: one row per fuel with its lowest price and where it is.
 // Each row is also the fuel selector for the map and the ranking.
 import { FUEL_LABELS, formatClp } from "../lib/prices";
-import { getRegionData } from "../lib/region";
 import { FUELS, type Fuel } from "../lib/schema";
+
+export type BestPrices = Partial<Record<Fuel, { price: number; place?: string }>>;
 
 interface Props {
   selected: Fuel;
+  best: BestPrices;
 }
 
-const { selected } = Astro.props;
-const { cheapestStation } = await getRegionData();
+const { selected, best } = Astro.props;
 ---
 
 <section aria-labelledby="board-title" class="w-full max-w-sm">
@@ -20,7 +21,7 @@ const { cheapestStation } = await getRegionData();
 
   <ul class="mt-2 overflow-hidden rounded-t-xl border border-lane bg-curb">
     {FUELS.map((fuel) => {
-      const best = cheapestStation(fuel);
+      const row = best[fuel];
       return (
         <li class="border-b border-lane last:border-b-0">
           <button
@@ -39,12 +40,12 @@ const { cheapestStation } = await getRegionData();
                 8.888
               </span>
               <span class="absolute inset-0 text-led">
-                {best ? formatClp(best.price).slice(1) : ""}
+                {row ? formatClp(row.price).slice(1) : ""}
               </span>
             </span>
 
             <span class="ml-auto text-right text-sm text-dust">
-              {best?.comuna ?? "Sin datos aún"}
+              {row?.place ?? "Sin datos aún"}
             </span>
           </button>
         </li>

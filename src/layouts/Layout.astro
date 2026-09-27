@@ -9,11 +9,14 @@ const isMockData = pricesMeta.source === "mock";
 interface Props {
   title?: string;
   description?: string;
+  // Area shown next to the site name: "Chile" or the region name
+  area?: string;
 }
 
 const {
   title = "Radar Bencina",
   description = "Precios de combustible en Chile, comuna por comuna, con datos oficiales de la CNE.",
+  area = "Chile",
 } = Astro.props;
 ---
 
@@ -37,7 +40,7 @@ const {
         <a href="/" class="font-display text-xl font-bold">
           Radar Bencina
         </a>
-        <span class="text-sm text-dust">Región Metropolitana</span>
+        <span class="text-sm text-dust">{area}</span>
       </div>
     </header>
 

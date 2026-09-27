@@ -10,7 +10,7 @@ interface Props {
 const { selected } = Astro.props;
 ---
 
-<div class="flex gap-2" role="group" aria-label="Combustible">
+<div class="flex flex-wrap justify-center gap-2" role="group" aria-label="Combustible">
   {FUELS.map((fuel) => (
     <button
       type="button"

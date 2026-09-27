@@ -32,6 +32,10 @@ function setup() {
     const median = Number(path.getAttribute(`data-median-${fuel}`));
     const count = Number(path.getAttribute(`data-count-${fuel}`));
     const reference = Number(figure!.getAttribute(`data-ref-${fuel}`));
+    // Region maps compare medians with "la región"; the Chile map, averages with "el país".
+    const refLabel = figure!.dataset.refLabel ?? "la región";
+    const statLabel = figure!.dataset.statLabel ?? "mediana";
+    const equalText = figure!.dataset.equalText ?? "igual a la mediana de la región";
 
     const title = document.createElement("p");
     title.className = "font-semibold";
@@ -42,9 +46,9 @@ function setup() {
       const diff = median - reference;
       const comparison =
         diff === 0
-          ? "igual a la mediana de la región"
-          : `${formatClp(Math.abs(diff))} ${diff < 0 ? "más barato" : "más caro"} que la región`;
-      detail.textContent = `${FUEL_LABELS[fuel]}: ${formatClp(median)} mediana, ${comparison}. ${count} estaciones.`;
+          ? equalText
+          : `${formatClp(Math.abs(diff))} ${diff < 0 ? "más barato" : "más caro"} que ${refLabel}`;
+      detail.textContent = `${FUEL_LABELS[fuel]}: ${formatClp(median)} ${statLabel}, ${comparison}. ${count} estaciones.`;
     } else {
       detail.textContent = `Sin datos de ${FUEL_LABELS[fuel]}.`;
     }
@@ -56,7 +60,7 @@ function setup() {
       go.href = link.getAttribute("href") ?? "#";
       go.dataset.cut = link.dataset.cut;
       go.className = "mt-2 inline-block font-semibold text-led underline underline-offset-2";
-      go.textContent = `Ver estaciones de ${name}`;
+      go.textContent = `${link.dataset.linkLabel ?? figure!.dataset.linkLabel ?? "Ver estaciones de"} ${name}`;
       tooltip!.append(go);
     }
     tooltip!.classList.toggle("pointer-events-none", !withLink);

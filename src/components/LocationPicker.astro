@@ -1,0 +1,69 @@
+---
+// Region → provincia → comuna selects. "Ver" opens the comuna if one is chosen,
+// otherwise the region. Options are filled by src/scripts/location-picker.ts from the
+// JSON below, because Safari ignores `hidden` on <option>.
+import { comunas } from "../lib/geo";
+import { REGIONS } from "../lib/regions";
+import { comunaHref, regionHref } from "../lib/slug";
+
+export interface PickerRegion {
+  name: string;
+  href: string;
+  provincias: { name: string; comunas: { name: string; href: string }[] }[];
+}
+
+const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, "es");
+
+const data: PickerRegion[] = REGIONS.map((region) => {
+  const inRegion = comunas.filter((c) => c.region === region.code);
+  const provincias = [...new Set(inRegion.map((c) => c.provincia))].map((name) => ({
+    name,
+    comunas: inRegion
+      .filter((c) => c.provincia === name)
+      .map((c) => ({ name: c.name, href: comunaHref(region.slug, c.name) }))
+      .sort(byName),
+  }));
+  return { name: region.name, href: regionHref(region.slug), provincias: provincias.sort(byName) };
+});
+
+const selectClass =
+  "w-full rounded-md border border-lane bg-curb px-3 py-2 text-paint disabled:opacity-50";
+---
+
+<form
+  class="grid gap-3 lg:grid-cols-[1fr_1fr_1fr_auto] lg:items-end"
+  data-location-picker
+  aria-label="Elegir región, provincia y comuna"
+>
+  <label class="grid gap-1 text-sm text-dust">
+    Región
+    <select class={selectClass} data-picker-region>
+      <option value="">Elige una región</option>
+      {data.map((region, i) => (
+        <option value={i}>{region.name}</option>
+      ))}
+    </select>
+  </label>
+  <label class="grid gap-1 text-sm text-dust">
+    Provincia
+    <select class={selectClass} data-picker-provincia disabled>
+      <option value="">Todas las provincias</option>
+    </select>
+  </label>
+  <label class="grid gap-1 text-sm text-dust">
+    Comuna
+    <select class={selectClass} data-picker-comuna disabled>
+      <option value="">Todas las comunas</option>
+    </select>
+  </label>
+  <button
+    type="submit"
+    class="rounded-md bg-sign px-5 py-2 font-display text-lg font-bold text-paint disabled:opacity-50"
+    data-picker-go
+    disabled
+  >
+    Ver
+  </button>
+
+  <script type="application/json" data-picker-data set:html={JSON.stringify(data)} />
+</form>

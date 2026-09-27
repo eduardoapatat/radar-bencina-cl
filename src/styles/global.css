@@ -61,11 +61,12 @@
     --fill: var(--color-curb);
   }
 
-  /* Content rendered once per fuel: only the selected fuel's version shows */
-  [data-fuel="93"] [data-for-fuel]:not([data-for-fuel="93"]),
-  [data-fuel="95"] [data-for-fuel]:not([data-for-fuel="95"]),
-  [data-fuel="97"] [data-for-fuel]:not([data-for-fuel="97"]),
-  [data-fuel="diesel"] [data-for-fuel]:not([data-for-fuel="diesel"]) {
+  /* Content rendered per fuel: only the selected fuel's version shows.
+     `data-for-fuel` is a space-separated list, so one element can serve several fuels. */
+  [data-fuel="93"] [data-for-fuel]:not([data-for-fuel~="93"]),
+  [data-fuel="95"] [data-for-fuel]:not([data-for-fuel~="95"]),
+  [data-fuel="97"] [data-for-fuel]:not([data-for-fuel~="97"]),
+  [data-fuel="diesel"] [data-for-fuel]:not([data-for-fuel~="diesel"]) {
     display: none;
   }
 }

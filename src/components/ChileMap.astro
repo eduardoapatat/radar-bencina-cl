@@ -1,0 +1,180 @@
+---
+// All of Chile in one tall column, each region colored by how its average price compares
+// with the national average. Same markup contract as RegionMap, so the tooltip, highlight
+// and zoom script (region-map.ts) works unchanged.
+import { projectChile } from "../lib/geo";
+import { getNationalData } from "../lib/national";
+import { formatClp } from "../lib/prices";
+import { REGIONS, regionByCode } from "../lib/regions";
+import { FUELS, type Fuel } from "../lib/schema";
+import { comunaHref, regionHref } from "../lib/slug";
+
+interface Props {
+  fuel: Fuel;
+}
+
+const { fuel } = Astro.props;
+// No "cheapest region" outline here: the ranking beside the map already says it, and a
+// pre-highlighted region read as a default selection.
+const { stats, averages, classFor } = await getNationalData();
+
+// Width in viewBox units; the page sizes the SVG by height so the whole country fits.
+const map = projectChile([REGIONS.map((r) => r.code)], 240);
+
+const perFuelAttrs = (code: string) =>
+  Object.fromEntries(
+    FUELS.flatMap((f) => {
+      const s = stats.get(code)?.[f];
+      return [
+        [`data-class-${f}`, classFor(code, f)],
+        // The tooltip script reads `data-median-*`; on this map it holds the average.
+        [`data-median-${f}`, s?.mean ?? ""],
+        [`data-count-${f}`, s?.count ?? 0],
+      ];
+    }),
+  );
+---
+
+<figure
+  class="relative space-y-3"
+  data-region-map
+  data-link-label="Ver comunas de"
+  data-ref-label="el país"
+  data-stat-label="promedio"
+  data-equal-text="igual al promedio del país"
+  {...Object.fromEntries(FUELS.map((f) => [`data-ref-${f}`, averages[f] ?? ""]))}
+>
+  <svg
+    viewBox={`0 0 ${map.width} ${map.height}`}
+    class="h-[70dvh] w-auto max-w-full sm:h-[80dvh]"
+    role="img"
+    aria-labelledby="chile-map-title"
+  >
+    <title id="chile-map-title">
+      Mapa de las regiones de Chile coloreadas según su precio promedio
+    </title>
+
+    {map.unmarked.map((d) => (
+      <path d={d} class="unmarked" />
+    ))}
+
+    {map.regions.map((shape) => {
+      const region = regionByCode.get(shape.region)!;
+      const fuelStats = stats.get(shape.region)?.[fuel];
+      return (
+        <a
+          href={regionHref(region.slug)}
+          data-comuna-link
+          data-cut={region.code}
+          data-name={region.name}
+          aria-label={`Ver comunas de ${region.name}`}
+        >
+          <path
+            d={shape.d}
+            class="comuna"
+            data-class={classFor(shape.region, fuel)}
+            {...perFuelAttrs(shape.region)}
+          >
+            <title>
+                {fuelStats
+                  ? `${region.name}: promedio ${formatClp(fuelStats.mean)}`
+                  : `${region.name}: sin datos`}
+              </title>
+          </path>
+        </a>
+      );
+    })}
+
+    {map.insets.map((inset) => (
+      <g>
+        <rect
+          x={inset.box.x}
+          y={inset.box.y}
+          width={inset.box.width}
+          height={inset.box.height}
+          class="inset-frame"
+        />
+        <a
+          href={comunaHref(regionByCode.get(inset.region)!.slug, inset.name)}
+          data-comuna-link
+          data-cut={inset.cut}
+          data-name={inset.name}
+          data-link-label="Ver estaciones de"
+          aria-label={`Ver estaciones de ${inset.name}`}
+        >
+          <path d={inset.d} class="comuna" data-class="none" />
+        </a>
+        <text
+          x={inset.box.x + inset.box.width / 2}
+          y={inset.box.y + inset.box.height + 14}
+          class="inset-label"
+          text-anchor="middle"
+        >
+          {inset.name}
+        </text>
+      </g>
+    ))}
+
+    <path class="highlight-outline invisible" data-map-highlight></path>
+  </svg>
+
+  <div
+    class="map-tooltip pointer-events-none absolute z-10 hidden w-max max-w-56 rounded-md border border-lane bg-curb px-3 py-2 text-sm"
+    data-map-tooltip
+    role="status"
+  ></div>
+</figure>
+
+<style>
+  .comuna {
+    fill: var(--fill);
+    stroke: var(--color-asphalt);
+    stroke-width: 1;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    transition: fill 250ms ease-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .comuna {
+      transition: none;
+    }
+  }
+
+  [data-comuna-link]:focus {
+    outline: none;
+  }
+  [data-comuna-link]:focus-visible .comuna {
+    stroke: var(--color-paint);
+    stroke-width: 2;
+  }
+
+  .unmarked {
+    fill: var(--color-lane);
+    stroke: var(--color-asphalt);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .inset-frame {
+    fill: none;
+    stroke: var(--color-lane);
+    stroke-width: 1;
+    stroke-dasharray: 4 3;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .inset-label {
+    fill: var(--color-dust);
+    font-size: 14px;
+  }
+
+  .highlight-outline {
+    fill: none;
+    stroke: var(--color-paint);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+</style>

@@ -6,21 +6,25 @@ import { comunas, projectComuna } from "../../lib/geo";
 import { FUEL_LABELS, STALE_AFTER_DAYS, formatClp } from "../../lib/prices";
 import { getRegionData } from "../../lib/region";
 import { FUELS } from "../../lib/fuels";
-import { slugify } from "../../lib/slug";
+import { regionByCode } from "../../lib/regions";
+import { regionHref, slugify } from "../../lib/slug";
 
 export const getStaticPaths = (() => {
-  const slugs = new Set<string>();
+  const paths = new Set<string>();
   return comunas.map((comuna) => {
+    const region = regionByCode.get(comuna.region);
+    if (!region) throw new Error(`Comuna ${comuna.cut} has unknown region ${comuna.region}`);
     const slug = slugify(comuna.name);
-    if (slugs.has(slug)) throw new Error(`Duplicate comuna slug "${slug}"`);
-    slugs.add(slug);
-    return { params: { comuna: slug }, props: { comuna } };
+    const path = `${region.slug}/${slug}`;
+    if (paths.has(path)) throw new Error(`Duplicate comuna path "${path}"`);
+    paths.add(path);
+    return { params: { region: region.slug, comuna: slug }, props: { comuna, region } };
   });
 }) satisfies GetStaticPaths;
 
-const { comuna } = Astro.props;
+const { comuna, region } = Astro.props;
 const selectedFuel = "95";
-const { stats, medians, classFor, stationsIn, cheapestFirst } = await getRegionData();
+const { stats, medians, classFor, stationsIn, cheapestFirst } = await getRegionData(region.code);
 
 const stations = stationsIn(comuna.cut);
 const comunaStats = stats.get(comuna.cut) ?? {};
@@ -45,11 +49,16 @@ const mapsUrl = (lat: number, lng: number) =>
 
 <Layout
   title={`Bencina en ${comuna.name}: precios por estación | Radar Bencina`}
-  description={`Precios de 93, 95, 97 y diésel en las estaciones de ${comuna.name}, Región Metropolitana.`}
+  description={`Precios de 93, 95, 97 y diésel en las estaciones de ${comuna.name}, ${region.label.replace(/^la /, "")}.`}
+  area={region.name}
 >
-  <nav aria-label="Ruta">
-    <a href="/" class="text-sm text-dust underline-offset-2 hover:text-paint hover:underline">
-      Región Metropolitana
+  <nav aria-label="Ruta" class="flex gap-2 text-sm text-dust">
+    <a href="/" class="underline-offset-2 hover:text-paint hover:underline">
+      Chile
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href={regionHref(region.slug)} class="underline-offset-2 hover:text-paint hover:underline">
+      {region.name}
     </a>
   </nav>
   <h1 class="mt-1 font-display text-4xl font-bold sm:text-5xl">{comuna.name}</h1>

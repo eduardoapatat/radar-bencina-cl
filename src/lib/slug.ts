@@ -8,4 +8,5 @@ export function slugify(name: string): string {
     .replace(/^-|-$/g, "");
 }
 
-export const comunaHref = (name: string) => `/metropolitana/${slugify(name)}/`;
+export const regionHref = (regionSlug: string) => `/${regionSlug}/`;
+export const comunaHref = (regionSlug: string, name: string) => `/${regionSlug}/${slugify(name)}/`;

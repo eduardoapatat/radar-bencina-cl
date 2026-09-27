@@ -3,11 +3,17 @@
 // Gives the same information as the colors without relying on them.
 import { CLASS_LABELS, FUEL_LABELS, formatClp } from "../lib/prices";
 import { getRegionData } from "../lib/region";
+import type { RegionInfo } from "../lib/regions";
 import { comunaHref } from "../lib/slug";
 import { FUELS } from "../lib/schema";
 
+interface Props {
+  region: RegionInfo;
+}
+
 const TOP = 10;
-const { ranking } = await getRegionData();
+const { region } = Astro.props;
+const { ranking } = await getRegionData(region.code);
 ---
 
 <section aria-labelledby="ranking-title" class="w-full max-w-sm">
@@ -26,7 +32,7 @@ const { ranking } = await getRegionData();
           title={row.priceClass === "none" ? undefined : CLASS_LABELS[row.priceClass]}
         />
         <a
-          href={comunaHref(row.name)}
+          href={comunaHref(region.slug, row.name)}
           data-cut={row.cut}
           class="flex-1 underline-offset-2 hover:underline"
         >
