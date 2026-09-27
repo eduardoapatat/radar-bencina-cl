@@ -6,7 +6,6 @@ import { readFile, writeFile } from "node:fs/promises";
 import { PricesMetaSchema, StationSchema } from "../src/lib/schema.ts";
 
 const BASE_URL = "https://api.cne.cl";
-const REGION_CODES = new Set(["13"]); // Región Metropolitana for now
 const OUTPUT_PATH = "src/data/prices.json";
 const META_PATH = "src/data/prices.meta.json";
 const TOPOLOGY_PATH = "src/data/chile.topo.json";
@@ -59,6 +58,14 @@ function santiagoToDate(date, time = "00:00:00") {
   );
   return new Date(asUtc - (shownAsUtc - asUtc));
 }
+
+// Some stations type coordinates with a decimal comma or stray spaces ("-32,873774").
+const parseCoordinate = (value) =>
+  Number(
+    String(value ?? "")
+      .trim()
+      .replace(",", "."),
+  );
 
 // "COPEC" → "Copec", "JVL COMBUSTIBLES" → "JVL Combustibles", "Sin Bandera" stays.
 const normalizeBrand = (brand) =>
@@ -117,7 +124,6 @@ const skipped = { maintenance: 0, noPrices: 0, unknownComuna: 0, invalid: 0 };
 
 for (const item of raw) {
   const location = item.ubicacion ?? {};
-  if (!REGION_CODES.has(location.codigo_region)) continue;
   if (item.en_mantenimiento) {
     skipped.maintenance++;
     continue;
@@ -142,8 +148,8 @@ for (const item of raw) {
     brand: normalizeBrand(item.distribuidor?.marca),
     address: location.direccion?.trim(),
     comunaCut: location.codigo_comuna,
-    lat: Number(location.latitud),
-    lng: Number(location.longitud),
+    lat: parseCoordinate(location.latitud),
+    lng: parseCoordinate(location.longitud),
     prices,
   });
   if (result.success) {
