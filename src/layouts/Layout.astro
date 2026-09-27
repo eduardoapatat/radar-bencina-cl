@@ -1,7 +1,10 @@
 ---
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
+import pricesMeta from "../data/prices.meta.json";
 import "../styles/global.css";
+
+const isMockData = pricesMeta.source === "mock";
 
 interface Props {
   title?: string;
@@ -37,6 +40,12 @@ const {
         <span class="text-sm text-dust">Región Metropolitana</span>
       </div>
     </header>
+
+    {isMockData && (
+      <p class="bg-led px-4 py-2 text-center text-sm font-semibold text-asphalt">
+        Datos de prueba: estos precios y estaciones no son reales.
+      </p>
+    )}
 
     <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
       <slot />

@@ -23,7 +23,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "data:boundaries": "node scripts/prepare-boundaries.mjs",
-    "data:mock": "node scripts/mock-prices.mjs"
+    "data:mock": "node scripts/mock-prices.mjs",
+    "data:explore": "node --env-file=.env scripts/explore-cne.mjs",
+    "data:fetch": "node --env-file=.env scripts/fetch-prices.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
